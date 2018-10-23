@@ -5,6 +5,11 @@
  */
 package Main;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Guacha
@@ -18,6 +23,63 @@ public class inises extends javax.swing.JFrame {
         initComponents();
     }
 
+    public inises(boolean usr2){
+        initComponents();
+        if (usr2){
+            nobutton();
+            
+        }
+        
+    }
+    public static String usrlog1;
+    public static String usrlog2;
+    
+    private String conv(char[] chr){
+        String res = "";
+        
+        for (int i = 0; i < chr.length; i++){
+            res = res + chr[i];
+        }
+        return res;
+    }
+    
+    private boolean compcred(String usr, char[] pswi){
+        dbclass regusr = new dbclass("src/files/usr.txt");
+        dbclass regpsw = new dbclass("src/files/psw.txt");
+        int pos = 0;
+        try {
+            String[] reg = regusr.leerArch();
+            
+            while (!reg[pos].equalsIgnoreCase(usr) && !(pos < reg.length)){
+                pos++;
+            }           
+            
+            if (pos == reg.length){
+                return false;
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(inises.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        try {
+            String[] psws = regpsw.leerArch();
+            
+            if (conv(pswi).equals(psws[pos])){
+                usrlog1 = usr;
+                return true;                
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(inises.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return false;
+        
+    }
+    
+    private void nobutton(){
+        P2.setVisible(false);
+        IA.setVisible(false);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -30,11 +92,11 @@ public class inises extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        usr = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        psw = new javax.swing.JPasswordField();
+        P2 = new javax.swing.JButton();
+        IA = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -54,54 +116,74 @@ public class inises extends javax.swing.JFrame {
         jLabel1.setText("Nombre de Usuario");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 400, -1));
 
-        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, 220, -1));
+        usr.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        getContentPane().add(usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, 220, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Contraseña");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 400, -1));
 
-        jPasswordField1.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
-        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+        psw.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        psw.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField1ActionPerformed(evt);
+                pswActionPerformed(evt);
             }
         });
-        getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 330, 220, -1));
+        getContentPane().add(psw, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 330, 220, -1));
 
-        jButton2.setFont(new java.awt.Font("UD Digi Kyokasho N-R", 0, 15)); // NOI18N
-        jButton2.setText("<html>\n<p style=\"text-align: center;\">友とゲームする </p><br><p style=\"text-align: center;\"> Jugar VS Otro Jugador</p>\n");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        P2.setFont(new java.awt.Font("UD Digi Kyokasho N-R", 0, 15)); // NOI18N
+        P2.setText("<html>\n<p style=\"text-align: center;\">友とゲームする </p><br><p style=\"text-align: center;\"> Jugar VS Otro Jugador</p>\n");
+        P2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                P2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 430, 170, 80));
+        getContentPane().add(P2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 430, 170, 80));
 
-        jButton3.setFont(new java.awt.Font("UD Digi Kyokasho N-R", 0, 15)); // NOI18N
-        jButton3.setText("<html> <p style=\"text-align: center;\">AIとゲームする </p><br><p style=\"text-align: center;\"> Jugar VS IA</p>");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        IA.setFont(new java.awt.Font("UD Digi Kyokasho N-R", 0, 15)); // NOI18N
+        IA.setText("<html> <p style=\"text-align: center;\">AIとゲームする </p><br><p style=\"text-align: center;\"> Jugar VS IA</p>");
+        IA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                IAActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 160, 80));
+        getContentPane().add(IA, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 160, 80));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+    private void pswActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pswActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
+    }//GEN-LAST:event_pswActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void P2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_P2ActionPerformed
+        String[] opt = {"Registrar 2do Jugador", "Jugar como Invitado", "Iniciar Sesión"};
+        if(compcred(usr.getText(), psw.getPassword())){
+            int sel = JOptionPane.showOptionDialog(null, "Qué desea hacer?", "Opciones para Jugador 2", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null ,opt, opt[0]);
+            this.setVisible(false);
+            
+            switch(sel){
+                
+                case 0: 
+                    Registro vent0 = new Registro();
+                    vent0.setVisible(true);
+                break;
+                
+                case 2: 
+                    inises vent1 = new inises(true);
+                    vent1.setVisible(true);
+                    
+                break;
+            }
+        } else{
+            JOptionPane.showMessageDialog(null, "Usuario o Contraseña Inválido", "Error al Iniciar Sesión", JOptionPane.WARNING_MESSAGE);
+        }
+    }//GEN-LAST:event_P2ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void IAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IAActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_IAActionPerformed
 
     /**
      * @param args the command line arguments
@@ -134,18 +216,19 @@ public class inises extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new inises().setVisible(true);
+                
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton IA;
+    private javax.swing.JButton P2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JPasswordField psw;
+    private javax.swing.JTextField usr;
     // End of variables declaration//GEN-END:variables
 }

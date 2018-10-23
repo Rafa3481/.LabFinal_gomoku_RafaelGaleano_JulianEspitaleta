@@ -87,7 +87,9 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_salirActionPerformed
 
     private void inisesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inisesActionPerformed
-        // TODO add your handling code here:
+        inises vent = new inises();
+        
+        vent.setVisible(true);
     }//GEN-LAST:event_inisesActionPerformed
 
     private void registActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registActionPerformed

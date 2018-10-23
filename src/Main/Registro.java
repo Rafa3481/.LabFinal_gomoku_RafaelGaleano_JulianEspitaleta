@@ -144,7 +144,7 @@ public class Registro extends javax.swing.JFrame {
         if (conv(psw2).equals(conv(psw))){
             
             
-            dbclass regusr = new dbclass("src/files/usr.txt");
+            dbclass regusr = new dbclass("src/files/usr.txt", true);
             dbclass regpsw = new dbclass("src/files/psw.txt", true);
             
             try {

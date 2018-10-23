@@ -35,14 +35,21 @@ public class Main extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
         filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setTitle("Gomoku");
+        setMaximumSize(new java.awt.Dimension(400, 620));
+        setMinimumSize(new java.awt.Dimension(400, 620));
+        setPreferredSize(new java.awt.Dimension(400, 620));
+        setResizable(false);
+        getContentPane().setLayout(null);
 
         jLabel2.setFont(new java.awt.Font("UD Digi Kyokasho NP-B", 0, 48)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("五目並べ");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 400, 80));
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(0, 70, 400, 80);
 
         salir.setText("Salir");
         salir.addActionListener(new java.awt.event.ActionListener() {
@@ -50,7 +57,8 @@ public class Main extends javax.swing.JFrame {
                 salirActionPerformed(evt);
             }
         });
-        getContentPane().add(salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 440, 200, 40));
+        getContentPane().add(salir);
+        salir.setBounds(100, 440, 200, 40);
 
         inises.setText("Iniciar Sesión");
         inises.addActionListener(new java.awt.event.ActionListener() {
@@ -58,7 +66,8 @@ public class Main extends javax.swing.JFrame {
                 inisesActionPerformed(evt);
             }
         });
-        getContentPane().add(inises, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, 200, 40));
+        getContentPane().add(inises);
+        inises.setBounds(100, 300, 200, 40);
 
         regist.setText("Registrarse");
         regist.addActionListener(new java.awt.event.ActionListener() {
@@ -66,18 +75,27 @@ public class Main extends javax.swing.JFrame {
                 registActionPerformed(evt);
             }
         });
-        getContentPane().add(regist, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 370, 200, 40));
+        getContentPane().add(regist);
+        regist.setBounds(100, 370, 200, 40);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Gomoku");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -4, 400, 80));
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(0, -4, 400, 80);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 400, 80));
-        getContentPane().add(filler1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 560, -1, 70));
-        getContentPane().add(filler2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 480, 400, 120));
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(10, 70, 400, 80);
+        getContentPane().add(filler1);
+        filler1.setBounds(390, 560, 0, 70);
+        getContentPane().add(filler2);
+        filler2.setBounds(0, 470, 400, 120);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/MainBackground.jpg"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(-40, -30, 450, 630);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -135,6 +153,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.Box.Filler filler1;
     private javax.swing.Box.Filler filler2;
     private javax.swing.JButton inises;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

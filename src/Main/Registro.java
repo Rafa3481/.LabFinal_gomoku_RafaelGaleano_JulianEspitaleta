@@ -8,6 +8,7 @@ package Main;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 /**
  *
@@ -42,8 +43,8 @@ public class Registro extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
-        jTextField1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -52,30 +53,38 @@ public class Registro extends javax.swing.JFrame {
         conpss = new javax.swing.JPasswordField();
         pss = new javax.swing.JPasswordField();
         salir = new javax.swing.JButton();
-        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
         reg = new javax.swing.JButton();
-
-        jTextField1.setText("jTextField1");
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setMaximumSize(new java.awt.Dimension(442, 372));
+        setMinimumSize(new java.awt.Dimension(442, 372));
+        setPreferredSize(new java.awt.Dimension(442, 372));
+        getContentPane().setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Goudy Old Style", 0, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Registre su usuario");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 40));
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(100, 0, 250, 40);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        jLabel2.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel2.setFont(new java.awt.Font("Goudy Old Style", 0, 18)); // NOI18N
         jLabel2.setText("Confirmar Contraseña");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, -1, -1));
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(50, 140, 150, 22);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel3.setFont(new java.awt.Font("Goudy Old Style", 0, 18)); // NOI18N
         jLabel3.setText("Usuario");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, -1, 20));
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(130, 60, 60, 20);
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        jLabel4.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel4.setFont(new java.awt.Font("Goudy Old Style", 0, 18)); // NOI18N
         jLabel4.setText("Contraseña");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, -1, 20));
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(120, 100, 72, 20);
 
         usr.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         usr.addActionListener(new java.awt.event.ActionListener() {
@@ -83,7 +92,8 @@ public class Registro extends javax.swing.JFrame {
                 usrActionPerformed(evt);
             }
         });
-        getContentPane().add(usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, 130, -1));
+        getContentPane().add(usr);
+        usr.setBounds(210, 60, 150, 23);
 
         conpss.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         conpss.addActionListener(new java.awt.event.ActionListener() {
@@ -91,7 +101,8 @@ public class Registro extends javax.swing.JFrame {
                 conpssActionPerformed(evt);
             }
         });
-        getContentPane().add(conpss, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 130, -1));
+        getContentPane().add(conpss);
+        conpss.setBounds(210, 140, 150, 23);
 
         pss.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         pss.addActionListener(new java.awt.event.ActionListener() {
@@ -99,24 +110,68 @@ public class Registro extends javax.swing.JFrame {
                 pssActionPerformed(evt);
             }
         });
-        getContentPane().add(pss, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 130, -1));
+        getContentPane().add(pss);
+        pss.setBounds(210, 100, 150, 23);
 
-        salir.setText("Volver a menú");
+        salir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Buttons/base5.png"))); // NOI18N
+        salir.setBorderPainted(false);
+        salir.setContentAreaFilled(false);
+        salir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                salirMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                salirMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                salirMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                salirMouseReleased(evt);
+            }
+        });
         salir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 salirActionPerformed(evt);
             }
         });
-        getContentPane().add(salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 310, -1, -1));
-        getContentPane().add(filler1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 440, 40));
+        getContentPane().add(salir);
+        salir.setBounds(140, 280, 170, 40);
 
-        reg.setText("Registrarme");
+        reg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Buttons/base4.png"))); // NOI18N
+        reg.setBorderPainted(false);
+        reg.setContentAreaFilled(false);
+        reg.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                regMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                regMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                regMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                regMouseReleased(evt);
+            }
+        });
         reg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 regActionPerformed(evt);
             }
         });
-        getContentPane().add(reg, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, -1, -1));
+        getContentPane().add(reg);
+        reg.setBounds(160, 220, 130, 40);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/RegisterBackground.jpg"))); // NOI18N
+
+        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, jLabel5, org.jdesktop.beansbinding.ObjectProperty.create(), jLabel5, org.jdesktop.beansbinding.BeanProperty.create("background"));
+        bindingGroup.addBinding(binding);
+
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(-240, -290, 810, 730);
+
+        bindingGroup.bind();
 
         pack();
         setLocationRelativeTo(null);
@@ -183,6 +238,46 @@ public class Registro extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_regActionPerformed
 
+    private void regMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_regMouseEntered
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/tilted4.png"));
+        reg.setIcon(ii);
+    }//GEN-LAST:event_regMouseEntered
+
+    private void regMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_regMouseExited
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/base4.png"));
+        reg.setIcon(ii);
+    }//GEN-LAST:event_regMouseExited
+
+    private void regMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_regMousePressed
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/pressed4.png"));
+        reg.setIcon(ii);
+    }//GEN-LAST:event_regMousePressed
+
+    private void regMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_regMouseReleased
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/base4.png"));
+        reg.setIcon(ii);
+    }//GEN-LAST:event_regMouseReleased
+
+    private void salirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_salirMouseEntered
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/tilted5.png"));
+        salir.setIcon(ii);
+    }//GEN-LAST:event_salirMouseEntered
+
+    private void salirMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_salirMouseExited
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/base5.png"));
+        salir.setIcon(ii);
+    }//GEN-LAST:event_salirMouseExited
+
+    private void salirMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_salirMousePressed
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/pressed5.png"));
+        salir.setIcon(ii);
+    }//GEN-LAST:event_salirMousePressed
+
+    private void salirMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_salirMouseReleased
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/base5.png"));
+        salir.setIcon(ii);
+    }//GEN-LAST:event_salirMouseReleased
+
     /**
      * @param args the command line arguments
      */
@@ -220,15 +315,15 @@ public class Registro extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPasswordField conpss;
-    private javax.swing.Box.Filler filler1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPasswordField pss;
     private javax.swing.JButton reg;
     private javax.swing.JButton salir;
     private javax.swing.JTextField usr;
+    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }

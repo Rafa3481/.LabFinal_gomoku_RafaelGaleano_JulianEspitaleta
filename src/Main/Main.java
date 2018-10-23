@@ -5,6 +5,8 @@
  */
 package Main;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author ragaleano
@@ -55,38 +57,86 @@ public class Main extends javax.swing.JFrame {
         getContentPane().add(jLabel3);
         jLabel3.setBounds(110, 0, 170, 80);
 
-        salir.setText("Salir");
+        salir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Buttons/Base3.png"))); // NOI18N
+        salir.setBorderPainted(false);
+        salir.setContentAreaFilled(false);
+        salir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                salirMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                salirMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                salirMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                salirMouseReleased(evt);
+            }
+        });
         salir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 salirActionPerformed(evt);
             }
         });
         getContentPane().add(salir);
-        salir.setBounds(100, 440, 200, 40);
+        salir.setBounds(150, 430, 100, 50);
 
-        inises.setText("Iniciar Sesión");
+        inises.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Buttons/Base1.png"))); // NOI18N
+        inises.setBorderPainted(false);
+        inises.setContentAreaFilled(false);
+        inises.setPreferredSize(new java.awt.Dimension(200, 57));
+        inises.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                inisesMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                inisesMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                inisesMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                inisesMouseReleased(evt);
+            }
+        });
         inises.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 inisesActionPerformed(evt);
             }
         });
         getContentPane().add(inises);
-        inises.setBounds(100, 300, 200, 40);
+        inises.setBounds(110, 290, 180, 50);
 
-        regist.setText("Registrarse");
+        regist.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Buttons/Base2.png"))); // NOI18N
+        regist.setBorderPainted(false);
+        regist.setContentAreaFilled(false);
+        regist.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                registMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                registMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                registMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                registMouseReleased(evt);
+            }
+        });
         regist.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 registActionPerformed(evt);
             }
         });
         getContentPane().add(regist);
-        regist.setBounds(100, 370, 200, 40);
+        regist.setBounds(120, 360, 160, 50);
 
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Buttons/gear_icon-icons.com_69371 (1).png"))); // NOI18N
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
-        jButton1.setOpaque(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -123,6 +173,66 @@ public class Main extends javax.swing.JFrame {
         //button.setContentAreaFilled(false);
         //button.setBorderPainted(false);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void inisesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_inisesMouseEntered
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/tilted1.png"));
+        inises.setIcon(ii);
+    }//GEN-LAST:event_inisesMouseEntered
+
+    private void inisesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_inisesMouseExited
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/base1.png"));
+        inises.setIcon(ii);
+    }//GEN-LAST:event_inisesMouseExited
+
+    private void inisesMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_inisesMousePressed
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/pressed1.png"));
+        inises.setIcon(ii);
+    }//GEN-LAST:event_inisesMousePressed
+
+    private void inisesMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_inisesMouseReleased
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/base1.png"));
+        inises.setIcon(ii);
+    }//GEN-LAST:event_inisesMouseReleased
+
+    private void registMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registMouseEntered
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/tilted2.png"));
+        regist.setIcon(ii);
+    }//GEN-LAST:event_registMouseEntered
+
+    private void registMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registMouseExited
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/base2.png"));
+        regist.setIcon(ii);
+    }//GEN-LAST:event_registMouseExited
+
+    private void registMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registMousePressed
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/pressed2.png"));
+        regist.setIcon(ii);
+    }//GEN-LAST:event_registMousePressed
+
+    private void registMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registMouseReleased
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/base2.png"));
+        regist.setIcon(ii);
+    }//GEN-LAST:event_registMouseReleased
+
+    private void salirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_salirMouseEntered
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/tilted3.png"));
+        salir.setIcon(ii);
+    }//GEN-LAST:event_salirMouseEntered
+
+    private void salirMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_salirMouseExited
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/base3.png"));
+        salir.setIcon(ii);
+    }//GEN-LAST:event_salirMouseExited
+
+    private void salirMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_salirMousePressed
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/pressed3.png"));
+        salir.setIcon(ii);
+    }//GEN-LAST:event_salirMousePressed
+
+    private void salirMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_salirMouseReleased
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/base3.png"));
+        salir.setIcon(ii);
+    }//GEN-LAST:event_salirMouseReleased
 
     /**
      * @param args the command line arguments

@@ -21,6 +21,7 @@ public class inises extends javax.swing.JFrame {
      */
     public inises() {
         initComponents();
+        acc.setVisible(false);
     }
 
     public inises(boolean usr2){
@@ -79,6 +80,7 @@ public class inises extends javax.swing.JFrame {
     private void nobutton(){
         P2.setVisible(false);
         IA.setVisible(false);
+        acc.setVisible(true);
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -89,6 +91,7 @@ public class inises extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -97,6 +100,9 @@ public class inises extends javax.swing.JFrame {
         psw = new javax.swing.JPasswordField();
         P2 = new javax.swing.JButton();
         IA = new javax.swing.JButton();
+        acc = new javax.swing.JButton();
+
+        jButton1.setText("jButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -149,6 +155,9 @@ public class inises extends javax.swing.JFrame {
             }
         });
         getContentPane().add(IA, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 160, 80));
+
+        acc.setText("Aceptar");
+        getContentPane().add(acc, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 390, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -224,6 +233,8 @@ public class inises extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton IA;
     private javax.swing.JButton P2;
+    private javax.swing.JButton acc;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

@@ -43,48 +43,18 @@ public class Registro extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         usr = new javax.swing.JTextField();
         conpss = new javax.swing.JPasswordField();
         pss = new javax.swing.JPasswordField();
         salir = new javax.swing.JButton();
         reg = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(442, 372));
         setMinimumSize(new java.awt.Dimension(442, 372));
         setPreferredSize(new java.awt.Dimension(442, 372));
         getContentPane().setLayout(null);
-
-        jLabel1.setFont(new java.awt.Font("Goudy Old Style", 0, 36)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Registre su usuario");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(100, 0, 250, 40);
-
-        jLabel2.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel2.setFont(new java.awt.Font("Goudy Old Style", 0, 18)); // NOI18N
-        jLabel2.setText("Confirmar Contraseña");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(50, 140, 150, 24);
-
-        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel3.setFont(new java.awt.Font("Goudy Old Style", 0, 18)); // NOI18N
-        jLabel3.setText("Usuario");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(130, 60, 60, 20);
-
-        jLabel4.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel4.setFont(new java.awt.Font("Goudy Old Style", 0, 18)); // NOI18N
-        jLabel4.setText("Contraseña");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(120, 100, 93, 20);
 
         usr.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         usr.addActionListener(new java.awt.event.ActionListener() {
@@ -162,16 +132,6 @@ public class Registro extends javax.swing.JFrame {
         });
         getContentPane().add(reg);
         reg.setBounds(160, 220, 130, 40);
-
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/RegisterBackground.jpg"))); // NOI18N
-
-        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, jLabel5, org.jdesktop.beansbinding.ObjectProperty.create(), jLabel5, org.jdesktop.beansbinding.BeanProperty.create("background"));
-        bindingGroup.addBinding(binding);
-
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(-240, -290, 810, 730);
-
-        bindingGroup.bind();
 
         pack();
         setLocationRelativeTo(null);
@@ -315,15 +275,9 @@ public class Registro extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPasswordField conpss;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JPasswordField pss;
     private javax.swing.JButton reg;
     private javax.swing.JButton salir;
     private javax.swing.JTextField usr;
-    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }

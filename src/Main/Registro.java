@@ -123,7 +123,9 @@ public class Registro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
+        Main f = new Main();
         this.dispose();
+        f.setVisible(true);
     }//GEN-LAST:event_salirActionPerformed
 
     private void pssActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pssActionPerformed
@@ -145,7 +147,7 @@ public class Registro extends javax.swing.JFrame {
         if (conv(psw2).equals(conv(psw))){
             
             
-            dbclass regusr = new dbclass("src/files/usr.txt");
+            dbclass regusr = new dbclass("src/files/usr.txt", true);
             dbclass regpsw = new dbclass("src/files/psw.txt", true);
             
             try {

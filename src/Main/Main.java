@@ -29,10 +29,10 @@ public class Main extends javax.swing.JFrame {
 
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         salir = new javax.swing.JButton();
         inises = new javax.swing.JButton();
         regist = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -54,8 +54,6 @@ public class Main extends javax.swing.JFrame {
         jLabel3.setText("Gomoku");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(110, 0, 170, 80);
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(10, 514, 70, 70);
 
         salir.setText("Salir");
         salir.addActionListener(new java.awt.event.ActionListener() {
@@ -84,6 +82,20 @@ public class Main extends javax.swing.JFrame {
         getContentPane().add(regist);
         regist.setBounds(100, 370, 200, 40);
 
+        jButton1.setBackground(new java.awt.Color(0, 0, 0));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Buttons/gear_icon-icons.com_69371 (1).png"))); // NOI18N
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
+        jButton1.setOpaque(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(10, 530, 50, 50);
+
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/MainBackground.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(-40, -30, 450, 630);
@@ -105,6 +117,12 @@ public class Main extends javax.swing.JFrame {
         wat.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_registActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // button.setOpaque(false);
+        //button.setContentAreaFilled(false);
+        //button.setBorderPainted(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -143,10 +161,10 @@ public class Main extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton inises;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JButton regist;
     private javax.swing.JButton salir;
     // End of variables declaration//GEN-END:variables

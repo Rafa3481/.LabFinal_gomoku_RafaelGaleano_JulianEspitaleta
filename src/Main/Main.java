@@ -93,6 +93,7 @@ public class Main extends javax.swing.JFrame {
     private void registActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registActionPerformed
         Registro wat = new Registro();
         wat.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_registActionPerformed
 
     /**

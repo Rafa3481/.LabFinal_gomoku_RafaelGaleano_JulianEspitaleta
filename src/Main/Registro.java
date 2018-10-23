@@ -8,6 +8,7 @@ package Main;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 /**
  *
  * @author Guacha
@@ -50,8 +51,9 @@ public class Registro extends javax.swing.JFrame {
         usr = new javax.swing.JTextField();
         conpss = new javax.swing.JPasswordField();
         pss = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
+        salir = new javax.swing.JButton();
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
+        reg = new javax.swing.JButton();
 
         jTextField1.setText("jTextField1");
 
@@ -99,43 +101,29 @@ public class Registro extends javax.swing.JFrame {
         });
         getContentPane().add(pss, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 130, -1));
 
-        jButton1.setText("Registrarme");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        salir.setText("Volver a menú");
+        salir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                salirActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 300, -1, -1));
+        getContentPane().add(salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 310, -1, -1));
         getContentPane().add(filler1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 440, 40));
+
+        reg.setText("Registrarme");
+        reg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                regActionPerformed(evt);
+            }
+        });
+        getContentPane().add(reg, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        char[] psw = pss.getPassword();
-        char[] psw2 = conpss.getPassword();
-        for (int i = 0; i < psw.length; i++){
-            System.out.print(psw[i]);
-        }
-        System.out.println("");
-        for (int i = 0; i < psw2.length; i++){
-            System.out.print(psw2[i]);
-        }
-        System.out.println("");
-        if (conv(psw2).equals(conv(psw))){
-            System.out.println("Éxito!");
-            dbclass reg = new dbclass("src/files/psw.txt", true);
-            try {
-                reg.escrArch(conv(psw));
-            } catch (IOException ex) {
-                System.out.println("ERROR DE ESCRITURA!");
-                System.out.println("Tipo de Error: " + ex);
-                System.out.println("Contacte a Servicio técnico");
-            }
-        } else{
-            System.out.println("NEPE!");
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_salirActionPerformed
 
     private void pssActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pssActionPerformed
         
@@ -148,6 +136,49 @@ public class Registro extends javax.swing.JFrame {
     private void conpssActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_conpssActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_conpssActionPerformed
+
+    private void regActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regActionPerformed
+        char[] psw = pss.getPassword();
+        char[] psw2 = conpss.getPassword();
+        String usuario = usr.getText();
+        if (conv(psw2).equals(conv(psw))){
+            
+            
+            dbclass regusr = new dbclass("src/files/usr.txt");
+            dbclass regpsw = new dbclass("src/files/psw.txt", true);
+            
+            try {
+                if (regusr.compArch(usuario)){
+                    JOptionPane.showMessageDialog(null, "El usuario " + usuario + " Ya se encuentra registrado, Inténte con otro nombre.", "Error de registro", JOptionPane.ERROR_MESSAGE);
+                } else {
+                    try {
+                        regusr.escrArch(usuario);
+                        regpsw.escrArch(conv(psw));
+                        JOptionPane.showMessageDialog(null, "El usuario " + usuario + " ha sido registrado satisfactoriamente", "Registro Satisfactorio", JOptionPane.INFORMATION_MESSAGE);
+                        
+                        Main vent = new Main();
+                        vent.setVisible(true);
+                        this.dispose();
+                    } catch (IOException ex) {
+                        System.out.println("ERROR DE ESCRITURA!");
+                        System.out.println("Tipo de Error: " + ex);
+                        System.out.println("Contacte a Servicio técnico");
+                    }
+                }
+            } catch (IOException ex) {
+                try {
+                    regusr.escrArch(usuario);
+                    regpsw.escrArch(conv(psw));
+                    JOptionPane.showMessageDialog(null, "El usuario " + usuario + " ha sido registrado satisfactoriamente", "Registro Satisfactorio", JOptionPane.INFORMATION_MESSAGE);
+                } catch (IOException ex1) {
+                    Logger.getLogger(Registro.class.getName()).log(Level.SEVERE, null, ex1);
+                }
+            }
+            
+        } else{
+            JOptionPane.showMessageDialog(null, "Las contraseñas ingresadas no coinciden, Inténte nuevamente", "Error de registro", JOptionPane.WARNING_MESSAGE);
+        }
+    }//GEN-LAST:event_regActionPerformed
 
     /**
      * @param args the command line arguments
@@ -187,13 +218,14 @@ public class Registro extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPasswordField conpss;
     private javax.swing.Box.Filler filler1;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JPasswordField pss;
+    private javax.swing.JButton reg;
+    private javax.swing.JButton salir;
     private javax.swing.JTextField usr;
     // End of variables declaration//GEN-END:variables
 }

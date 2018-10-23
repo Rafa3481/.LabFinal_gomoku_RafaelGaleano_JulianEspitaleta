@@ -7,6 +7,8 @@ package Main;
 
 import java.io.FileWriter;
 import java.io.PrintWriter;
+import java.io.FileReader;
+import java.io.BufferedReader;
 import java.io.IOException;
 /**
  *
@@ -35,4 +37,45 @@ public class dbclass {
         escribir.close();
     }
     
+    int lineas() throws IOException{
+        FileReader leer = new FileReader(arch);
+        BufferedReader linea = new BufferedReader(leer);
+        int res = 0;
+        while(linea.readLine() != null){
+            res++;
+        }
+        linea.close();
+        return res;        
+    }
+    
+    public String[] leerArch() throws IOException{
+        FileReader leer = new FileReader(arch);
+        BufferedReader lire = new BufferedReader(leer);
+        
+        
+        String nullcito[] = new String[lineas()];
+        
+        for (int i = 0; i < lineas(); i++){
+            nullcito[i] = lire.readLine();
+        }
+        lire.close();
+        return nullcito;        
+    }
+    
+    public boolean compArch(String usr) throws IOException{
+        FileReader leer = new FileReader(arch);
+        BufferedReader lire = new BufferedReader(leer);
+        
+        
+        String nullcito[] = new String[lineas()];
+        
+        for (int i = 0; i < lineas(); i++){
+            nullcito[i] = lire.readLine();
+            if (nullcito[i].equalsIgnoreCase(usr)){
+                return true;
+            }
+        }
+        lire.close();
+        return false;
+    }
 }

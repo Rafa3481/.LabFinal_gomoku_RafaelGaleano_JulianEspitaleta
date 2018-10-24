@@ -51,13 +51,13 @@ public class Main extends javax.swing.JFrame {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("五目並べ");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(90, 70, 210, 80);
+        jLabel2.setBounds(0, 70, 400, 80);
 
-        jLabel3.setFont(new java.awt.Font("Goudy Old Style", 0, 48)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Gabriola", 0, 56)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Gomoku");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(110, 0, 170, 80);
+        jLabel3.setBounds(0, 0, 400, 80);
 
         salir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Buttons/Base3.png"))); // NOI18N
         salir.setBorderPainted(false);

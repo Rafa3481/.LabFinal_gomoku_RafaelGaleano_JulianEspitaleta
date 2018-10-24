@@ -49,6 +49,11 @@ public class Registro extends javax.swing.JFrame {
         pss = new javax.swing.JPasswordField();
         salir = new javax.swing.JButton();
         reg = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(442, 372));
@@ -132,6 +137,31 @@ public class Registro extends javax.swing.JFrame {
         });
         getContentPane().add(reg);
         reg.setBounds(160, 220, 130, 40);
+
+        jLabel1.setFont(new java.awt.Font("Gabriola", 0, 18)); // NOI18N
+        jLabel1.setText("Confirmar contraseña");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(70, 140, 120, 20);
+
+        jLabel2.setFont(new java.awt.Font("Gabriola", 0, 18)); // NOI18N
+        jLabel2.setText("Contraseña");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(70, 100, 120, 20);
+
+        jLabel3.setFont(new java.awt.Font("Gabriola", 0, 18)); // NOI18N
+        jLabel3.setText("Nombre de usuario");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(70, 60, 120, 20);
+
+        jLabel4.setFont(new java.awt.Font("Gabriola", 0, 48)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Registro");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(0, 10, 450, 50);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/RegisterBackground.jpg"))); // NOI18N
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(-220, -260, 670, 640);
 
         pack();
         setLocationRelativeTo(null);
@@ -275,6 +305,11 @@ public class Registro extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPasswordField conpss;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPasswordField pss;
     private javax.swing.JButton reg;
     private javax.swing.JButton salir;

@@ -24,8 +24,9 @@ public class inises extends javax.swing.JFrame {
         initComponents();
         acc.setVisible(false);
     }
-
-    public inises(boolean usr2){
+    
+    private String usrh;
+    public inises(boolean usr2, String usr1){
         initComponents();
         if (usr2){
             nobutton();
@@ -222,19 +223,19 @@ public class inises extends javax.swing.JFrame {
                     switch(sel2){
 
                         case 0: 
-                            tab15 vent = new tab15();
+                            tab15 vent = new tab15(usr.getText(),"Invitado");
                             vent.setVisible(true);
                             this.dispose();
                         break;
 
                         case 1:
-                            tab19 vent1 = new tab19();
+                            tab19 vent1 = new tab19(usr.getText(),"Invitado");
                             vent1.setVisible(true);
                             this.dispose();
                         break;
 
                         case 2: 
-                            tab21 vent2 = new tab21();
+                            tab21 vent2 = new tab21(usr.getText(),"Invitado");
                             vent2.setVisible(true);
                             this.dispose();
                         break;
@@ -242,7 +243,7 @@ public class inises extends javax.swing.JFrame {
                 break;
                 
                 case 2: 
-                    inises vent2 = new inises(true);
+                    inises vent2 = new inises(true, usr.getText());
                     vent2.setVisible(true);
 
                 break;

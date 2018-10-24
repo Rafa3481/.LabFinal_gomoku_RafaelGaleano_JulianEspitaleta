@@ -22,6 +22,8 @@ public class gamemec {
         p1 = usr1;
         if (!IA){
             p2 = usr2;
+        } else{
+            p2 = "IA";
         }
     }
     
@@ -30,6 +32,9 @@ public class gamemec {
         if (rand < 0.5){
             noire = 1;
             blanche = 2;
+        } else{
+            noire = 2;
+            blanche = 1;
         }
     }
     

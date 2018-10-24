@@ -18,6 +18,31 @@ public class tab19 extends javax.swing.JFrame {
         initComponents();
     }
 
+    public tab19(String nom1, String nom2){
+        initComponents();
+        if (nom2.equalsIgnoreCase("iaai")){
+            gamemec mec = new gamemec(true, nom1, nom2);
+            mec.assturn();
+            if (mec.getnoir() == 1){
+                kuro.setText(nom1);
+                shiro.setText("IA");
+            } else{
+                kuro.setText("IA");
+                shiro.setText(nom1);
+            }
+        } else{
+            gamemec mec = new gamemec(true, nom1, nom2);
+            mec.assturn();
+            if (mec.getnoir() == 1){
+                kuro.setText(nom1);
+                shiro.setText(nom2);
+            } else{
+                kuro.setText(nom2);
+                shiro.setText(nom1);
+            }
+            
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -33,8 +58,8 @@ public class tab19 extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        kuro = new javax.swing.JTextField();
+        shiro = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -63,11 +88,11 @@ public class tab19 extends javax.swing.JFrame {
         jLabel6.setText("(Fichas Blancas)");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 150, -1, -1));
 
-        jTextField1.setEditable(false);
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 100, 140, -1));
+        kuro.setEditable(false);
+        getContentPane().add(kuro, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 100, 140, -1));
 
-        jTextField2.setEditable(false);
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 100, 140, -1));
+        shiro.setEditable(false);
+        getContentPane().add(shiro, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 100, 140, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -114,7 +139,7 @@ public class tab19 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField kuro;
+    private javax.swing.JTextField shiro;
     // End of variables declaration//GEN-END:variables
 }

@@ -183,7 +183,12 @@ public class inises extends javax.swing.JFrame {
         getContentPane().add(IA, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, 210, 80));
 
         acc.setText("Aceptar");
-        getContentPane().add(acc, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 390, -1, -1));
+        acc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                accActionPerformed(evt);
+            }
+        });
+        getContentPane().add(acc, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 380, -1, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/RegisterBackground.jpg"))); // NOI18N
         jLabel5.setText("jLabel5");
@@ -209,10 +214,37 @@ public class inises extends javax.swing.JFrame {
                     vent0.setVisible(true);
                 break;
                 
+                case 1:
+                    String[] tabs = {"15x15", "19x19", "21x21"};
+                    int sel2 = JOptionPane.showOptionDialog(null, "Elija su estilo de tablero", "Opciones de Juego", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null ,tabs, opt[0]);
+                    this.setVisible(false);
+
+                    switch(sel2){
+
+                        case 0: 
+                            tab15 vent = new tab15();
+                            vent.setVisible(true);
+                            this.dispose();
+                        break;
+
+                        case 1:
+                            tab19 vent1 = new tab19();
+                            vent1.setVisible(true);
+                            this.dispose();
+                        break;
+
+                        case 2: 
+                            tab21 vent2 = new tab21();
+                            vent2.setVisible(true);
+                            this.dispose();
+                        break;
+                    }
+                break;
+                
                 case 2: 
-                    inises vent1 = new inises(true);
-                    vent1.setVisible(true);
-                    
+                    inises vent2 = new inises(true);
+                    vent2.setVisible(true);
+
                 break;
             }
         } else{
@@ -221,7 +253,34 @@ public class inises extends javax.swing.JFrame {
     }//GEN-LAST:event_P2ActionPerformed
 
     private void IAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IAActionPerformed
-        
+        String[] opt = {"15x15", "19x19", "21x21"};
+        if(compcred(usr.getText(), psw.getPassword())){
+            int sel = JOptionPane.showOptionDialog(null, "Elija su estilo de tablero", "Opciones de Juego", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null ,opt, opt[0]);
+                this.setVisible(false);
+
+                switch(sel){
+
+                    case 0: 
+                        tab15 vent0 = new tab15();
+                        vent0.setVisible(true);
+                        this.dispose();
+                    break;
+
+                    case 1:
+                        tab19 vent1 = new tab19();
+                        vent1.setVisible(true);
+                        this.dispose();
+                    break;
+
+                    case 2: 
+                        tab21 vent2 = new tab21();
+                        vent2.setVisible(true);
+                        this.dispose();
+                    break;
+                }
+        } else{
+            JOptionPane.showMessageDialog(null, "Usuario o Contraseña Inválido", "Error al Iniciar Sesión", JOptionPane.WARNING_MESSAGE);
+        }
     }//GEN-LAST:event_IAActionPerformed
 
     private void P2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_P2MouseEntered
@@ -243,6 +302,37 @@ public class inises extends javax.swing.JFrame {
         ImageIcon tilt = new ImageIcon("src/Buttons/ia.png");
         IA.setIcon(tilt);
     }//GEN-LAST:event_IAMouseExited
+
+    private void accActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_accActionPerformed
+        String[] opt = {"15x15", "19x19", "21x21"};
+        if(compcred(usr.getText(), psw.getPassword())){
+            int sel = JOptionPane.showOptionDialog(null, "Elija su estilo de tablero", "Opciones de Juego", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null ,opt, opt[0]);
+                this.setVisible(false);
+
+                switch(sel){
+
+                    case 0: 
+                        tab15 vent0 = new tab15();
+                        vent0.setVisible(true);
+                        this.dispose();
+                    break;
+
+                    case 1:
+                        tab19 vent1 = new tab19();
+                        vent1.setVisible(true);
+                        this.dispose();
+                    break;
+
+                    case 2: 
+                        tab21 vent2 = new tab21();
+                        vent2.setVisible(true);
+                        this.dispose();
+                    break;
+                }
+        } else{
+            JOptionPane.showMessageDialog(null, "Usuario o Contraseña Inválido", "Error al Iniciar Sesión", JOptionPane.WARNING_MESSAGE);
+        }
+    }//GEN-LAST:event_accActionPerformed
 
     /**
      * @param args the command line arguments

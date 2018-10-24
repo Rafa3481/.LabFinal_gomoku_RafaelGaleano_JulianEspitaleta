@@ -164,6 +164,7 @@ public class Main extends javax.swing.JFrame {
         inises vent = new inises();
         
         vent.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_inisesActionPerformed
 
     private void registActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registActionPerformed

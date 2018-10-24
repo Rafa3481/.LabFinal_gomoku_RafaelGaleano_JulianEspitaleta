@@ -111,6 +111,7 @@ public class tab15 extends javax.swing.JFrame {
         getContentPane().add(shiro, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 110, 140, -1));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void kuroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kuroActionPerformed

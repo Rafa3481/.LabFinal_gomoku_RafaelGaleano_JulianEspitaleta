@@ -95,6 +95,7 @@ public class tab19 extends javax.swing.JFrame {
         getContentPane().add(shiro, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 100, 140, -1));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**

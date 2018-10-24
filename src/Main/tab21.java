@@ -95,6 +95,7 @@ public class tab21 extends javax.swing.JFrame {
         getContentPane().add(shiro, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 140, 140, -1));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**

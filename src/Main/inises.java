@@ -8,6 +8,7 @@ package Main;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -101,6 +102,7 @@ public class inises extends javax.swing.JFrame {
         P2 = new javax.swing.JButton();
         IA = new javax.swing.JButton();
         acc = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
 
         jButton1.setText("jButton1");
 
@@ -110,25 +112,27 @@ public class inises extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("UD Digi Kyokasho NP-B", 0, 48)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("ログイン");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 400, 80));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 460, 80));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Inicie Sesión");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -4, 400, 80));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -4, 460, 80));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 204, 204));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Nombre de Usuario");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 400, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 460, -1));
 
         usr.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
-        getContentPane().add(usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, 220, -1));
+        getContentPane().add(usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, 220, -1));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 204, 204));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Contraseña");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 400, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 460, -1));
 
         psw.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         psw.addActionListener(new java.awt.event.ActionListener() {
@@ -136,28 +140,54 @@ public class inises extends javax.swing.JFrame {
                 pswActionPerformed(evt);
             }
         });
-        getContentPane().add(psw, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 330, 220, -1));
+        getContentPane().add(psw, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 330, 220, -1));
 
+        P2.setBackground(new java.awt.Color(235, 159, 29));
         P2.setFont(new java.awt.Font("UD Digi Kyokasho N-R", 0, 15)); // NOI18N
+        P2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Buttons/tomo.png"))); // NOI18N
         P2.setText("<html>\n<p style=\"text-align: center;\">友とゲームする </p><br><p style=\"text-align: center;\"> Jugar VS Otro Jugador</p>\n");
+        P2.setContentAreaFilled(false);
+        P2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                P2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                P2MouseExited(evt);
+            }
+        });
         P2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 P2ActionPerformed(evt);
             }
         });
-        getContentPane().add(P2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 430, 170, 80));
+        getContentPane().add(P2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 430, 210, 80));
 
+        IA.setBackground(new java.awt.Color(235, 159, 29));
         IA.setFont(new java.awt.Font("UD Digi Kyokasho N-R", 0, 15)); // NOI18N
+        IA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Buttons/ia.png"))); // NOI18N
         IA.setText("<html> <p style=\"text-align: center;\">AIとゲームする </p><br><p style=\"text-align: center;\"> Jugar VS IA</p>");
+        IA.setContentAreaFilled(false);
+        IA.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                IAMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                IAMouseExited(evt);
+            }
+        });
         IA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 IAActionPerformed(evt);
             }
         });
-        getContentPane().add(IA, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 160, 80));
+        getContentPane().add(IA, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, 210, 80));
 
         acc.setText("Aceptar");
         getContentPane().add(acc, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 390, -1, -1));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/RegisterBackground.jpg"))); // NOI18N
+        jLabel5.setText("jLabel5");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-470, 0, 930, 530));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -191,8 +221,28 @@ public class inises extends javax.swing.JFrame {
     }//GEN-LAST:event_P2ActionPerformed
 
     private void IAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IAActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_IAActionPerformed
+
+    private void P2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_P2MouseEntered
+        ImageIcon tilted = new ImageIcon("src/Buttons/tomotilted.png");
+        P2.setIcon(tilted);
+    }//GEN-LAST:event_P2MouseEntered
+
+    private void P2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_P2MouseExited
+        ImageIcon tilt = new ImageIcon("src/Buttons/tomo.png");
+        P2.setIcon(tilt);
+    }//GEN-LAST:event_P2MouseExited
+
+    private void IAMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IAMouseEntered
+        ImageIcon tilted = new ImageIcon("src/Buttons/iatilted.png");
+        IA.setIcon(tilted);
+    }//GEN-LAST:event_IAMouseEntered
+
+    private void IAMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IAMouseExited
+        ImageIcon tilt = new ImageIcon("src/Buttons/ia.png");
+        IA.setIcon(tilt);
+    }//GEN-LAST:event_IAMouseExited
 
     /**
      * @param args the command line arguments
@@ -239,6 +289,7 @@ public class inises extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPasswordField psw;
     private javax.swing.JTextField usr;
     // End of variables declaration//GEN-END:variables

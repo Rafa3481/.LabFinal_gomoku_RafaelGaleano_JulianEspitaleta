@@ -30,7 +30,7 @@ public class inises extends javax.swing.JFrame {
         initComponents();
         if (usr2){
             nobutton();
-            
+            usrh = usr1;
         }
         
     }
@@ -53,13 +53,16 @@ public class inises extends javax.swing.JFrame {
         try {
             String[] reg = regusr.leerArch();
             
-            while (!reg[pos].equalsIgnoreCase(usr) && !(pos < reg.length)){
+            System.out.println(reg.length);
+            while (!(reg[pos].equalsIgnoreCase(usr)) && (pos < reg.length)){
                 pos++;
             }           
             
             if (pos == reg.length){
+                
                 return false;
             }
+            System.out.println(pos);
         } catch (IOException ex) {
             Logger.getLogger(inises.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -127,6 +130,11 @@ public class inises extends javax.swing.JFrame {
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 460, -1));
 
         usr.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        usr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                usrActionPerformed(evt);
+            }
+        });
         getContentPane().add(usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, 220, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -263,19 +271,19 @@ public class inises extends javax.swing.JFrame {
                 switch(sel){
 
                     case 0: 
-                        tab15 vent0 = new tab15();
+                        tab15 vent0 = new tab15(usr.getText(), "iaai");
                         vent0.setVisible(true);
                         this.dispose();
                     break;
 
                     case 1:
-                        tab19 vent1 = new tab19();
+                        tab19 vent1 = new tab19(usr.getText(), "iaai");
                         vent1.setVisible(true);
                         this.dispose();
                     break;
 
                     case 2: 
-                        tab21 vent2 = new tab21();
+                        tab21 vent2 = new tab21(usr.getText(), "iaai");
                         vent2.setVisible(true);
                         this.dispose();
                     break;
@@ -307,6 +315,7 @@ public class inises extends javax.swing.JFrame {
 
     private void accActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_accActionPerformed
         String[] opt = {"15x15", "19x19", "21x21"};
+        
         if(compcred(usr.getText(), psw.getPassword())){
             int sel = JOptionPane.showOptionDialog(null, "Elija su estilo de tablero", "Opciones de Juego", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null ,opt, opt[0]);
                 this.setVisible(false);
@@ -314,19 +323,19 @@ public class inises extends javax.swing.JFrame {
                 switch(sel){
 
                     case 0: 
-                        tab15 vent0 = new tab15();
+                        tab15 vent0 = new tab15(usrh,usr.getText());
                         vent0.setVisible(true);
                         this.dispose();
                     break;
 
                     case 1:
-                        tab19 vent1 = new tab19();
+                        tab19 vent1 = new tab19(usrh,usr.getText());
                         vent1.setVisible(true);
                         this.dispose();
                     break;
 
                     case 2: 
-                        tab21 vent2 = new tab21();
+                        tab21 vent2 = new tab21(usrh,usr.getText());
                         vent2.setVisible(true);
                         this.dispose();
                     break;
@@ -335,6 +344,10 @@ public class inises extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Usuario o Contraseña Inválido", "Error al Iniciar Sesión", JOptionPane.WARNING_MESSAGE);
         }
     }//GEN-LAST:event_accActionPerformed
+
+    private void usrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usrActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_usrActionPerformed
 
     /**
      * @param args the command line arguments

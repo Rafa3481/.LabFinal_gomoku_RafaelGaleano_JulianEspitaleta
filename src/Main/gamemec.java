@@ -53,4 +53,8 @@ public class gamemec {
         
     }
     
+    static public javax.swing.JButton getButt(Object obt){
+        return (javax.swing.JButton)obt;
+    }
+    
 }

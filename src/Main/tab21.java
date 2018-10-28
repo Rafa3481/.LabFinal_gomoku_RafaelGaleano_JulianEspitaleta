@@ -5,6 +5,8 @@
  */
 package Main;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Guacha
@@ -7606,6 +7608,14 @@ public class tab21 extends javax.swing.JFrame {
         int col = mec.getcol(opt), fil = mec.getfil(opt);        
         
         mec.marcar(opt, mec.getTurn());
+        if(mec.chkvic() != 0){
+            if (mec.chkvic() == tneg){
+                JOptionPane.showMessageDialog(null, "Ganó el NEGRO PUTITO");
+            } else{
+                JOptionPane.showMessageDialog(null, "Ganó el BLANCO PUTITO");
+                
+            }
+        }
     }//GEN-LAST:event_click
 
     private void menter(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menter

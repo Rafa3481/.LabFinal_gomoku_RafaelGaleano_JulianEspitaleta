@@ -8,6 +8,7 @@ package Main;
 import java.awt.Color;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -3238,12 +3239,14 @@ public class tab15 extends javax.swing.JFrame {
         int col = mec.getcol(opt), fil = mec.getfil(opt);        
         
         mec.marcar(opt, mec.getTurn());
-        
-
-
-            
-        
-        
+        if(mec.chkvic() != 0){
+            if (mec.chkvic() == tneg){
+                JOptionPane.showMessageDialog(null, "Ganó el NEGRO PUTITO");
+            } else{
+                JOptionPane.showMessageDialog(null, "Ganó el BLANCO PUTITO");
+                
+            }
+        }
     }//GEN-LAST:event_click
 
     private void menter(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menter

@@ -137,4 +137,83 @@ public class gamemec {
             
     }
     
+    private int chkver(){
+        for (int i = 0; i < 21; i++){
+            for (int j = 0; j < 17; j++){
+                if(tab[i][j] != 0){
+                    if (tab[i][j] == tab[i][j+1] && tab[i][j] == tab[i][j+2] && tab[i][j] == tab[i][j+3] && tab[i][j] == tab[i][j+4]){
+                        if(tab[i][j] == noire){
+                            return noire;
+                        } else{
+                            return blanche;
+                        }
+                    }
+                }
+            }
+        }
+        return 0;
+    }
+    
+    private int chkhor(){
+        for (int i = 0; i < 17; i++){
+            for (int j = 0; j < 21; j++){
+                if(tab[i][j] != 0){
+                    if (tab[i][j] == tab[i+1][j] && tab[i][j] == tab[i+2][j] && tab[i][j] == tab[i+3][j] && tab[i][j] == tab[i+4][j]){
+                        if(tab[i][j] == noire){
+                            return noire;
+                        } else{
+                            return blanche;
+                        }
+                    }
+                }
+            }
+        }
+        return 0;
+    }
+    
+   private int chkdiag(){
+       for (int i = 0; i < 17; i++) {
+           for (int j = 0; j < 17; j++) {
+               if (tab[j][i] != 0) {
+                   if (tab[j][i] == tab[j+1][i+1] && tab[j][i] == tab[j+2][i+2] && tab[j][i] == tab[j+3][i+3] && tab[j][i] == tab[j+4][i+4]){
+                       if(tab[j][i] == noire){
+                            return noire;
+                        } else{
+                            return blanche;
+                        }
+                   }
+               }
+            }    
+       }
+       
+       for (int i = 0; i < 17; i++) {
+           for (int j = 5; j < 17; j++) {
+               if (tab[j][i] != 0) {
+                   if (tab[j][i] == tab[j-1][i+1] && tab[j][i] == tab[j-2][i+2] && tab[j][i] == tab[j-3][i+3] && tab[j][i] == tab[j-4][i+4]){
+                       if(tab[j][i] == noire){
+                            return noire;
+                        } else{
+                            return blanche;
+                        }
+                   }
+               }
+           }
+           
+       }
+       return 0;
+   }
+   
+   public int chkvic(){
+       if(chkdiag() != 0){
+           return chkdiag();
+       }
+       if(chkhor() != 0){
+           return chkhor();
+       }
+       if(chkver() != 0){
+           return chkver();
+       }
+       return 0;
+   }
+    
 }

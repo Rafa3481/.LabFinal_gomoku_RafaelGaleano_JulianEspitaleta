@@ -53,7 +53,7 @@ public class inises extends javax.swing.JFrame {
         try {
             String[] reg = regusr.leerArch();
             
-            System.out.println(reg.length);
+            
             while (!(reg[pos].equalsIgnoreCase(usr)) && (pos < reg.length)){
                 pos++;
             }           
@@ -62,7 +62,7 @@ public class inises extends javax.swing.JFrame {
                 
                 return false;
             }
-            System.out.println(pos);
+            
         } catch (IOException ex) {
             Logger.getLogger(inises.class.getName()).log(Level.SEVERE, null, ex);
         }

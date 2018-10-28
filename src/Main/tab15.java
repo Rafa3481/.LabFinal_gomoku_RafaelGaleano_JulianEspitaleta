@@ -5,6 +5,10 @@
  */
 package Main;
 
+import java.awt.Color;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author Guacha
@@ -19,12 +23,14 @@ public class tab15 extends javax.swing.JFrame {
         
         
     }
-    
+    int tneg;
     public tab15(String nom1, String nom2){
         initComponents();
         if (nom2.equalsIgnoreCase("iaai")){
-            gamemec mec = new gamemec(true, nom1, nom2);
+            gamemec mec = new gamemec();
+            mec.initab();
             mec.assturn();
+            tneg = mec.getnoir();
             if (mec.getnoir() == 1){
                 kuro.setText(nom1);
                 shiro.setText("IA");
@@ -32,9 +38,12 @@ public class tab15 extends javax.swing.JFrame {
                 kuro.setText("IA");
                 shiro.setText(nom1);
             }
+            
         } else{
-            gamemec mec = new gamemec(true, nom1, nom2);
+            gamemec mec = new gamemec();
             mec.assturn();
+            mec.initab();
+            tneg = mec.getnoir();
             if (mec.getnoir() == 1){
                 kuro.setText(nom1);
                 shiro.setText(nom2);
@@ -44,11 +53,12 @@ public class tab15 extends javax.swing.JFrame {
             }
             
         }
-    }
-    
-    private void shadow(javax.swing.JButton button){
         
     }
+    
+    
+    
+
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -291,188 +301,2736 @@ public class tab15 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(shiro, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 110, 140, -1));
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 447, 30, 30));
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 447, 30, 30));
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 447, 30, 30));
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 447, 30, 30));
-        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 447, 30, 30));
-        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 447, 30, 30));
-        getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 447, 30, 30));
-        getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 447, 30, 30));
-        getContentPane().add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 447, 30, 30));
-        getContentPane().add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 447, 30, 30));
-        getContentPane().add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 447, 30, 30));
-        getContentPane().add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 447, 30, 30));
-        getContentPane().add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 447, 30, 30));
-        getContentPane().add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 414, 30, 30));
-        getContentPane().add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 414, 30, 30));
-        getContentPane().add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 414, 30, 30));
-        getContentPane().add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 414, 30, 30));
-        getContentPane().add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 414, 30, 30));
-        getContentPane().add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 414, 30, 30));
-        getContentPane().add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 414, 30, 30));
-        getContentPane().add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 414, 30, 30));
-        getContentPane().add(jButton23, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 414, 30, 30));
-        getContentPane().add(jButton24, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 414, 30, 30));
-        getContentPane().add(jButton25, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 414, 30, 30));
-        getContentPane().add(jButton26, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 414, 30, 30));
-        getContentPane().add(jButton27, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 414, 30, 30));
-        getContentPane().add(jButton28, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 381, 30, 30));
-        getContentPane().add(jButton29, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 381, 30, 30));
-        getContentPane().add(jButton30, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 381, 30, 30));
-        getContentPane().add(jButton31, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 381, 30, 30));
-        getContentPane().add(jButton32, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 381, 30, 30));
-        getContentPane().add(jButton33, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 381, 30, 30));
-        getContentPane().add(jButton34, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 381, 30, 30));
-        getContentPane().add(jButton35, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 381, 30, 30));
-        getContentPane().add(jButton36, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 381, 30, 30));
-        getContentPane().add(jButton37, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 381, 30, 30));
-        getContentPane().add(jButton38, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 381, 30, 30));
-        getContentPane().add(jButton39, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 381, 30, 30));
-        getContentPane().add(jButton40, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 381, 30, 30));
-        getContentPane().add(jButton41, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 348, 30, 30));
-        getContentPane().add(jButton42, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 348, 30, 30));
-        getContentPane().add(jButton43, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 348, 30, 30));
-        getContentPane().add(jButton44, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 348, 30, 30));
-        getContentPane().add(jButton45, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 348, 30, 30));
-        getContentPane().add(jButton46, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 348, 30, 30));
-        getContentPane().add(jButton47, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 348, 30, 30));
-        getContentPane().add(jButton48, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 348, 30, 30));
-        getContentPane().add(jButton49, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 348, 30, 30));
-        getContentPane().add(jButton50, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 348, 30, 30));
-        getContentPane().add(jButton51, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 348, 30, 30));
-        getContentPane().add(jButton52, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 348, 30, 30));
-        getContentPane().add(jButton53, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 348, 30, 30));
-        getContentPane().add(jButton54, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 315, 30, 30));
-        getContentPane().add(jButton55, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 315, 30, 30));
-        getContentPane().add(jButton56, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 315, 30, 30));
-        getContentPane().add(jButton57, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 315, 30, 30));
-        getContentPane().add(jButton58, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 315, 30, 30));
-        getContentPane().add(jButton59, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 315, 30, 30));
-        getContentPane().add(jButton60, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 315, 30, 30));
-        getContentPane().add(jButton61, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 315, 30, 30));
-        getContentPane().add(jButton62, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 315, 30, 30));
-        getContentPane().add(jButton63, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 315, 30, 30));
-        getContentPane().add(jButton64, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 315, 30, 30));
-        getContentPane().add(jButton65, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 315, 30, 30));
-        getContentPane().add(jButton66, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 315, 30, 30));
-        getContentPane().add(jButton67, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 282, 30, 30));
-        getContentPane().add(jButton68, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 282, 30, 30));
-        getContentPane().add(jButton69, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 282, 30, 30));
-        getContentPane().add(jButton70, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 282, 30, 30));
-        getContentPane().add(jButton71, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 282, 30, 30));
-        getContentPane().add(jButton72, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 282, 30, 30));
-        getContentPane().add(jButton73, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 282, 30, 30));
-        getContentPane().add(jButton74, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 282, 30, 30));
-        getContentPane().add(jButton75, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 282, 30, 30));
-        getContentPane().add(jButton76, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 282, 30, 30));
-        getContentPane().add(jButton77, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 282, 30, 30));
-        getContentPane().add(jButton78, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 282, 30, 30));
-        getContentPane().add(jButton79, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 282, 30, 30));
-        getContentPane().add(jButton80, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 249, 30, 30));
-        getContentPane().add(jButton81, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 249, 30, 30));
-        getContentPane().add(jButton82, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 249, 30, 30));
-        getContentPane().add(jButton83, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 249, 30, 30));
-        getContentPane().add(jButton84, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 249, 30, 30));
-        getContentPane().add(jButton85, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 249, 30, 30));
-        getContentPane().add(jButton86, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 249, 30, 30));
-        getContentPane().add(jButton87, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 249, 30, 30));
-        getContentPane().add(jButton88, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 249, 30, 30));
-        getContentPane().add(jButton89, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 249, 30, 30));
-        getContentPane().add(jButton90, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 249, 30, 30));
-        getContentPane().add(jButton91, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 249, 30, 30));
-        getContentPane().add(jButton92, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 249, 30, 30));
-        getContentPane().add(jButton93, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 216, 30, 30));
-        getContentPane().add(jButton94, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 216, 30, 30));
-        getContentPane().add(jButton95, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 216, 30, 30));
-        getContentPane().add(jButton96, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 216, 30, 30));
-        getContentPane().add(jButton97, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 216, 30, 30));
-        getContentPane().add(jButton98, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 216, 30, 30));
-        getContentPane().add(jButton99, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 216, 30, 30));
-        getContentPane().add(jButton100, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 216, 30, 30));
-        getContentPane().add(jButton101, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 216, 30, 30));
-        getContentPane().add(jButton102, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 216, 30, 30));
-        getContentPane().add(jButton103, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 216, 30, 30));
-        getContentPane().add(jButton104, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 216, 30, 30));
-        getContentPane().add(jButton105, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 216, 30, 30));
-        getContentPane().add(jButton106, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 183, 30, 30));
-        getContentPane().add(jButton107, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 183, 30, 30));
-        getContentPane().add(jButton108, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 183, 30, 30));
-        getContentPane().add(jButton109, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 183, 30, 30));
-        getContentPane().add(jButton110, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 183, 30, 30));
-        getContentPane().add(jButton111, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 183, 30, 30));
-        getContentPane().add(jButton112, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 183, 30, 30));
-        getContentPane().add(jButton113, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 183, 30, 30));
-        getContentPane().add(jButton114, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 183, 30, 30));
-        getContentPane().add(jButton115, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 183, 30, 30));
-        getContentPane().add(jButton116, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 183, 30, 30));
-        getContentPane().add(jButton117, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 183, 30, 30));
-        getContentPane().add(jButton118, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 183, 30, 30));
-        getContentPane().add(jButton119, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 150, 30, 30));
-        getContentPane().add(jButton120, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 150, 30, 30));
-        getContentPane().add(jButton121, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 150, 30, 30));
-        getContentPane().add(jButton122, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 150, 30, 30));
-        getContentPane().add(jButton123, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, 30, 30));
-        getContentPane().add(jButton124, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 150, 30, 30));
-        getContentPane().add(jButton125, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 150, 30, 30));
-        getContentPane().add(jButton126, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 150, 30, 30));
-        getContentPane().add(jButton127, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 150, 30, 30));
-        getContentPane().add(jButton128, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 150, 30, 30));
-        getContentPane().add(jButton129, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 150, 30, 30));
-        getContentPane().add(jButton130, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 150, 30, 30));
-        getContentPane().add(jButton131, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 150, 30, 30));
-        getContentPane().add(jButton132, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 117, 30, 30));
-        getContentPane().add(jButton133, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 117, 30, 30));
-        getContentPane().add(jButton134, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 117, 30, 30));
-        getContentPane().add(jButton135, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 117, 30, 30));
-        getContentPane().add(jButton136, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 117, 30, 30));
-        getContentPane().add(jButton137, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 117, 30, 30));
-        getContentPane().add(jButton138, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 117, 30, 30));
-        getContentPane().add(jButton139, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 117, 30, 30));
-        getContentPane().add(jButton140, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 117, 30, 30));
-        getContentPane().add(jButton141, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 117, 30, 30));
-        getContentPane().add(jButton142, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 117, 30, 30));
-        getContentPane().add(jButton143, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 117, 30, 30));
-        getContentPane().add(jButton144, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 117, 30, 30));
-        getContentPane().add(jButton145, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 84, 30, 30));
-        getContentPane().add(jButton146, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 84, 30, 30));
-        getContentPane().add(jButton147, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 84, 30, 30));
-        getContentPane().add(jButton148, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 84, 30, 30));
-        getContentPane().add(jButton149, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 84, 30, 30));
-        getContentPane().add(jButton150, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 84, 30, 30));
-        getContentPane().add(jButton151, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 84, 30, 30));
-        getContentPane().add(jButton152, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 84, 30, 30));
-        getContentPane().add(jButton153, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 84, 30, 30));
-        getContentPane().add(jButton154, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 84, 30, 30));
-        getContentPane().add(jButton155, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 84, 30, 30));
-        getContentPane().add(jButton156, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 84, 30, 30));
-        getContentPane().add(jButton157, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 84, 30, 30));
-        getContentPane().add(jButton158, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 51, 30, 30));
-        getContentPane().add(jButton159, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 51, 30, 30));
-        getContentPane().add(jButton160, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 51, 30, 30));
-        getContentPane().add(jButton161, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 51, 30, 30));
-        getContentPane().add(jButton162, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 51, 30, 30));
-        getContentPane().add(jButton163, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 51, 30, 30));
-        getContentPane().add(jButton164, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 51, 30, 30));
-        getContentPane().add(jButton165, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 51, 30, 30));
-        getContentPane().add(jButton166, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 51, 30, 30));
-        getContentPane().add(jButton167, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 51, 30, 30));
-        getContentPane().add(jButton168, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 51, 30, 30));
-        getContentPane().add(jButton169, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 51, 30, 30));
-        getContentPane().add(jButton170, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 51, 30, 30));
-        getContentPane().add(b00, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 18, 30, 30));
-        getContentPane().add(b01, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 18, 30, 30));
-        getContentPane().add(jButton173, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 18, 30, 30));
-        getContentPane().add(jButton174, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 18, 30, 30));
-        getContentPane().add(jButton175, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 18, 30, 30));
-        getContentPane().add(jButton176, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 18, 30, 30));
-        getContentPane().add(jButton177, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 18, 30, 30));
-        getContentPane().add(jButton178, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 18, 30, 30));
-        getContentPane().add(jButton179, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 18, 30, 30));
-        getContentPane().add(jButton180, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 18, 30, 30));
-        getContentPane().add(jButton181, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 18, 30, 30));
-        getContentPane().add(jButton182, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 18, 30, 30));
-        getContentPane().add(jButton183, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 18, 30, 30));
+
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 449, 30, 30));
+
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 449, 30, 30));
+
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 449, 30, 30));
+
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 449, 30, 30));
+
+        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 449, 30, 30));
+
+        jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 449, 30, 30));
+
+        jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 449, 30, 30));
+
+        jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 449, 30, 30));
+
+        jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 449, 30, 30));
+
+        jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 449, 30, 30));
+
+        jButton12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 449, 30, 30));
+
+        jButton13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 449, 30, 30));
+
+        jButton14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 449, 30, 30));
+
+        jButton15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 416, 30, 30));
+
+        jButton16.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 416, 30, 30));
+
+        jButton17.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 416, 30, 30));
+
+        jButton18.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 416, 30, 30));
+
+        jButton19.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 416, 30, 30));
+
+        jButton20.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 416, 30, 30));
+
+        jButton21.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 416, 30, 30));
+
+        jButton22.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 416, 30, 30));
+
+        jButton23.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton23, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 416, 30, 30));
+
+        jButton24.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton24, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 416, 30, 30));
+
+        jButton25.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton25.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton25, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 416, 30, 30));
+
+        jButton26.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton26.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton26, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 416, 30, 30));
+
+        jButton27.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton27.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton27, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 416, 30, 30));
+
+        jButton28.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton28.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton28, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 383, 30, 30));
+
+        jButton29.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton29.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton29, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 383, 30, 30));
+
+        jButton30.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton30.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton30, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 383, 30, 30));
+
+        jButton31.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton31.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton31, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 383, 30, 30));
+
+        jButton32.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton32.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton32, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 383, 30, 30));
+
+        jButton33.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton33.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton33, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 383, 30, 30));
+
+        jButton34.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton34.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton34, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 383, 30, 30));
+
+        jButton35.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton35.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton35, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 383, 30, 30));
+
+        jButton36.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton36.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton36, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 383, 30, 30));
+
+        jButton37.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton37.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton37, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 383, 30, 30));
+
+        jButton38.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton38.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton38, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 383, 30, 30));
+
+        jButton39.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton39.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton39, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 383, 30, 30));
+
+        jButton40.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton40.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton40, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 383, 30, 30));
+
+        jButton41.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton41.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton41, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 350, 30, 30));
+
+        jButton42.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton42.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton42, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 350, 30, 30));
+
+        jButton43.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton43.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton43, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 350, 30, 30));
+
+        jButton44.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton44.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton44, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 350, 30, 30));
+
+        jButton45.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton45.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton45, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 350, 30, 30));
+
+        jButton46.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton46.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton46, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 350, 30, 30));
+
+        jButton47.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton47.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton47, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 350, 30, 30));
+
+        jButton48.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton48.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton48, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 350, 30, 30));
+
+        jButton49.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton49.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton49, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 350, 30, 30));
+
+        jButton50.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton50.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton50, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 350, 30, 30));
+
+        jButton51.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton51.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton51, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 350, 30, 30));
+
+        jButton52.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton52.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton52, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 350, 30, 30));
+
+        jButton53.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton53.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton53, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 350, 30, 30));
+
+        jButton54.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton54.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton54, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 317, 30, 30));
+
+        jButton55.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton55.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton55, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 317, 30, 30));
+
+        jButton56.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton56.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton56, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 317, 30, 30));
+
+        jButton57.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton57.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton57, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 317, 30, 30));
+
+        jButton58.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton58.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton58, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 317, 30, 30));
+
+        jButton59.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton59.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton59, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 317, 30, 30));
+
+        jButton60.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton60.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton60, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 317, 30, 30));
+
+        jButton61.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton61.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton61, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 317, 30, 30));
+
+        jButton62.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton62.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton62, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 317, 30, 30));
+
+        jButton63.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton63.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton63, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 317, 30, 30));
+
+        jButton64.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton64.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton64, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 317, 30, 30));
+
+        jButton65.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton65.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton65, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 317, 30, 30));
+
+        jButton66.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton66.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton66, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 317, 30, 30));
+
+        jButton67.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton67.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton67, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 284, 30, 30));
+
+        jButton68.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton68.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton68, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 284, 30, 30));
+
+        jButton69.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton69.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton69, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 284, 30, 30));
+
+        jButton70.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton70.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton70, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 284, 30, 30));
+
+        jButton71.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton71.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton71, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 284, 30, 30));
+
+        jButton72.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton72.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton72, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 284, 30, 30));
+
+        jButton73.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton73.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton73, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 284, 30, 30));
+
+        jButton74.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton74.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton74, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 284, 30, 30));
+
+        jButton75.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton75.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton75, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 284, 30, 30));
+
+        jButton76.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton76.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton76, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 284, 30, 30));
+
+        jButton77.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton77.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton77, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 284, 30, 30));
+
+        jButton78.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton78.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton78, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 284, 30, 30));
+
+        jButton79.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton79.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton79, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 284, 30, 30));
+
+        jButton80.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton80.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton80, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 251, 30, 30));
+
+        jButton81.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton81.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton81, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 251, 30, 30));
+
+        jButton82.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton82.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton82, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 251, 30, 30));
+
+        jButton83.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton83.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton83, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 251, 30, 30));
+
+        jButton84.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton84.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton84, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 251, 30, 30));
+
+        jButton85.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton85.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton85, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 251, 30, 30));
+
+        jButton86.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton86.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton86, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 251, 30, 30));
+
+        jButton87.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton87.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton87, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 251, 30, 30));
+
+        jButton88.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton88.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton88, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 251, 30, 30));
+
+        jButton89.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton89.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton89, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 251, 30, 30));
+
+        jButton90.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton90.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton90, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 251, 30, 30));
+
+        jButton91.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton91.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton91, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 251, 30, 30));
+
+        jButton92.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton92.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton92, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 251, 30, 30));
+
+        jButton93.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton93.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton93, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 218, 30, 30));
+
+        jButton94.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton94.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton94, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 218, 30, 30));
+
+        jButton95.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton95.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton95, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 218, 30, 30));
+
+        jButton96.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton96.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton96, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 218, 30, 30));
+
+        jButton97.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton97.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton97, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 218, 30, 30));
+
+        jButton98.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton98.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton98, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 218, 30, 30));
+
+        jButton99.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton99.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton99, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 218, 30, 30));
+
+        jButton100.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton100.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton100, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 218, 30, 30));
+
+        jButton101.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton101.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton101, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 218, 30, 30));
+
+        jButton102.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton102.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton102, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 218, 30, 30));
+
+        jButton103.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton103.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton103, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 218, 30, 30));
+
+        jButton104.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton104.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton104, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 218, 30, 30));
+
+        jButton105.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton105.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton105, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 218, 30, 30));
+
+        jButton106.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton106.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton106, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 185, 30, 30));
+
+        jButton107.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton107.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton107, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 185, 30, 30));
+
+        jButton108.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton108.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton108, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 185, 30, 30));
+
+        jButton109.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton109.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton109, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 185, 30, 30));
+
+        jButton110.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton110.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton110, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 185, 30, 30));
+
+        jButton111.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton111.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton111, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 185, 30, 30));
+
+        jButton112.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton112.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton112, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 185, 30, 30));
+
+        jButton113.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton113.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton113, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 185, 30, 30));
+
+        jButton114.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton114.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton114, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 185, 30, 30));
+
+        jButton115.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton115.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton115, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 185, 30, 30));
+
+        jButton116.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton116.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton116, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 185, 30, 30));
+
+        jButton117.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton117.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton117, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 185, 30, 30));
+
+        jButton118.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton118.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton118, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 185, 30, 30));
+
+        jButton119.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton119.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton119, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 152, 30, 30));
+
+        jButton120.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton120.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton120, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 152, 30, 30));
+
+        jButton121.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton121.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton121, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 152, 30, 30));
+
+        jButton122.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton122.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton122, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 152, 30, 30));
+
+        jButton123.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton123.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton123, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 152, 30, 30));
+
+        jButton124.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton124.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton124, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 152, 30, 30));
+
+        jButton125.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton125.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton125, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 152, 30, 30));
+
+        jButton126.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton126.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton126, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 152, 30, 30));
+
+        jButton127.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton127.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton127, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 152, 30, 30));
+
+        jButton128.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton128.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton128, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 152, 30, 30));
+
+        jButton129.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton129.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton129, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 152, 30, 30));
+
+        jButton130.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton130.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton130, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 152, 30, 30));
+
+        jButton131.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton131.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton131, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 152, 30, 30));
+
+        jButton132.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton132.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton132, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 119, 30, 30));
+
+        jButton133.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton133.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton133, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 119, 30, 30));
+
+        jButton134.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton134.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton134, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 119, 30, 30));
+
+        jButton135.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton135.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton135, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 119, 30, 30));
+
+        jButton136.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton136.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton136, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 119, 30, 30));
+
+        jButton137.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton137.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton137, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 119, 30, 30));
+
+        jButton138.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton138.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton138, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 119, 30, 30));
+
+        jButton139.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton139.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton139, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 119, 30, 30));
+
+        jButton140.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton140.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton140, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 119, 30, 30));
+
+        jButton141.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton141.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton141, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 119, 30, 30));
+
+        jButton142.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton142.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton142, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 119, 30, 30));
+
+        jButton143.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton143.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton143, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 119, 30, 30));
+
+        jButton144.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton144.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton144, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 119, 30, 30));
+
+        jButton145.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton145.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton145, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 86, 30, 30));
+
+        jButton146.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton146.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton146, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 86, 30, 30));
+
+        jButton147.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton147.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton147, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 86, 30, 30));
+
+        jButton148.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton148.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton148, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 86, 30, 30));
+
+        jButton149.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton149.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton149, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 86, 30, 30));
+
+        jButton150.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton150.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton150, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 86, 30, 30));
+
+        jButton151.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton151.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton151, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 86, 30, 30));
+
+        jButton152.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton152.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton152, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 86, 30, 30));
+
+        jButton153.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton153.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton153, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 86, 30, 30));
+
+        jButton154.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton154.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton154, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 86, 30, 30));
+
+        jButton155.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton155.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton155, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 86, 30, 30));
+
+        jButton156.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton156.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton156, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 86, 30, 30));
+
+        jButton157.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton157.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton157, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 86, 30, 30));
+
+        jButton158.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton158.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton158, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 53, 30, 30));
+
+        jButton159.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton159.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton159, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 53, 30, 30));
+
+        jButton160.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton160.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton160, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 53, 30, 30));
+
+        jButton161.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton161.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton161, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 53, 30, 30));
+
+        jButton162.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton162.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton162, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 53, 30, 30));
+
+        jButton163.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton163.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton163, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 53, 30, 30));
+
+        jButton164.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton164.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton164, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 53, 30, 30));
+
+        jButton165.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton165.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton165, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 53, 30, 30));
+
+        jButton166.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton166.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton166, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 53, 30, 30));
+
+        jButton167.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton167.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton167, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 53, 30, 30));
+
+        jButton168.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton168.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton168, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 53, 30, 30));
+
+        jButton169.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton169.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton169, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 53, 30, 30));
+
+        jButton170.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton170.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton170, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 53, 30, 30));
+
+        b00.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        b00.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(b00, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 20, 30, 30));
+
+        b01.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        b01.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(b01, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 20, 30, 30));
+
+        jButton173.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton173.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton173, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 20, 30, 30));
+
+        jButton174.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton174.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton174, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 20, 30, 30));
+
+        jButton175.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton175.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton175, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, 30, 30));
+
+        jButton176.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton176.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton176, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 20, 30, 30));
+
+        jButton177.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton177.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton177, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 20, 30, 30));
+
+        jButton178.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton178.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton178, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 20, 30, 30));
+
+        jButton179.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton179.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton179, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 20, 30, 30));
+
+        jButton180.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton180.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton180, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 20, 30, 30));
+
+        jButton181.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton181.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton181, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 20, 30, 30));
+
+        jButton182.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton182.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton182, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 20, 30, 30));
+
+        jButton183.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mexit(evt);
+            }
+        });
+        jButton183.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                click(evt);
+            }
+        });
+        getContentPane().add(jButton183, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 20, 30, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tabs/15x15.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -488,6 +3046,28 @@ public class tab15 extends javax.swing.JFrame {
     private void shiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_shiroActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_shiroActionPerformed
+
+    private void click(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_click
+        gamemec mec = new gamemec();
+        javax.swing.JButton opt = mec.getButt(evt.getSource());
+        int col = mec.getcol(opt), fil = mec.getfil(opt);        
+        
+        mec.marcar(opt, mec.getTurn());
+        
+
+
+            
+        
+        
+    }//GEN-LAST:event_click
+
+    private void menter(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menter
+        // TODO add your handling code here:
+    }//GEN-LAST:event_menter
+
+    private void mexit(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mexit
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mexit
 
 
     /**

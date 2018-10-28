@@ -262,6 +262,7 @@ public class tab15 extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setFocusable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("UD Digi Kyokasho NP-B", 0, 48)); // NOI18N
@@ -287,6 +288,7 @@ public class tab15 extends javax.swing.JFrame {
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 160, -1, -1));
 
         kuro.setEditable(false);
+        kuro.setFocusable(false);
         kuro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 kuroActionPerformed(evt);
@@ -295,6 +297,7 @@ public class tab15 extends javax.swing.JFrame {
         getContentPane().add(kuro, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 110, 140, -1));
 
         shiro.setEditable(false);
+        shiro.setFocusable(false);
         shiro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 shiroActionPerformed(evt);
@@ -302,6 +305,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(shiro, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 110, 140, -1));
 
+        jButton2.setContentAreaFilled(false);
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -317,6 +321,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 449, 30, 30));
 
+        jButton3.setContentAreaFilled(false);
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -332,6 +337,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 449, 30, 30));
 
+        jButton4.setContentAreaFilled(false);
         jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -347,6 +353,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 449, 30, 30));
 
+        jButton5.setContentAreaFilled(false);
         jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -362,6 +369,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 449, 30, 30));
 
+        jButton6.setContentAreaFilled(false);
         jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -377,6 +385,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 449, 30, 30));
 
+        jButton7.setContentAreaFilled(false);
         jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -392,6 +401,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 449, 30, 30));
 
+        jButton8.setContentAreaFilled(false);
         jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -407,6 +417,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 449, 30, 30));
 
+        jButton9.setContentAreaFilled(false);
         jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -422,6 +433,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 449, 30, 30));
 
+        jButton10.setContentAreaFilled(false);
         jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -437,6 +449,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 449, 30, 30));
 
+        jButton11.setContentAreaFilled(false);
         jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -452,6 +465,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 449, 30, 30));
 
+        jButton12.setContentAreaFilled(false);
         jButton12.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -467,6 +481,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 449, 30, 30));
 
+        jButton13.setContentAreaFilled(false);
         jButton13.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -482,6 +497,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 449, 30, 30));
 
+        jButton14.setContentAreaFilled(false);
         jButton14.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -497,6 +513,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 449, 30, 30));
 
+        jButton15.setContentAreaFilled(false);
         jButton15.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -512,6 +529,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 416, 30, 30));
 
+        jButton16.setContentAreaFilled(false);
         jButton16.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -527,6 +545,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 416, 30, 30));
 
+        jButton17.setContentAreaFilled(false);
         jButton17.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -542,6 +561,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 416, 30, 30));
 
+        jButton18.setContentAreaFilled(false);
         jButton18.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -557,6 +577,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 416, 30, 30));
 
+        jButton19.setContentAreaFilled(false);
         jButton19.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -572,6 +593,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 416, 30, 30));
 
+        jButton20.setContentAreaFilled(false);
         jButton20.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -587,6 +609,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 416, 30, 30));
 
+        jButton21.setContentAreaFilled(false);
         jButton21.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -602,6 +625,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 416, 30, 30));
 
+        jButton22.setContentAreaFilled(false);
         jButton22.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -617,6 +641,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 416, 30, 30));
 
+        jButton23.setContentAreaFilled(false);
         jButton23.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -632,6 +657,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton23, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 416, 30, 30));
 
+        jButton24.setContentAreaFilled(false);
         jButton24.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -647,6 +673,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton24, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 416, 30, 30));
 
+        jButton25.setContentAreaFilled(false);
         jButton25.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -662,6 +689,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton25, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 416, 30, 30));
 
+        jButton26.setContentAreaFilled(false);
         jButton26.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -677,6 +705,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton26, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 416, 30, 30));
 
+        jButton27.setContentAreaFilled(false);
         jButton27.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -692,6 +721,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton27, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 416, 30, 30));
 
+        jButton28.setContentAreaFilled(false);
         jButton28.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -707,6 +737,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton28, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 383, 30, 30));
 
+        jButton29.setContentAreaFilled(false);
         jButton29.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -722,6 +753,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton29, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 383, 30, 30));
 
+        jButton30.setContentAreaFilled(false);
         jButton30.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -737,6 +769,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton30, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 383, 30, 30));
 
+        jButton31.setContentAreaFilled(false);
         jButton31.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -752,6 +785,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton31, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 383, 30, 30));
 
+        jButton32.setContentAreaFilled(false);
         jButton32.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -767,6 +801,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton32, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 383, 30, 30));
 
+        jButton33.setContentAreaFilled(false);
         jButton33.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -782,6 +817,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton33, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 383, 30, 30));
 
+        jButton34.setContentAreaFilled(false);
         jButton34.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -797,6 +833,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton34, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 383, 30, 30));
 
+        jButton35.setContentAreaFilled(false);
         jButton35.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -812,6 +849,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton35, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 383, 30, 30));
 
+        jButton36.setContentAreaFilled(false);
         jButton36.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -827,6 +865,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton36, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 383, 30, 30));
 
+        jButton37.setContentAreaFilled(false);
         jButton37.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -842,6 +881,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton37, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 383, 30, 30));
 
+        jButton38.setContentAreaFilled(false);
         jButton38.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -857,6 +897,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton38, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 383, 30, 30));
 
+        jButton39.setContentAreaFilled(false);
         jButton39.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -872,6 +913,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton39, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 383, 30, 30));
 
+        jButton40.setContentAreaFilled(false);
         jButton40.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -887,6 +929,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton40, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 383, 30, 30));
 
+        jButton41.setContentAreaFilled(false);
         jButton41.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -902,6 +945,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton41, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 350, 30, 30));
 
+        jButton42.setContentAreaFilled(false);
         jButton42.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -917,6 +961,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton42, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 350, 30, 30));
 
+        jButton43.setContentAreaFilled(false);
         jButton43.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -932,6 +977,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton43, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 350, 30, 30));
 
+        jButton44.setContentAreaFilled(false);
         jButton44.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -947,6 +993,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton44, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 350, 30, 30));
 
+        jButton45.setContentAreaFilled(false);
         jButton45.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -962,6 +1009,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton45, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 350, 30, 30));
 
+        jButton46.setContentAreaFilled(false);
         jButton46.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -977,6 +1025,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton46, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 350, 30, 30));
 
+        jButton47.setContentAreaFilled(false);
         jButton47.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -992,6 +1041,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton47, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 350, 30, 30));
 
+        jButton48.setContentAreaFilled(false);
         jButton48.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1007,6 +1057,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton48, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 350, 30, 30));
 
+        jButton49.setContentAreaFilled(false);
         jButton49.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1022,6 +1073,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton49, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 350, 30, 30));
 
+        jButton50.setContentAreaFilled(false);
         jButton50.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1037,6 +1089,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton50, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 350, 30, 30));
 
+        jButton51.setContentAreaFilled(false);
         jButton51.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1052,6 +1105,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton51, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 350, 30, 30));
 
+        jButton52.setContentAreaFilled(false);
         jButton52.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1067,6 +1121,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton52, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 350, 30, 30));
 
+        jButton53.setContentAreaFilled(false);
         jButton53.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1082,6 +1137,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton53, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 350, 30, 30));
 
+        jButton54.setContentAreaFilled(false);
         jButton54.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1097,6 +1153,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton54, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 317, 30, 30));
 
+        jButton55.setContentAreaFilled(false);
         jButton55.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1112,6 +1169,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton55, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 317, 30, 30));
 
+        jButton56.setContentAreaFilled(false);
         jButton56.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1127,6 +1185,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton56, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 317, 30, 30));
 
+        jButton57.setContentAreaFilled(false);
         jButton57.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1142,6 +1201,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton57, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 317, 30, 30));
 
+        jButton58.setContentAreaFilled(false);
         jButton58.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1157,6 +1217,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton58, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 317, 30, 30));
 
+        jButton59.setContentAreaFilled(false);
         jButton59.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1172,6 +1233,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton59, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 317, 30, 30));
 
+        jButton60.setContentAreaFilled(false);
         jButton60.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1187,6 +1249,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton60, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 317, 30, 30));
 
+        jButton61.setContentAreaFilled(false);
         jButton61.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1202,6 +1265,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton61, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 317, 30, 30));
 
+        jButton62.setContentAreaFilled(false);
         jButton62.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1217,6 +1281,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton62, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 317, 30, 30));
 
+        jButton63.setContentAreaFilled(false);
         jButton63.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1232,6 +1297,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton63, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 317, 30, 30));
 
+        jButton64.setContentAreaFilled(false);
         jButton64.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1247,6 +1313,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton64, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 317, 30, 30));
 
+        jButton65.setContentAreaFilled(false);
         jButton65.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1262,6 +1329,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton65, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 317, 30, 30));
 
+        jButton66.setContentAreaFilled(false);
         jButton66.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1277,6 +1345,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton66, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 317, 30, 30));
 
+        jButton67.setContentAreaFilled(false);
         jButton67.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1292,6 +1361,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton67, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 284, 30, 30));
 
+        jButton68.setContentAreaFilled(false);
         jButton68.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1307,6 +1377,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton68, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 284, 30, 30));
 
+        jButton69.setContentAreaFilled(false);
         jButton69.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1322,6 +1393,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton69, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 284, 30, 30));
 
+        jButton70.setContentAreaFilled(false);
         jButton70.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1337,6 +1409,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton70, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 284, 30, 30));
 
+        jButton71.setContentAreaFilled(false);
         jButton71.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1352,6 +1425,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton71, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 284, 30, 30));
 
+        jButton72.setContentAreaFilled(false);
         jButton72.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1367,6 +1441,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton72, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 284, 30, 30));
 
+        jButton73.setContentAreaFilled(false);
         jButton73.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1382,6 +1457,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton73, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 284, 30, 30));
 
+        jButton74.setContentAreaFilled(false);
         jButton74.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1397,6 +1473,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton74, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 284, 30, 30));
 
+        jButton75.setContentAreaFilled(false);
         jButton75.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1412,6 +1489,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton75, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 284, 30, 30));
 
+        jButton76.setContentAreaFilled(false);
         jButton76.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1427,6 +1505,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton76, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 284, 30, 30));
 
+        jButton77.setContentAreaFilled(false);
         jButton77.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1442,6 +1521,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton77, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 284, 30, 30));
 
+        jButton78.setContentAreaFilled(false);
         jButton78.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1457,6 +1537,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton78, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 284, 30, 30));
 
+        jButton79.setContentAreaFilled(false);
         jButton79.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1472,6 +1553,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton79, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 284, 30, 30));
 
+        jButton80.setContentAreaFilled(false);
         jButton80.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1487,6 +1569,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton80, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 251, 30, 30));
 
+        jButton81.setContentAreaFilled(false);
         jButton81.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1502,6 +1585,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton81, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 251, 30, 30));
 
+        jButton82.setContentAreaFilled(false);
         jButton82.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1517,6 +1601,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton82, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 251, 30, 30));
 
+        jButton83.setContentAreaFilled(false);
         jButton83.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1532,6 +1617,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton83, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 251, 30, 30));
 
+        jButton84.setContentAreaFilled(false);
         jButton84.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1547,6 +1633,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton84, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 251, 30, 30));
 
+        jButton85.setContentAreaFilled(false);
         jButton85.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1562,6 +1649,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton85, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 251, 30, 30));
 
+        jButton86.setContentAreaFilled(false);
         jButton86.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1577,6 +1665,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton86, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 251, 30, 30));
 
+        jButton87.setContentAreaFilled(false);
         jButton87.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1592,6 +1681,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton87, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 251, 30, 30));
 
+        jButton88.setContentAreaFilled(false);
         jButton88.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1607,6 +1697,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton88, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 251, 30, 30));
 
+        jButton89.setContentAreaFilled(false);
         jButton89.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1622,6 +1713,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton89, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 251, 30, 30));
 
+        jButton90.setContentAreaFilled(false);
         jButton90.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1637,6 +1729,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton90, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 251, 30, 30));
 
+        jButton91.setContentAreaFilled(false);
         jButton91.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1652,6 +1745,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton91, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 251, 30, 30));
 
+        jButton92.setContentAreaFilled(false);
         jButton92.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1667,6 +1761,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton92, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 251, 30, 30));
 
+        jButton93.setContentAreaFilled(false);
         jButton93.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1682,6 +1777,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton93, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 218, 30, 30));
 
+        jButton94.setContentAreaFilled(false);
         jButton94.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1697,6 +1793,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton94, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 218, 30, 30));
 
+        jButton95.setContentAreaFilled(false);
         jButton95.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1712,6 +1809,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton95, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 218, 30, 30));
 
+        jButton96.setContentAreaFilled(false);
         jButton96.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1727,6 +1825,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton96, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 218, 30, 30));
 
+        jButton97.setContentAreaFilled(false);
         jButton97.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1742,6 +1841,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton97, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 218, 30, 30));
 
+        jButton98.setContentAreaFilled(false);
         jButton98.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1757,6 +1857,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton98, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 218, 30, 30));
 
+        jButton99.setContentAreaFilled(false);
         jButton99.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1772,6 +1873,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton99, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 218, 30, 30));
 
+        jButton100.setContentAreaFilled(false);
         jButton100.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1787,6 +1889,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton100, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 218, 30, 30));
 
+        jButton101.setContentAreaFilled(false);
         jButton101.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1802,6 +1905,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton101, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 218, 30, 30));
 
+        jButton102.setContentAreaFilled(false);
         jButton102.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1817,6 +1921,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton102, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 218, 30, 30));
 
+        jButton103.setContentAreaFilled(false);
         jButton103.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1832,6 +1937,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton103, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 218, 30, 30));
 
+        jButton104.setContentAreaFilled(false);
         jButton104.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1847,6 +1953,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton104, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 218, 30, 30));
 
+        jButton105.setContentAreaFilled(false);
         jButton105.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1862,6 +1969,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton105, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 218, 30, 30));
 
+        jButton106.setContentAreaFilled(false);
         jButton106.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1877,6 +1985,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton106, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 185, 30, 30));
 
+        jButton107.setContentAreaFilled(false);
         jButton107.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1892,6 +2001,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton107, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 185, 30, 30));
 
+        jButton108.setContentAreaFilled(false);
         jButton108.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1907,6 +2017,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton108, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 185, 30, 30));
 
+        jButton109.setContentAreaFilled(false);
         jButton109.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1922,6 +2033,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton109, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 185, 30, 30));
 
+        jButton110.setContentAreaFilled(false);
         jButton110.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1937,6 +2049,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton110, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 185, 30, 30));
 
+        jButton111.setContentAreaFilled(false);
         jButton111.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1952,6 +2065,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton111, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 185, 30, 30));
 
+        jButton112.setContentAreaFilled(false);
         jButton112.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1967,6 +2081,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton112, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 185, 30, 30));
 
+        jButton113.setContentAreaFilled(false);
         jButton113.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1982,6 +2097,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton113, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 185, 30, 30));
 
+        jButton114.setContentAreaFilled(false);
         jButton114.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -1997,6 +2113,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton114, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 185, 30, 30));
 
+        jButton115.setContentAreaFilled(false);
         jButton115.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2012,6 +2129,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton115, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 185, 30, 30));
 
+        jButton116.setContentAreaFilled(false);
         jButton116.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2027,6 +2145,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton116, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 185, 30, 30));
 
+        jButton117.setContentAreaFilled(false);
         jButton117.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2042,6 +2161,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton117, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 185, 30, 30));
 
+        jButton118.setContentAreaFilled(false);
         jButton118.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2057,6 +2177,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton118, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 185, 30, 30));
 
+        jButton119.setContentAreaFilled(false);
         jButton119.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2072,6 +2193,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton119, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 152, 30, 30));
 
+        jButton120.setContentAreaFilled(false);
         jButton120.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2087,6 +2209,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton120, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 152, 30, 30));
 
+        jButton121.setContentAreaFilled(false);
         jButton121.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2102,6 +2225,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton121, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 152, 30, 30));
 
+        jButton122.setContentAreaFilled(false);
         jButton122.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2117,6 +2241,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton122, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 152, 30, 30));
 
+        jButton123.setContentAreaFilled(false);
         jButton123.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2132,6 +2257,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton123, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 152, 30, 30));
 
+        jButton124.setContentAreaFilled(false);
         jButton124.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2147,6 +2273,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton124, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 152, 30, 30));
 
+        jButton125.setContentAreaFilled(false);
         jButton125.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2162,6 +2289,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton125, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 152, 30, 30));
 
+        jButton126.setContentAreaFilled(false);
         jButton126.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2177,6 +2305,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton126, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 152, 30, 30));
 
+        jButton127.setContentAreaFilled(false);
         jButton127.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2192,6 +2321,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton127, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 152, 30, 30));
 
+        jButton128.setContentAreaFilled(false);
         jButton128.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2207,6 +2337,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton128, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 152, 30, 30));
 
+        jButton129.setContentAreaFilled(false);
         jButton129.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2222,6 +2353,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton129, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 152, 30, 30));
 
+        jButton130.setContentAreaFilled(false);
         jButton130.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2237,6 +2369,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton130, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 152, 30, 30));
 
+        jButton131.setContentAreaFilled(false);
         jButton131.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2252,6 +2385,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton131, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 152, 30, 30));
 
+        jButton132.setContentAreaFilled(false);
         jButton132.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2267,6 +2401,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton132, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 119, 30, 30));
 
+        jButton133.setContentAreaFilled(false);
         jButton133.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2282,6 +2417,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton133, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 119, 30, 30));
 
+        jButton134.setContentAreaFilled(false);
         jButton134.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2297,6 +2433,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton134, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 119, 30, 30));
 
+        jButton135.setContentAreaFilled(false);
         jButton135.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2312,6 +2449,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton135, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 119, 30, 30));
 
+        jButton136.setContentAreaFilled(false);
         jButton136.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2327,6 +2465,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton136, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 119, 30, 30));
 
+        jButton137.setContentAreaFilled(false);
         jButton137.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2342,6 +2481,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton137, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 119, 30, 30));
 
+        jButton138.setContentAreaFilled(false);
         jButton138.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2357,6 +2497,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton138, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 119, 30, 30));
 
+        jButton139.setContentAreaFilled(false);
         jButton139.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2372,6 +2513,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton139, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 119, 30, 30));
 
+        jButton140.setContentAreaFilled(false);
         jButton140.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2387,6 +2529,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton140, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 119, 30, 30));
 
+        jButton141.setContentAreaFilled(false);
         jButton141.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2402,6 +2545,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton141, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 119, 30, 30));
 
+        jButton142.setContentAreaFilled(false);
         jButton142.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2417,6 +2561,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton142, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 119, 30, 30));
 
+        jButton143.setContentAreaFilled(false);
         jButton143.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2432,6 +2577,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton143, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 119, 30, 30));
 
+        jButton144.setContentAreaFilled(false);
         jButton144.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2447,6 +2593,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton144, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 119, 30, 30));
 
+        jButton145.setContentAreaFilled(false);
         jButton145.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2462,6 +2609,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton145, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 86, 30, 30));
 
+        jButton146.setContentAreaFilled(false);
         jButton146.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2477,6 +2625,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton146, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 86, 30, 30));
 
+        jButton147.setContentAreaFilled(false);
         jButton147.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2492,6 +2641,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton147, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 86, 30, 30));
 
+        jButton148.setContentAreaFilled(false);
         jButton148.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2507,6 +2657,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton148, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 86, 30, 30));
 
+        jButton149.setContentAreaFilled(false);
         jButton149.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2522,6 +2673,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton149, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 86, 30, 30));
 
+        jButton150.setContentAreaFilled(false);
         jButton150.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2537,6 +2689,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton150, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 86, 30, 30));
 
+        jButton151.setContentAreaFilled(false);
         jButton151.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2552,6 +2705,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton151, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 86, 30, 30));
 
+        jButton152.setContentAreaFilled(false);
         jButton152.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2567,6 +2721,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton152, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 86, 30, 30));
 
+        jButton153.setContentAreaFilled(false);
         jButton153.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2582,6 +2737,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton153, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 86, 30, 30));
 
+        jButton154.setContentAreaFilled(false);
         jButton154.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2597,6 +2753,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton154, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 86, 30, 30));
 
+        jButton155.setContentAreaFilled(false);
         jButton155.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2612,6 +2769,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton155, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 86, 30, 30));
 
+        jButton156.setContentAreaFilled(false);
         jButton156.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2627,6 +2785,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton156, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 86, 30, 30));
 
+        jButton157.setContentAreaFilled(false);
         jButton157.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2642,6 +2801,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton157, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 86, 30, 30));
 
+        jButton158.setContentAreaFilled(false);
         jButton158.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2657,6 +2817,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton158, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 53, 30, 30));
 
+        jButton159.setContentAreaFilled(false);
         jButton159.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2672,6 +2833,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton159, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 53, 30, 30));
 
+        jButton160.setContentAreaFilled(false);
         jButton160.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2687,6 +2849,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton160, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 53, 30, 30));
 
+        jButton161.setContentAreaFilled(false);
         jButton161.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2702,6 +2865,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton161, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 53, 30, 30));
 
+        jButton162.setContentAreaFilled(false);
         jButton162.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2717,6 +2881,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton162, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 53, 30, 30));
 
+        jButton163.setContentAreaFilled(false);
         jButton163.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2732,6 +2897,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton163, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 53, 30, 30));
 
+        jButton164.setContentAreaFilled(false);
         jButton164.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2747,6 +2913,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton164, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 53, 30, 30));
 
+        jButton165.setContentAreaFilled(false);
         jButton165.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2762,6 +2929,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton165, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 53, 30, 30));
 
+        jButton166.setContentAreaFilled(false);
         jButton166.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2777,6 +2945,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton166, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 53, 30, 30));
 
+        jButton167.setContentAreaFilled(false);
         jButton167.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2792,6 +2961,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton167, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 53, 30, 30));
 
+        jButton168.setContentAreaFilled(false);
         jButton168.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2807,6 +2977,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton168, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 53, 30, 30));
 
+        jButton169.setContentAreaFilled(false);
         jButton169.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2822,6 +2993,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton169, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 53, 30, 30));
 
+        jButton170.setContentAreaFilled(false);
         jButton170.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2837,6 +3009,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton170, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 53, 30, 30));
 
+        b00.setContentAreaFilled(false);
         b00.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2852,6 +3025,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(b00, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 20, 30, 30));
 
+        b01.setContentAreaFilled(false);
         b01.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2867,6 +3041,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(b01, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 20, 30, 30));
 
+        jButton173.setContentAreaFilled(false);
         jButton173.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2882,6 +3057,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton173, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 20, 30, 30));
 
+        jButton174.setContentAreaFilled(false);
         jButton174.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2897,6 +3073,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton174, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 20, 30, 30));
 
+        jButton175.setContentAreaFilled(false);
         jButton175.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2912,6 +3089,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton175, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, 30, 30));
 
+        jButton176.setContentAreaFilled(false);
         jButton176.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2927,6 +3105,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton176, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 20, 30, 30));
 
+        jButton177.setContentAreaFilled(false);
         jButton177.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2942,6 +3121,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton177, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 20, 30, 30));
 
+        jButton178.setContentAreaFilled(false);
         jButton178.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2957,6 +3137,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton178, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 20, 30, 30));
 
+        jButton179.setContentAreaFilled(false);
         jButton179.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2972,6 +3153,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton179, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 20, 30, 30));
 
+        jButton180.setContentAreaFilled(false);
         jButton180.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -2987,6 +3169,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton180, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 20, 30, 30));
 
+        jButton181.setContentAreaFilled(false);
         jButton181.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -3002,6 +3185,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton181, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 20, 30, 30));
 
+        jButton182.setContentAreaFilled(false);
         jButton182.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -3017,6 +3201,7 @@ public class tab15 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton182, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 20, 30, 30));
 
+        jButton183.setContentAreaFilled(false);
         jButton183.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menter(evt);
@@ -3062,11 +3247,13 @@ public class tab15 extends javax.swing.JFrame {
     }//GEN-LAST:event_click
 
     private void menter(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menter
-        // TODO add your handling code here:
+        gamemec mec = new gamemec();
+        mec.sombrear(mec.getButt(evt.getSource()), mec.getTurn(), true);
     }//GEN-LAST:event_menter
 
     private void mexit(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mexit
-        // TODO add your handling code here:
+        gamemec mec = new gamemec();
+        mec.sombrear(mec.getButt(evt.getSource()), mec.getTurn(), false);
     }//GEN-LAST:event_mexit
 
 

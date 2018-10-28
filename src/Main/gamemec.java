@@ -23,11 +23,14 @@ public class gamemec {
     public String p1;
     public String p2;
     
-    public static int[][] tab = new int[20][20];
+    public static int[][] tab = new int[21][21];
     
     
     public static final Icon blanc = new ImageIcon("src/Buttons/blancafinal.png");
     public static final Icon noir = new ImageIcon("src/Buttons/negrafinal.png");
+    public static final Icon transnoir = new ImageIcon("src/Buttons/negratransfinal.png");
+    public static final Icon transblanc = new ImageIcon("src/Buttons/blancatransfinal.png");
+    
     
     public void assturn(){
         double rand = Math.random();
@@ -119,5 +122,19 @@ public class gamemec {
             
     }
     
+    public void sombrear(javax.swing.JButton button, int turno, boolean ent){
+        if(tab[getcol(button)][getfil(button)] == 0){
+            if(ent){
+                if(turno == noire){
+                    button.setIcon(transnoir);
+                } else{
+                    button.setIcon(transblanc);
+                }
+            } else{
+                button.setIcon(null);
+            }
+        }
+            
+    }
     
 }

@@ -5534,7 +5534,7 @@ public class tab19 extends javax.swing.JFrame {
         
         mec.marcar(opt, mec.getTurn());
         if(mec.chkvic() != 0){
-            if (mec.chkvic() == tneg){
+            if (mec.chkvic() == mec.getnoir()){
                 JOptionPane.showMessageDialog(null, "Ganó el NEGRO PUTITO");
             } else{
                 JOptionPane.showMessageDialog(null, "Ganó el BLANCO PUTITO");

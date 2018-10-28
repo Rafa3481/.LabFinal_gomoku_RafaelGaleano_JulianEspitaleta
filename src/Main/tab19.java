@@ -370,6 +370,9 @@ public class tab19 extends javax.swing.JFrame {
         jButton611 = new javax.swing.JButton();
         jButton612 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        esplab = new javax.swing.JLabel();
+        tlab = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -5523,6 +5526,19 @@ public class tab19 extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tabs/19x19.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 630));
 
+        esplab.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 24)); // NOI18N
+        esplab.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        esplab.setText("(Negras)");
+        getContentPane().add(esplab, new org.netbeans.lib.awtextra.AbsoluteConstraints(736, 370, 110, -1));
+
+        tlab.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 120)); // NOI18N
+        tlab.setText("黒");
+        getContentPane().add(tlab, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 250, -1, 110));
+
+        jLabel9.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 24)); // NOI18N
+        jLabel9.setText("Turno Actual:");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 210, -1, -1));
+
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
@@ -5533,6 +5549,13 @@ public class tab19 extends javax.swing.JFrame {
         int col = mec.getcol(opt), fil = mec.getfil(opt);        
         
         mec.marcar(opt, mec.getTurn());
+         if (mec.getTurn() == mec.getnoir()){
+            tlab.setText("黒");
+            esplab.setText("(Negras)");
+        } else{
+            tlab.setText("白");
+            esplab.setText("(Blancas)");
+        }
         if(mec.chkvic() != 0){
             if (mec.chkvic() == mec.getnoir()){
                 JOptionPane.showMessageDialog(null, "Ganó el NEGRO PUTITO");
@@ -5589,6 +5612,7 @@ public class tab19 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel esplab;
     private javax.swing.JButton jButton307;
     private javax.swing.JButton jButton308;
     private javax.swing.JButton jButton309;
@@ -5901,7 +5925,9 @@ public class tab19 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField kuro;
     private javax.swing.JTextField shiro;
+    private javax.swing.JLabel tlab;
     // End of variables declaration//GEN-END:variables
 }

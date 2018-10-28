@@ -5,6 +5,7 @@
  */
 package Main;
 
+import java.util.Timer;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
@@ -24,6 +25,20 @@ public class gamemec {
     public String p2;
     
     public static int[][] tab = new int[21][21];
+    private long iniTemp = 0, finTmp = 0;
+    private boolean stp = false;
+    
+    public void tempstart(){
+        this.iniTemp = System.currentTimeMillis();
+        stp = true;
+    }
+    
+    public void tempstop(){
+        this.finTmp = System.currentTimeMillis();
+        stp = false;
+    }
+    
+
     
     
     public static final Icon blanc = new ImageIcon("src/Buttons/blancafinal.png");

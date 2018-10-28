@@ -5,10 +5,9 @@
  */
 package Main;
 
-import java.awt.Color;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
+import java.awt.Component;
 import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
 
 /**
  *
@@ -261,6 +260,9 @@ public class tab15 extends javax.swing.JFrame {
         jButton182 = new javax.swing.JButton();
         jButton183 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        esplab = new javax.swing.JLabel();
+        tlab = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setFocusable(false);
@@ -3221,6 +3223,19 @@ public class tab15 extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tabs/15x15.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
+        esplab.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 24)); // NOI18N
+        esplab.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        esplab.setText("(Negras)");
+        getContentPane().add(esplab, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 360, 120, -1));
+
+        tlab.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 120)); // NOI18N
+        tlab.setText("黒");
+        getContentPane().add(tlab, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 240, -1, 110));
+
+        jLabel9.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 24)); // NOI18N
+        jLabel9.setText("Turno Actual:");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 200, -1, -1));
+
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
@@ -3236,9 +3251,19 @@ public class tab15 extends javax.swing.JFrame {
     private void click(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_click
         gamemec mec = new gamemec();
         javax.swing.JButton opt = mec.getButt(evt.getSource());
-        int col = mec.getcol(opt), fil = mec.getfil(opt);        
+        IA izi = new IA(15, 0);
+        
+        //mec.marcar((javax.swing.JButton)this.getComponentAt((izi.getX()+18)*33, (izi.getY()+18)*33), mec.getTurn());
         
         mec.marcar(opt, mec.getTurn());
+        if (mec.getTurn() == mec.getnoir()){
+            tlab.setText("黒");
+            esplab.setText("(Negras)");
+        } else{
+            tlab.setText("白");
+            esplab.setText("(Blancas)");
+        }
+        
         if(mec.chkvic() != 0){
             if (mec.chkvic() == tneg){
                 JOptionPane.showMessageDialog(null, "Ganó el NEGRO PUTITO");
@@ -3298,6 +3323,7 @@ public class tab15 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton b00;
     private javax.swing.JButton b01;
+    private javax.swing.JLabel esplab;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton100;
     private javax.swing.JButton jButton101;
@@ -3484,8 +3510,10 @@ public class tab15 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextField kuro;
     private javax.swing.JTextField shiro;
+    private javax.swing.JLabel tlab;
     // End of variables declaration//GEN-END:variables
 }

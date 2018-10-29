@@ -6,6 +6,7 @@
 package Main;
 
 import java.util.Timer;
+import java.util.TimerTask;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
@@ -25,18 +26,9 @@ public class gamemec {
     public String p2;
     
     public static int[][] tab = new int[21][21];
-    private long iniTemp = 0, finTmp = 0;
-    private boolean stp = false;
     
-    public void tempstart(){
-        this.iniTemp = System.currentTimeMillis();
-        stp = true;
-    }
     
-    public void tempstop(){
-        this.finTmp = System.currentTimeMillis();
-        stp = false;
-    }
+    private int segs;
     
 
     
@@ -121,7 +113,7 @@ public class gamemec {
         }
     }
     
-    public void marcar(javax.swing.JButton button, int turno){
+    public void marcar(javax.swing.JButton button, int turno, javax.swing.JLabel lab1, javax.swing.JLabel lab2){
         if(tab[getcol(button)][getfil(button)] == 0){
             tab[getcol(button)][getfil(button)] = turno;
             
@@ -131,6 +123,7 @@ public class gamemec {
                 button.setIcon(blanc);
             }
             mecturn(turno);
+            lblupd(lab1, lab2);
         } else{
             System.out.println("NOPE!, ya hay un " + tab[getcol(button)][getfil(button)]);
         }
@@ -230,5 +223,16 @@ public class gamemec {
        }
        return 0;
    }
-    
+   
+   public void lblupd(javax.swing.JLabel jap, javax.swing.JLabel esp){
+       if (getTurn() == getnoir()){
+            jap.setText("黒");
+            esp.setText("(Negras)");
+        } else{
+            jap.setText("白");
+            esp.setText("(Blancas)");
+        }
+   }
+   
+
 }

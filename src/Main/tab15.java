@@ -6,6 +6,7 @@
 package Main;
 
 import java.awt.Component;
+
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
@@ -23,9 +24,13 @@ public class tab15 extends javax.swing.JFrame {
         
         
     }
+    private boolean IATurn;
+    private boolean IAiru;
+    
     int tneg;
     public tab15(String nom1, String nom2){
         initComponents();
+        
         if (nom2.equalsIgnoreCase("iaai")){
             gamemec mec = new gamemec();
             mec.initab();
@@ -37,8 +42,10 @@ public class tab15 extends javax.swing.JFrame {
             } else{
                 kuro.setText("IA");
                 shiro.setText(nom1);
+                IA ia = new IA(13, 0, null);
+                ia.IATurn(this, tlab, esplab);
             }
-            
+            IAiru = true;
         } else{
             gamemec mec = new gamemec();
             mec.assturn();
@@ -53,6 +60,7 @@ public class tab15 extends javax.swing.JFrame {
             }
             
         }
+        
         
     }
     
@@ -3251,18 +3259,10 @@ public class tab15 extends javax.swing.JFrame {
     private void click(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_click
         gamemec mec = new gamemec();
         javax.swing.JButton opt = mec.getButt(evt.getSource());
-        IA izi = new IA(15, 0);
+        IA izi = new IA(13, 0, opt);
         
-        //mec.marcar((javax.swing.JButton)this.getComponentAt((izi.getX()+18)*33, (izi.getY()+18)*33), mec.getTurn());
+        mec.marcar(opt, mec.getTurn(), tlab, esplab);
         
-        mec.marcar(opt, mec.getTurn());
-        if (mec.getTurn() == mec.getnoir()){
-            tlab.setText("黒");
-            esplab.setText("(Negras)");
-        } else{
-            tlab.setText("白");
-            esplab.setText("(Blancas)");
-        }
         
         if(mec.chkvic() != 0){
             if (mec.chkvic() == tneg){
@@ -3272,11 +3272,20 @@ public class tab15 extends javax.swing.JFrame {
                 
             }
         }
+        
+        if(IAiru){
+            izi.IATurn(this, tlab, esplab);
+        }
     }//GEN-LAST:event_click
 
     private void menter(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menter
         gamemec mec = new gamemec();
-        mec.sombrear(mec.getButt(evt.getSource()), mec.getTurn(), true);
+        
+        
+        if(!IA.myTurn){
+            mec.sombrear(mec.getButt(evt.getSource()), mec.getTurn(), true);
+        }
+        
     }//GEN-LAST:event_menter
 
     private void mexit(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mexit

@@ -19,7 +19,8 @@ public class tab19 extends javax.swing.JFrame {
     public tab19() {
         initComponents();
     }
-
+    private boolean IAiru;
+    
     public tab19(String nom1, String nom2){
         initComponents();
         if (nom2.equalsIgnoreCase("iaai")){
@@ -32,7 +33,12 @@ public class tab19 extends javax.swing.JFrame {
             } else{
                 kuro.setText("IA");
                 shiro.setText(nom1);
+                kuro.setText("IA");
+                shiro.setText(nom1);
+                IA ia = new IA(17, 0, null);
+                ia.IATurn(this, tlab, esplab);
             }
+            IAiru = true;
         } else{
             gamemec mec = new gamemec();
             mec.assturn();
@@ -5546,16 +5552,11 @@ public class tab19 extends javax.swing.JFrame {
     private void click(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_click
         gamemec mec = new gamemec();
         javax.swing.JButton opt = mec.getButt(evt.getSource());
-        int col = mec.getcol(opt), fil = mec.getfil(opt);        
+        IA izi = new IA(17, 0, opt);
         
-        mec.marcar(opt, mec.getTurn());
-         if (mec.getTurn() == mec.getnoir()){
-            tlab.setText("黒");
-            esplab.setText("(Negras)");
-        } else{
-            tlab.setText("白");
-            esplab.setText("(Blancas)");
-        }
+        mec.marcar(opt, mec.getTurn(), tlab, esplab);
+        
+        
         if(mec.chkvic() != 0){
             if (mec.chkvic() == mec.getnoir()){
                 JOptionPane.showMessageDialog(null, "Ganó el NEGRO PUTITO");
@@ -5564,11 +5565,19 @@ public class tab19 extends javax.swing.JFrame {
                 
             }
         }
+        
+        if(IAiru){
+            izi.IATurn(this, tlab, esplab);
+        }
     }//GEN-LAST:event_click
 
     private void menter(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menter
         gamemec mec = new gamemec();
-        mec.sombrear(mec.getButt(evt.getSource()), mec.getTurn(), true);
+        
+        
+        if(!IA.myTurn){
+            mec.sombrear(mec.getButt(evt.getSource()), mec.getTurn(), true);
+        }
     }//GEN-LAST:event_menter
 
     private void mexit(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mexit

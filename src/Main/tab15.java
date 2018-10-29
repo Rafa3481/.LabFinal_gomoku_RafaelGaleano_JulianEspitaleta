@@ -24,7 +24,7 @@ public class tab15 extends javax.swing.JFrame {
         
         
     }
-    private boolean IATurn;
+    
     private boolean IAiru;
     
     int tneg;
@@ -35,7 +35,7 @@ public class tab15 extends javax.swing.JFrame {
             gamemec mec = new gamemec();
             mec.initab();
             mec.assturn();
-            tneg = mec.getnoir();
+            
             if (mec.getnoir() == 1){
                 kuro.setText(nom1);
                 shiro.setText("IA");
@@ -3257,6 +3257,7 @@ public class tab15 extends javax.swing.JFrame {
     }//GEN-LAST:event_shiroActionPerformed
 
     private void click(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_click
+        
         gamemec mec = new gamemec();
         javax.swing.JButton opt = mec.getButt(evt.getSource());
         IA izi = new IA(13, 0, opt);
@@ -3265,7 +3266,7 @@ public class tab15 extends javax.swing.JFrame {
         
         
         if(mec.chkvic() != 0){
-            if (mec.chkvic() == tneg){
+            if (mec.chkvic() == mec.getnoir()){
                 JOptionPane.showMessageDialog(null, "Ganó el NEGRO PUTITO");
             } else{
                 JOptionPane.showMessageDialog(null, "Ganó el BLANCO PUTITO");

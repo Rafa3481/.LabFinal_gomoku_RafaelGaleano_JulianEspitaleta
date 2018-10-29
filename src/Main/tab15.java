@@ -78,7 +78,6 @@ public class tab15 extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -283,8 +282,6 @@ public class tab15 extends javax.swing.JFrame {
         jLabel2.setText("五目並べ");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(470, 0, 400, 80);
-        getContentPane().add(jSeparator1);
-        jSeparator1.setBounds(470, 0, 0, 500);
 
         jLabel3.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 18)); // NOI18N
         jLabel3.setText("黒いのチップス");
@@ -3722,7 +3719,6 @@ public class tab15 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextField kuro;
     private javax.swing.JTextField shiro;
     private javax.swing.JLabel tlab;

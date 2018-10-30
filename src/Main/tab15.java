@@ -3259,31 +3259,45 @@ public class tab15 extends javax.swing.JFrame {
     private void click(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_click
         
         gamemec mec = new gamemec();
-        javax.swing.JButton opt = mec.getButt(evt.getSource());
-        IA izi = new IA(13, 0, opt);
-        
-        mec.marcar(opt, mec.getTurn(), tlab, esplab);
-        
-        
-        if(mec.chkvic() != 0){
-            if (mec.chkvic() == mec.getnoir()){
-                JOptionPane.showMessageDialog(null, "Ganó el NEGRO PUTITO");
-            } else{
-                JOptionPane.showMessageDialog(null, "Ganó el BLANCO PUTITO");
-                
+        if(mec.chkplz((javax.swing.JButton)evt.getSource()) && mec.chkvic() == 0){
+            javax.swing.JButton opt = mec.getButt(evt.getSource());
+            IA izi = new IA(13, 0, opt);
+
+            mec.marcar(opt, mec.getTurn(), tlab, esplab);
+
+
+            if(mec.chkvic() != 0){
+                if (mec.chkvic() == mec.getnoir()){
+                    JOptionPane.showMessageDialog(null, "Ganó el NEGRO PUTITO");
+                } else{
+                    JOptionPane.showMessageDialog(null, "Ganó el BLANCO PUTITO");
+
+                }
             }
+
+            if(IAiru && mec.chkvic() == 0){
+                izi.IATurn(this, tlab, esplab);
+                if(mec.chkvic() != 0){
+                    if (mec.chkvic() == mec.getnoir()){
+                        JOptionPane.showMessageDialog(null, "Ganó el NEGRO PUTITO");
+                    } else{
+                        JOptionPane.showMessageDialog(null, "Ganó el BLANCO PUTITO");
+
+                    }
+                }
+            }
+        } else{
+            
         }
+            
         
-        if(IAiru){
-            izi.IATurn(this, tlab, esplab);
-        }
     }//GEN-LAST:event_click
 
     private void menter(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menter
         gamemec mec = new gamemec();
         
         
-        if(!IA.myTurn){
+        if(!IA.myTurn && mec.chkvic() == 0){
             mec.sombrear(mec.getButt(evt.getSource()), mec.getTurn(), true);
         }
         

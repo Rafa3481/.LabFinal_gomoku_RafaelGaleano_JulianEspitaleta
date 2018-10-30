@@ -7626,23 +7626,35 @@ public class tab21 extends javax.swing.JFrame {
 
     private void click(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_click
         gamemec mec = new gamemec();
-        javax.swing.JButton opt = mec.getButt(evt.getSource());
-        IA izi = new IA(19, 0, opt);
-        
-        mec.marcar(opt, mec.getTurn(), tlab, esplab);
-        
-        
-        if(mec.chkvic() != 0){
-            if (mec.chkvic() == mec.getnoir()){
-                JOptionPane.showMessageDialog(null, "Ganó el NEGRO PUTITO");
-            } else{
-                JOptionPane.showMessageDialog(null, "Ganó el BLANCO PUTITO");
-                
+        if(mec.chkplz((javax.swing.JButton)evt.getSource())){
+            javax.swing.JButton opt = mec.getButt(evt.getSource());
+            IA izi = new IA(19, 0, opt);
+
+            mec.marcar(opt, mec.getTurn(), tlab, esplab);
+
+
+            if(mec.chkvic() != 0){
+                if (mec.chkvic() == mec.getnoir()){
+                    JOptionPane.showMessageDialog(null, "Ganó el NEGRO PUTITO");
+                } else{
+                    JOptionPane.showMessageDialog(null, "Ganó el BLANCO PUTITO");
+
+                }
             }
-        }
-        
-        if(IAiru){
-            izi.IATurn(this, tlab, esplab);
+
+            if(IAiru){
+                izi.IATurn(this, tlab, esplab);
+                if(mec.chkvic() != 0){
+                    if (mec.chkvic() == mec.getnoir()){
+                        JOptionPane.showMessageDialog(null, "Ganó el NEGRO PUTITO");
+                    } else{
+                        JOptionPane.showMessageDialog(null, "Ganó el BLANCO PUTITO");
+
+                    }
+                }
+            }
+        } else{
+            System.out.println("NEL PRRO");
         }
     }//GEN-LAST:event_click
 

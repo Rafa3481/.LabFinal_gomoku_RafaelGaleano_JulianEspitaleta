@@ -234,9 +234,9 @@ public class gamemec {
         }
    }
    
-   public boolean chkplz(JButton button){
-       if(tab[getcol(button)][getfil(button)] == 0){
-   }
+//   public boolean chkplz(JButton button){
+//       if(tab[getcol(button)][getfil(button)] == 0){
+//   }
    
 
 }

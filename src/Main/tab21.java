@@ -20,6 +20,7 @@ public class tab21 extends javax.swing.JFrame {
         initComponents();
     }
     private boolean IAiru;
+    public static int w21;
     
     public tab21(String nom1, String nom2){
         initComponents();
@@ -8090,6 +8091,7 @@ public class tab21 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void click(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_click
+        Victory v = new Victory();
         gamemec mec = new gamemec();
         javax.swing.JButton opt = mec.getButt(evt.getSource());
         IA izi = new IA(19, 0, opt);
@@ -8099,9 +8101,12 @@ public class tab21 extends javax.swing.JFrame {
         
         if(mec.chkvic() != 0){
             if (mec.chkvic() == mec.getnoir()){
-                JOptionPane.showMessageDialog(null, "Ganó el NEGRO PUTITO");
+                v.setVisible(true);
+                w21 = 1;
+                
             } else{
-                JOptionPane.showMessageDialog(null, "Ganó el BLANCO PUTITO");
+                v.setVisible(true);
+                w21 = 0;
                 
             }
         }

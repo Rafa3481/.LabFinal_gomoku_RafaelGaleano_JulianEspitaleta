@@ -242,21 +242,21 @@ public class inises extends javax.swing.JFrame {
                     switch(sel2){
 
                         case 0: 
-                            tab15 vent = new tab15(usr.getText(),"Invitado");
+                            tab15 vent = new tab15(usr.getText(),"Invitado", -1);
                             vent.setVisible(true);
                             this.setVisible(false);
                             
                         break;
 
                         case 1:
-                            tab19 vent1 = new tab19(usr.getText(),"Invitado");
+                            tab19 vent1 = new tab19(usr.getText(),"Invitado", -1);
                             vent1.setVisible(true);
                             this.setVisible(false);
                             
                         break;
 
                         case 2: 
-                            tab21 vent2 = new tab21(usr.getText(),"Invitado");
+                            tab21 vent2 = new tab21(usr.getText(),"Invitado", -1);
                             vent2.setVisible(true);
                             this.setVisible(false);
                             
@@ -277,28 +277,30 @@ public class inises extends javax.swing.JFrame {
 
     private void IAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IAActionPerformed
         String[] opt = {"15x15", "19x19", "21x21"};
+        String[] iaopt = {"Fácil", "Medio", "Complejo"};
         if(compcred(usr.getText(), psw.getPassword())){
+            int iabr = JOptionPane.showOptionDialog(null, "Elija la dificultad de la partida", "Opciones de Juego", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null ,iaopt, iaopt[0]);
             int sel = JOptionPane.showOptionDialog(null, "Elija su estilo de tablero", "Opciones de Juego", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null ,opt, opt[0]);
                 this.setVisible(false);
 
                 switch(sel){
 
                     case 0: 
-                        tab15 vent0 = new tab15(usr.getText(), "iaai");
+                        tab15 vent0 = new tab15(usr.getText(), "iaai", iabr);
                         vent0.setVisible(true);
                         this.dispose();
                         t = 0;
                     break;
 
                     case 1:
-                        tab19 vent1 = new tab19(usr.getText(), "iaai");
+                        tab19 vent1 = new tab19(usr.getText(), "iaai", iabr);
                         vent1.setVisible(true);
                         this.dispose();
                         t = 1;
                     break;
 
                     case 2: 
-                        tab21 vent2 = new tab21(usr.getText(), "iaai");
+                        tab21 vent2 = new tab21(usr.getText(), "iaai", iabr);
                         vent2.setVisible(true);
                         this.dispose();
                         t = 2;
@@ -339,19 +341,19 @@ public class inises extends javax.swing.JFrame {
                 switch(sel){
 
                     case 0: 
-                        tab15 vent0 = new tab15(usrh,usr.getText());
+                        tab15 vent0 = new tab15(usrh,usr.getText(), -1);
                         vent0.setVisible(true);
                         this.dispose();
                     break;
 
                     case 1:
-                        tab19 vent1 = new tab19(usrh,usr.getText());
+                        tab19 vent1 = new tab19(usrh,usr.getText(), -1);
                         vent1.setVisible(true);
                         this.dispose();
                     break;
 
                     case 2: 
-                        tab21 vent2 = new tab21(usrh,usr.getText());
+                        tab21 vent2 = new tab21(usrh,usr.getText(), -1);
                         vent2.setVisible(true);
                         this.dispose();
                     break;

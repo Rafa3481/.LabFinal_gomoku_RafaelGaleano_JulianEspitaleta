@@ -9,6 +9,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 
 /**
  *
@@ -234,9 +235,14 @@ public class gamemec {
         }
    }
    
-//   public boolean chkplz(JButton button){
-//       if(tab[getcol(button)][getfil(button)] == 0){
-//   }
+
+   public boolean chkplz(JButton button){
+       if(tab[getcol(button)][getfil(button)] == 0){
+           return true;
+       }
+       return false;
+   }
+
    
 
 }

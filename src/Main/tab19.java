@@ -20,14 +20,17 @@ public class tab19 extends javax.swing.JFrame {
         initComponents();
     }
     private boolean IAiru;
-    public static int w19;
+
+    private int IALvl;
+
     
-    public tab19(String nom1, String nom2){
+    public tab19(String nom1, String nom2, int iabr){
         initComponents();
         if (nom2.equalsIgnoreCase("iaai")){
             gamemec mec = new gamemec();
             mec.assturn();
             mec.initab();
+            IALvl = iabr;
             if (mec.getnoir() == 1){
                 kuro.setText(nom1);
                 shiro.setText("IA");
@@ -36,7 +39,7 @@ public class tab19 extends javax.swing.JFrame {
                 shiro.setText(nom1);
                 kuro.setText("IA");
                 shiro.setText(nom1);
-                IA ia = new IA(17, 0, null);
+                IA ia = new IA(17, IALvl, null);
                 ia.IATurn(this, tlab, esplab);
             }
             IAiru = true;
@@ -5881,26 +5884,37 @@ public class tab19 extends javax.swing.JFrame {
     private void click(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_click
         Victory v = new Victory();
         gamemec mec = new gamemec();
-        javax.swing.JButton opt = mec.getButt(evt.getSource());
-        IA izi = new IA(17, 0, opt);
-        
-        mec.marcar(opt, mec.getTurn(), tlab, esplab);
-        
-        
-        if(mec.chkvic() != 0){
-            if (mec.chkvic() == mec.getnoir()){
-                v.setVisible(true);
-                w19 = 1;
-                
-            } else{
-                v.setVisible(true);
-                w19 = 0;
-                               
+
+        if(mec.chkplz((javax.swing.JButton)evt.getSource())){
+            javax.swing.JButton opt = mec.getButt(evt.getSource());
+            IA izi = new IA(17, IALvl, opt);
+
+            mec.marcar(opt, mec.getTurn(), tlab, esplab);
+
+
+            if(mec.chkvic() != 0){
+                if (mec.chkvic() == mec.getnoir()){
+                    JOptionPane.showMessageDialog(null, "Ganó el NEGRO PUTITO");
+                } else{
+                    JOptionPane.showMessageDialog(null, "Ganó el BLANCO PUTITO");
+
+                }
+
             }
-        }
-        
-        if(IAiru){
-            izi.IATurn(this, tlab, esplab);
+
+            if(IAiru){
+                izi.IATurn(this, tlab, esplab);
+                if(mec.chkvic() != 0){
+                    if (mec.chkvic() == mec.getnoir()){
+                        JOptionPane.showMessageDialog(null, "Ganó el NEGRO PUTITO");
+                    } else{
+                        JOptionPane.showMessageDialog(null, "Ganó el BLANCO PUTITO");
+
+                    }
+                }
+            }
+        } else{
+            System.out.println("NEL PRRO");
         }
     }//GEN-LAST:event_click
 

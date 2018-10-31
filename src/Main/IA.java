@@ -79,7 +79,7 @@ public class IA {
         return false;
     }
 
-    public void IATurn(JFrame frame, JLabel lab1, JLabel lab2) {
+    public void IATurn(JFrame frame) {
         gamemec mec = new gamemec();
         myTurn = true;
         int its = (int) (Math.random() * 2 + 1) * 1000;
@@ -104,7 +104,7 @@ public class IA {
                     
                 } while(chkplay(getX(), getY()));
                 System.out.println("Colocando Ficha...");
-                mec.marcar(IAButton, turno, lab1, lab2);
+                mec.marcar(IAButton, turno);
                 
                 
                 myTurn = false;

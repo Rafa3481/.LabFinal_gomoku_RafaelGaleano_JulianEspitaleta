@@ -20,16 +20,18 @@ public class tab21 extends javax.swing.JFrame {
         initComponents();
     }
     private boolean IAiru;
-
+    private int diff;
     private int IALvl;
 
     
-    public tab21(String nom1, String nom2, int iabr){
+    public tab21(String nom1, String nom2, int iabr, int df){
         initComponents();
         if (nom2.equalsIgnoreCase("iaai")){
             gamemec mec = new gamemec();
             mec.assturn();
             mec.initab();
+            trlabel.setVisible(false);
+            timer.setVisible(false);
             IALvl = iabr;
             if (mec.getnoir() == 1){
                 kuro.setText(nom1);
@@ -40,13 +42,18 @@ public class tab21 extends javax.swing.JFrame {
                 kuro.setText("IA");
                 shiro.setText(nom1);
                 IA ia = new IA(17, IALvl, null);
-                ia.IATurn(this, tlab, esplab);
+                ia.IATurn(this);
             }
         IAiru = true;
         } else{
+            IAiru = false;
             gamemec mec = new gamemec();
             mec.assturn();
             mec.initab();
+            mec.getTabInfo(19, df, this, tlab, esplab, timer, IAiru);
+            mec.stp(df);
+            diff = df;
+            
             if (mec.getnoir() == 1){
                 kuro.setText(nom1);
                 shiro.setText(nom2);
@@ -519,6 +526,8 @@ public class tab21 extends javax.swing.JFrame {
         tlab = new javax.swing.JLabel();
         esplab = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        timer = new javax.swing.JLabel();
+        trlabel = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -8068,22 +8077,33 @@ public class tab21 extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 24)); // NOI18N
         jLabel7.setText("Turno Actual:");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(850, 230, 156, 25);
+        jLabel7.setBounds(750, 230, 156, 25);
 
         tlab.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 120)); // NOI18N
         tlab.setText("黒");
         getContentPane().add(tlab);
-        tlab.setBounds(870, 270, 120, 110);
+        tlab.setBounds(760, 260, 120, 110);
 
         esplab.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 24)); // NOI18N
         esplab.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         esplab.setText("(Negras)");
         getContentPane().add(esplab);
-        esplab.setBounds(880, 390, 110, 25);
+        esplab.setBounds(760, 380, 110, 25);
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/UB.jpg"))); // NOI18N
         getContentPane().add(jLabel9);
         jLabel9.setBounds(-70, -10, 794, 250);
+
+        timer.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 24)); // NOI18N
+        timer.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        timer.setText("jLabel10");
+        getContentPane().add(timer);
+        timer.setBounds(930, 260, 190, 25);
+
+        trlabel.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 24)); // NOI18N
+        trlabel.setText("Tiempo restante:");
+        getContentPane().add(trlabel);
+        trlabel.setBounds(930, 230, 200, 20);
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/RegisterBackground.jpg"))); // NOI18N
         getContentPane().add(jLabel8);
@@ -8101,7 +8121,7 @@ public class tab21 extends javax.swing.JFrame {
             javax.swing.JButton opt = mec.getButt(evt.getSource());
             IA izi = new IA(19, IALvl, opt);
 
-            mec.marcar(opt, mec.getTurn(), tlab, esplab);
+            mec.marcar(opt, mec.getTurn());
 
 
             if(mec.chkvic() != 0){
@@ -8120,7 +8140,7 @@ public class tab21 extends javax.swing.JFrame {
             }
 
             if(IAiru && mec.chkvic() == 0){
-                izi.IATurn(this, tlab, esplab);
+                izi.IATurn(this);
                 if(mec.chkvic() != 0){
                     if (mec.chkvic() == mec.getnoir()){
                         JOptionPane.showMessageDialog(null, "Ganó el NEGRO");
@@ -8642,6 +8662,8 @@ public class tab21 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField kuro;
     private javax.swing.JTextField shiro;
+    private javax.swing.JLabel timer;
     private javax.swing.JLabel tlab;
+    private javax.swing.JLabel trlabel;
     // End of variables declaration//GEN-END:variables
 }

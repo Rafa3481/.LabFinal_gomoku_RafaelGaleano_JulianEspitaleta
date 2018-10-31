@@ -10,6 +10,9 @@ import java.util.TimerTask;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -21,14 +24,19 @@ public class gamemec {
     }
     private static int turn;
     private static long init;
-    
+    private static Timer tmp;
     private static int noire;
     private static int blanche;
     public String p1;
     public String p2;
     private static int fichcont;
-
-    
+    private static int tabsz;
+    private static int inisegs;
+    private static int segs;
+    private static JLabel templabel, lab1, lab2;
+    private static JFrame frameTab;
+    private static int diff;
+    private static boolean IAiru;
     public static int[][] tab = new int[21][21];
     
     
@@ -42,7 +50,14 @@ public class gamemec {
     public static final Icon transnoir = new ImageIcon("src/Buttons/negratransfinal.png");
     public static final Icon transblanc = new ImageIcon("src/Buttons/blancatransfinal.png");
     
-    
+    public void getTabInfo(int integer, int df, JFrame frame, JLabel label, JLabel label2, JLabel temp, boolean iagame){
+        tabsz = integer;
+        frameTab = frame;
+        lab1 = label; lab2 = label2; templabel = temp;
+        IAiru = iagame;
+        diff = df;
+        
+    }
     public void assturn(){
         double rand = Math.random();
         if (rand < 0.5){
@@ -82,6 +97,37 @@ public class gamemec {
         return (javax.swing.JButton)obt;
     }
     
+    public void stp(int seg){
+        inisegs = seg;
+        segs = inisegs;
+        int delay = 1000, period = delay;
+        tmp = new Timer();
+        templabel.setText(String.valueOf(inisegs));
+        tmp.scheduleAtFixedRate(new TimerTask(){
+            public void run(){
+                
+                templabel.setText(String.valueOf(setInterval()));
+                if(segs == 0){
+                    
+                    JOptionPane.showMessageDialog(null, "Has perdido tu turno", "ATENCIÓN", JOptionPane.WARNING_MESSAGE);
+                    IA ia = new IA(tabsz, 0, null);
+                    
+//                    tmp.cancel();
+                    ia.IATurn(frameTab);
+                    
+                    
+                }
+            }
+        }, delay, period);
+    }
+    private final int setInterval(){
+        if (segs < 2){
+            tmp.cancel();
+        }
+        int res = (segs - 1);
+        segs = res;
+        return res;
+    }
     public int getcol(javax.swing.JButton button){
         
         int i = 18;
@@ -119,7 +165,7 @@ public class gamemec {
         
     }
     
-    public void marcar(javax.swing.JButton button, int turno, javax.swing.JLabel lab1, javax.swing.JLabel lab2){
+    public void marcar(javax.swing.JButton button, int turno){
         if(tab[getcol(button)][getfil(button)] == 0){
             tab[getcol(button)][getfil(button)] = turno;
             
@@ -131,6 +177,13 @@ public class gamemec {
             mecturn(turno);
             lblupd(lab1, lab2);
             fichcont++;
+            if(!IAiru){
+                
+                tmp.cancel();
+                stp(diff); 
+            }
+            
+            
         } else{
             System.out.println("NOPE!, ya hay un " + tab[getcol(button)][getfil(button)]);
         }

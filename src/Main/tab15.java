@@ -301,22 +301,22 @@ public class tab15 extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 18)); // NOI18N
         jLabel3.setText("黒いのチップス");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(500, 140, 130, 19);
+        jLabel3.setBounds(500, 140, 130, 24);
 
         jLabel4.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 18)); // NOI18N
         jLabel4.setText("(Fichas Negras)");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(500, 160, 135, 19);
+        jLabel4.setBounds(500, 160, 128, 24);
 
         jLabel5.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 18)); // NOI18N
         jLabel5.setText("白いのチップス");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(700, 140, 130, 19);
+        jLabel5.setBounds(700, 140, 130, 24);
 
         jLabel6.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 18)); // NOI18N
         jLabel6.setText("(Fichas Blancas)");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(700, 160, 144, 19);
+        jLabel6.setBounds(700, 160, 134, 24);
 
         kuro.setEditable(false);
         kuro.setFocusable(false);
@@ -3440,23 +3440,23 @@ public class tab15 extends javax.swing.JFrame {
         esplab.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         esplab.setText("(Negras)");
         getContentPane().add(esplab);
-        esplab.setBounds(510, 350, 120, 25);
+        esplab.setBounds(510, 350, 120, 32);
 
         tlab.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 120)); // NOI18N
         tlab.setText("黒");
         getContentPane().add(tlab);
         tlab.setBounds(510, 230, 120, 110);
 
-        timer.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 24)); // NOI18N
+        timer.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 72)); // NOI18N
         timer.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        timer.setText("jLabel8");
+        timer.setText("#");
         getContentPane().add(timer);
-        timer.setBounds(680, 230, 190, 40);
+        timer.setBounds(680, 230, 190, 100);
 
         jLabel9.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 24)); // NOI18N
         jLabel9.setText("Turno Actual:");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(490, 200, 156, 25);
+        jLabel9.setBounds(490, 200, 144, 32);
 
         trlabel.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 24)); // NOI18N
         trlabel.setText("Tiempo restante:");
@@ -3492,13 +3492,12 @@ public class tab15 extends javax.swing.JFrame {
 
             if(mec.chkvic() != 0){
                 if (mec.chkvic() == mec.getnoir()){
-                    JOptionPane.showMessageDialog(null, "Ganó el NEGRO");
-                    Victory v = new Victory(mec.chkvic());
-                    v.setVisible(true);
+                    JOptionPane.showMessageDialog(null, "Victoria!");
+                    Victory v = new Victory(mec.chkvic(), kuro.getText()); v.setVisible(true);
                     this.dispose();
                 } else{
-                    JOptionPane.showMessageDialog(null, "Ganó el BLANCO");
-                    Victory v = new Victory(mec.chkvic()); v.setVisible(true);
+                    JOptionPane.showMessageDialog(null, "Victoria!");
+                    Victory v = new Victory(mec.chkvic(), shiro.getText()); v.setVisible(true);
                     this.dispose();
 
                 }
@@ -3508,12 +3507,12 @@ public class tab15 extends javax.swing.JFrame {
                 izi.IATurn(this);
                 if(mec.chkvic() != 0){
                     if (mec.chkvic() == mec.getnoir()){
-                        JOptionPane.showMessageDialog(null, "Ganó el NEGRO");
-                        Victory v = new Victory(mec.chkvic()); v.setVisible(true);
+                        JOptionPane.showMessageDialog(null, "Victoria!");
+                        Victory v = new Victory(mec.chkvic(), kuro.getText()); v.setVisible(true);
                         this.dispose();
                     } else{
-                        JOptionPane.showMessageDialog(null, "Ganó el BLANCO");
-                        Victory v = new Victory(mec.chkvic()); v.setVisible(true);
+                        JOptionPane.showMessageDialog(null, "Victoria!");
+                        Victory v = new Victory(mec.chkvic(), shiro.getText()); v.setVisible(true);
                         this.dispose();
 
                     }

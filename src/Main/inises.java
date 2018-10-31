@@ -227,13 +227,7 @@ public class inises extends javax.swing.JFrame {
         if(compcred(usr.getText(), psw.getPassword())){
             int sel = JOptionPane.showOptionDialog(null, "Qué desea hacer?", "Opciones para Jugador 2", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null ,opt, opt[0]);
             this.setVisible(false);
-            int dfsel = JOptionPane.showOptionDialog(null, "Elija la dificultad de la partida", "Opciones de Juego", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null ,dfopt, dfopt[0]);
-            int diff = 10;
-            switch(dfsel){
-                case 0: diff = 10; break;              
-                case 1: diff = 5; break;
-                case 2: diff = 3; break;
-            }
+            
             switch(sel){
                 
                 case 0: 
@@ -249,6 +243,13 @@ public class inises extends javax.swing.JFrame {
                     switch(sel2){
 
                         case 0: 
+                            int dfsel = JOptionPane.showOptionDialog(null, "Elija la dificultad de la partida", "Opciones de Juego", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null ,dfopt, dfopt[0]);
+                            int diff = 10;
+                            switch(dfsel){
+                                case 0: diff = 10; break;              
+                                case 1: diff = 5; break;
+                                case 2: diff = 3; break;
+                            }
                             tab15 vent = new tab15(usr.getText(),"Invitado", -1, diff);
                             vent.setVisible(true);
                             this.setVisible(false);
@@ -256,13 +257,28 @@ public class inises extends javax.swing.JFrame {
                         break;
 
                         case 1:
+
+                            dfsel = JOptionPane.showOptionDialog(null, "Elija la dificultad de la partida", "Opciones de Juego", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null ,dfopt, dfopt[0]);
+                            diff = 10;
+                            switch(dfsel){
+                                case 0: diff = 10; break;              
+                                case 1: diff = 5; break;
+                                case 2: diff = 3; break;
+                            }
                             tab19 vent1 = new tab19(usr.getText(),"Invitado", -1, diff);
                             vent1.setVisible(true);
                             this.setVisible(false);
                             
                         break;
 
-                        case 2: 
+                        case 2:
+                            dfsel = JOptionPane.showOptionDialog(null, "Elija la dificultad de la partida", "Opciones de Juego", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null ,dfopt, dfopt[0]);
+                            diff = 10;
+                            switch(dfsel){
+                                case 0: diff = 10; break;              
+                                case 1: diff = 5; break;
+                                case 2: diff = 3; break;
+                            }
                             tab21 vent2 = new tab21(usr.getText(),"Invitado", -1, diff);
                             vent2.setVisible(true);
                             this.setVisible(false);

@@ -112,7 +112,7 @@ public class gamemec {
                     JOptionPane.showMessageDialog(null, "Has perdido tu turno", "ATENCIÓN", JOptionPane.WARNING_MESSAGE);
                     IA ia = new IA(tabsz, 0, null);
                     
-//                    tmp.cancel();
+                    tmp.cancel();
                     ia.IATurn(frameTab);
                     
                     
@@ -175,7 +175,7 @@ public class gamemec {
                 button.setIcon(blanc);
             }
             mecturn(turno);
-            lblupd(lab1, lab2);
+            lblupd();
             fichcont++;
             if(!IAiru){
                 
@@ -273,18 +273,22 @@ public class gamemec {
    
    public int chkvic(){
        if(chkdiag() != 0){
-           
+           if (!IAiru) {
+               tmp.cancel();
+           }
            
            return chkdiag();
        }
        if(chkhor() != 0){
-           
-           
+           if (!IAiru) {
+               tmp.cancel();
+           }
            return chkhor();
        }
        if(chkver() != 0){
-           
-           
+           if (!IAiru) {
+               tmp.cancel();
+           }
            return chkver();
        }
        return 0;
@@ -301,13 +305,13 @@ public class gamemec {
        res = res + (int)(getSegs()/60) + ":" + getSegs()%60; 
        return res;
    }
-   public void lblupd(javax.swing.JLabel jap, javax.swing.JLabel esp){
+   public void lblupd(){
        if (getTurn() == getnoir()){
-            jap.setText("黒");
-            esp.setText("(Negras)");
+            lab1.setText("黒");
+            lab2.setText("(Negras)");
         } else{
-            jap.setText("白");
-            esp.setText("(Blancas)");
+            lab1.setText("白");
+            lab2.setText("(Blancas)");
         }
    }
    

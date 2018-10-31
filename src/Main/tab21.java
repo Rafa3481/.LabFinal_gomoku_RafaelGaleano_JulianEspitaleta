@@ -546,22 +546,22 @@ public class tab21 extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 18)); // NOI18N
         jLabel3.setText("黒いのチップス");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(760, 170, 130, 19);
+        jLabel3.setBounds(760, 170, 130, 24);
 
         jLabel4.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 18)); // NOI18N
         jLabel4.setText("(Fichas Negras)");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(760, 190, 135, 19);
+        jLabel4.setBounds(760, 190, 128, 24);
 
         jLabel5.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 18)); // NOI18N
         jLabel5.setText("白いのチップス");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(960, 170, 130, 19);
+        jLabel5.setBounds(960, 170, 130, 24);
 
         jLabel6.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 18)); // NOI18N
         jLabel6.setText("(Fichas Blancas)");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(960, 190, 144, 19);
+        jLabel6.setBounds(960, 190, 134, 24);
 
         kuro.setEditable(false);
         kuro.setFocusable(false);
@@ -8077,7 +8077,7 @@ public class tab21 extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 24)); // NOI18N
         jLabel7.setText("Turno Actual:");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(750, 230, 156, 25);
+        jLabel7.setBounds(750, 230, 144, 32);
 
         tlab.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 120)); // NOI18N
         tlab.setText("黒");
@@ -8088,17 +8088,17 @@ public class tab21 extends javax.swing.JFrame {
         esplab.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         esplab.setText("(Negras)");
         getContentPane().add(esplab);
-        esplab.setBounds(760, 380, 110, 25);
+        esplab.setBounds(760, 380, 110, 32);
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/UB.jpg"))); // NOI18N
         getContentPane().add(jLabel9);
         jLabel9.setBounds(-70, -10, 794, 250);
 
-        timer.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 24)); // NOI18N
+        timer.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 72)); // NOI18N
         timer.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        timer.setText("jLabel10");
+        timer.setText("#");
         getContentPane().add(timer);
-        timer.setBounds(930, 260, 190, 25);
+        timer.setBounds(930, 260, 190, 100);
 
         trlabel.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 24)); // NOI18N
         trlabel.setText("Tiempo restante:");

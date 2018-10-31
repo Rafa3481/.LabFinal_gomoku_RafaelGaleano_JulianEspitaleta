@@ -30,6 +30,7 @@ public class tab19 extends javax.swing.JFrame {
             gamemec mec = new gamemec();
             mec.assturn();
             mec.initab();
+            mec.getTabInfo(19, df, this, tlab, esplab, timer, true);
             trlabel.setVisible(false);
             timer.setVisible(false);
             IALvl = iabr;
@@ -50,7 +51,7 @@ public class tab19 extends javax.swing.JFrame {
             gamemec mec = new gamemec();
             mec.assturn();
             mec.initab();
-            mec.getTabInfo(17, df, this, tlab, esplab, timer, IAiru);
+            mec.getTabInfo(17, df, this, tlab, esplab, timer, false);
             mec.stp(df);
             diff = df;
             
@@ -5931,10 +5932,10 @@ public class tab19 extends javax.swing.JFrame {
                 izi.IATurn(this);
                 if(mec.chkvic() != 0){
                     if (mec.chkvic() == mec.getnoir()){
-                    JOptionPane.showMessageDialog(null, "Ganó el NEGRO");
-                    Victory v = new Victory(mec.chkvic());
-                    v.setVisible(true);
-                    this.dispose();
+                        JOptionPane.showMessageDialog(null, "Ganó el NEGRO");
+                        Victory v = new Victory(mec.chkvic());
+                        v.setVisible(true);
+                        this.dispose();
                 } else{
                     JOptionPane.showMessageDialog(null, "Ganó el BLANCO");
                     Victory v = new Victory(mec.chkvic()); v.setVisible(true);

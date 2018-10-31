@@ -30,6 +30,7 @@ public class tab21 extends javax.swing.JFrame {
             gamemec mec = new gamemec();
             mec.assturn();
             mec.initab();
+            mec.getTabInfo(19, df, this, tlab, esplab, timer, true);
             trlabel.setVisible(false);
             timer.setVisible(false);
             IALvl = iabr;
@@ -50,7 +51,7 @@ public class tab21 extends javax.swing.JFrame {
             gamemec mec = new gamemec();
             mec.assturn();
             mec.initab();
-            mec.getTabInfo(19, df, this, tlab, esplab, timer, IAiru);
+            mec.getTabInfo(19, df, this, tlab, esplab, timer, false);
             mec.stp(df);
             diff = df;
             

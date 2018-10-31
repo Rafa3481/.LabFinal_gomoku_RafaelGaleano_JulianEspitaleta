@@ -273,18 +273,22 @@ public class gamemec {
    
    public int chkvic(){
        if(chkdiag() != 0){
+           if (!IAiru) {
+               tmp.cancel();
+           }
            
-           tmp.cancel();
            return chkdiag();
        }
        if(chkhor() != 0){
-           
-           tmp.cancel();
+           if (!IAiru) {
+               tmp.cancel();
+           }
            return chkhor();
        }
        if(chkver() != 0){
-           
-           tmp.cancel();
+           if (!IAiru) {
+               tmp.cancel();
+           }
            return chkver();
        }
        return 0;

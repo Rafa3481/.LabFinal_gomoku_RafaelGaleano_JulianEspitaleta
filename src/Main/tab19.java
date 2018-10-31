@@ -5915,13 +5915,12 @@ public class tab19 extends javax.swing.JFrame {
 
             if(mec.chkvic() != 0){
                 if (mec.chkvic() == mec.getnoir()){
-                    JOptionPane.showMessageDialog(null, "Ganó el NEGRO");
-                    Victory v = new Victory(mec.chkvic());
-                    v.setVisible(true);
+                    JOptionPane.showMessageDialog(null, "Victoria!");
+                    Victory v = new Victory(mec.chkvic(), kuro.getText()); v.setVisible(true);
                     this.dispose();
                 } else{
-                    JOptionPane.showMessageDialog(null, "Ganó el BLANCO");
-                    Victory v = new Victory(mec.chkvic()); v.setVisible(true);
+                    JOptionPane.showMessageDialog(null, "Victoria!");
+                    Victory v = new Victory(mec.chkvic(), shiro.getText()); v.setVisible(true);
                     this.dispose();
 
                 }
@@ -5932,16 +5931,15 @@ public class tab19 extends javax.swing.JFrame {
                 izi.IATurn(this);
                 if(mec.chkvic() != 0){
                     if (mec.chkvic() == mec.getnoir()){
-                        JOptionPane.showMessageDialog(null, "Ganó el NEGRO");
-                        Victory v = new Victory(mec.chkvic());
-                        v.setVisible(true);
+                        JOptionPane.showMessageDialog(null, "Victoria!");
+                        Victory v = new Victory(mec.chkvic(), kuro.getText()); v.setVisible(true);
                         this.dispose();
-                } else{
-                    JOptionPane.showMessageDialog(null, "Ganó el BLANCO");
-                    Victory v = new Victory(mec.chkvic()); v.setVisible(true);
-                    this.dispose();
+                    } else{
+                        JOptionPane.showMessageDialog(null, "Victoria!");
+                        Victory v = new Victory(mec.chkvic(), shiro.getText()); v.setVisible(true);
+                        this.dispose();
 
-                }
+                    }
                 }
             }
         } else{

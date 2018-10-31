@@ -21,19 +21,16 @@ public class Victory extends javax.swing.JFrame {
     public Victory(){
         initComponents();
     }
-    public Victory(int winner) {
+    public Victory(int winner, String wnr) {
         initComponents();
         gamemec mec = new gamemec();
         int wh = mec.getblanc(), bl = mec.getnoir();
         temps.setText(mec.getTime());
         fichas.setText(String.valueOf(mec.contFich()));
-        if (winner  == bl) {
-           txt.setText("winner winner chicken dinner (Negras)");
-           omedetou.setText("黒いさん、おめでとうございます！！");
-        } else{
-            txt.setText("winner winner chicken dinner (Blancas)");
-            omedetou.setText("白いさん、おめでとうございます！！");
-        }
+        
+           txt.setText("winner winner chicken dinner (" + wnr + ")");
+           omedetou.setText(wnr.toUpperCase() + "さん、おめでとうございます！！");
+        
     }
 
     /**
@@ -79,9 +76,9 @@ public class Victory extends javax.swing.JFrame {
         txt.setBounds(0, 10, 500, 44);
         txt.getAccessibleContext().setAccessibleParent(txt);
 
-        omedetou.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 24)); // NOI18N
+        omedetou.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 22)); // NOI18N
         omedetou.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        omedetou.setText("黒さん、おめでとうございます！！");
+        omedetou.setText("###############さん、おめでとうございます！！");
         getContentPane().add(omedetou);
         omedetou.setBounds(1, 86, 500, 30);
 

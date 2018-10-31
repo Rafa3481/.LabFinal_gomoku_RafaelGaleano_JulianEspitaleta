@@ -28,9 +28,11 @@ public class Victory extends javax.swing.JFrame {
         temps.setText(mec.getTime());
         fichas.setText(String.valueOf(mec.contFich()));
         
+
            txt.setText("winner winner chicken dinner (" + wnr + ")");
            omedetou.setText(wnr.toUpperCase() + "さん、おめでとうございます！！");
         
+
     }
 
     /**

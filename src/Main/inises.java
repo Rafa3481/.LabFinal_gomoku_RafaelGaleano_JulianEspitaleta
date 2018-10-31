@@ -206,7 +206,7 @@ public class inises extends javax.swing.JFrame {
             }
         });
         getContentPane().add(acc);
-        acc.setBounds(190, 360, 77, 25);
+        acc.setBounds(190, 360, 71, 23);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/RegisterBackground.jpg"))); // NOI18N
         jLabel5.setText("jLabel5");

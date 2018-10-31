@@ -112,7 +112,7 @@ public class gamemec {
                     JOptionPane.showMessageDialog(null, "Has perdido tu turno", "ATENCIÓN", JOptionPane.WARNING_MESSAGE);
                     IA ia = new IA(tabsz, 0, null);
                     
-//                    tmp.cancel();
+                    tmp.cancel();
                     ia.IATurn(frameTab);
                     
                     

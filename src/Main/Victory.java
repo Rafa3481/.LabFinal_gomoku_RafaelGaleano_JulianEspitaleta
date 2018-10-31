@@ -27,6 +27,7 @@ public class Victory extends javax.swing.JFrame {
         int wh = mec.getblanc(), bl = mec.getnoir();
         temps.setText(mec.getTime());
         fichas.setText(String.valueOf(mec.contFich()));
+        
         if (winner  == bl) {
            txt.setText("winner winner chicken dinner (Negras)");
            omedetou.setText("黒いさん、おめでとうございます！！");

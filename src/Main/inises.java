@@ -211,7 +211,7 @@ public class inises extends javax.swing.JFrame {
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/RegisterBackground.jpg"))); // NOI18N
         jLabel5.setText("jLabel5");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(-320, 0, 800, 530);
+        jLabel5.setBounds(-320, 0, 790, 530);
 
         pack();
         setLocationRelativeTo(null);
@@ -285,6 +285,7 @@ public class inises extends javax.swing.JFrame {
     private void IAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IAActionPerformed
         String[] opt = {"15x15", "19x19", "21x21"};
         String[] dfopt = {"Fácil", "Medio", "Complejo"};
+        
         if(compcred(usr.getText(), psw.getPassword())){
             int iabr = JOptionPane.showOptionDialog(null, "Elija la dificultad de la partida", "Opciones de Juego", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null ,dfopt, dfopt[0]);
             int sel = JOptionPane.showOptionDialog(null, "Elija su estilo de tablero", "Opciones de Juego", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null ,opt, opt[0]);

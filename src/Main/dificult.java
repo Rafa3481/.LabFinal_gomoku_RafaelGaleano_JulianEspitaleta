@@ -31,35 +31,42 @@ public class dificult extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(334, 150));
-        setMinimumSize(new java.awt.Dimension(334, 150));
-        setPreferredSize(new java.awt.Dimension(334, 150));
+        setMaximumSize(new java.awt.Dimension(300, 150));
+        setMinimumSize(new java.awt.Dimension(300, 150));
+        setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(300, 150));
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Dificultad");
+        jLabel1.setText("Elija la dificultad");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(60, 20, 207, 29);
+        jLabel1.setBounds(34, 20, 207, 29);
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton1.setText("Facil");
         getContentPane().add(jButton1);
-        jButton1.setBounds(20, 70, 57, 25);
+        jButton1.setBounds(10, 70, 73, 25);
 
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton2.setText("Media");
         getContentPane().add(jButton2);
-        jButton2.setBounds(120, 70, 67, 25);
+        jButton2.setBounds(100, 70, 73, 25);
 
         jButton3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton3.setText("Dificil");
         getContentPane().add(jButton3);
-        jButton3.setBounds(220, 70, 61, 25);
+        jButton3.setBounds(190, 70, 73, 25);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/UB.jpg"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(0, 0, 290, 120);
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -102,5 +109,6 @@ public class dificult extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

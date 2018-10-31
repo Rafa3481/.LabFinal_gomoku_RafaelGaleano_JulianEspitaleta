@@ -31,11 +31,14 @@ public class size extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(334, 150));
-        setMinimumSize(new java.awt.Dimension(334, 150));
-        setPreferredSize(new java.awt.Dimension(334, 150));
+        setMaximumSize(new java.awt.Dimension(315, 150));
+        setMinimumSize(new java.awt.Dimension(315, 150));
+        setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(315, 150));
+        setResizable(false);
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -45,19 +48,26 @@ public class size extends javax.swing.JFrame {
         jLabel1.setBounds(50, 20, 207, 29);
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton1.setText("15x15");
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Buttons/15Xbase.png"))); // NOI18N
+        jButton1.setContentAreaFilled(false);
         getContentPane().add(jButton1);
-        jButton1.setBounds(20, 70, 73, 25);
+        jButton1.setBounds(10, 60, 90, 40);
 
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton2.setText("19x19");
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Buttons/19Xbase.png"))); // NOI18N
+        jButton2.setContentAreaFilled(false);
         getContentPane().add(jButton2);
-        jButton2.setBounds(120, 70, 73, 25);
+        jButton2.setBounds(110, 60, 90, 40);
 
         jButton3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton3.setText("21x21");
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Buttons/21Xbase.png"))); // NOI18N
+        jButton3.setContentAreaFilled(false);
         getContentPane().add(jButton3);
-        jButton3.setBounds(220, 70, 73, 25);
+        jButton3.setBounds(210, 60, 90, 40);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/UB.jpg"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(-10, 0, 340, 120);
 
         pack();
         setLocationRelativeTo(null);
@@ -103,5 +113,6 @@ public class size extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

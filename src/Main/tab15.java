@@ -26,15 +26,16 @@ public class tab15 extends javax.swing.JFrame {
     }
     
     private boolean IAiru;
-    
+    private int IALvl;
     int tneg;
-    public tab15(String nom1, String nom2){
+    public tab15(String nom1, String nom2, int iabr){
         initComponents();
         
         if (nom2.equalsIgnoreCase("iaai")){
             gamemec mec = new gamemec();
             mec.initab();
             mec.assturn();
+            IALvl = iabr;
             
             if (mec.getnoir() == 1){
                 kuro.setText(nom1);
@@ -42,7 +43,7 @@ public class tab15 extends javax.swing.JFrame {
             } else{
                 kuro.setText("IA");
                 shiro.setText(nom1);
-                IA ia = new IA(13, 0, null);
+                IA ia = new IA(13, IALvl, null);
                 ia.IATurn(this, tlab, esplab);
             }
             IAiru = true;
@@ -3261,7 +3262,7 @@ public class tab15 extends javax.swing.JFrame {
         gamemec mec = new gamemec();
         if(mec.chkplz((javax.swing.JButton)evt.getSource()) && mec.chkvic() == 0){
             javax.swing.JButton opt = mec.getButt(evt.getSource());
-            IA izi = new IA(13, 0, opt);
+            IA izi = new IA(13, IALvl, opt);
 
             mec.marcar(opt, mec.getTurn(), tlab, esplab);
 

@@ -20,13 +20,15 @@ public class tab21 extends javax.swing.JFrame {
         initComponents();
     }
     private boolean IAiru;
+    private int IALvl;
     
-    public tab21(String nom1, String nom2){
+    public tab21(String nom1, String nom2, int iabr){
         initComponents();
         if (nom2.equalsIgnoreCase("iaai")){
             gamemec mec = new gamemec();
             mec.assturn();
             mec.initab();
+            IALvl = iabr;
             if (mec.getnoir() == 1){
                 kuro.setText(nom1);
                 shiro.setText("IA");
@@ -35,7 +37,7 @@ public class tab21 extends javax.swing.JFrame {
                 shiro.setText(nom1);
                 kuro.setText("IA");
                 shiro.setText(nom1);
-                IA ia = new IA(17, 0, null);
+                IA ia = new IA(17, IALvl, null);
                 ia.IATurn(this, tlab, esplab);
             }
         IAiru = true;
@@ -7628,7 +7630,7 @@ public class tab21 extends javax.swing.JFrame {
         gamemec mec = new gamemec();
         if(mec.chkplz((javax.swing.JButton)evt.getSource())){
             javax.swing.JButton opt = mec.getButt(evt.getSource());
-            IA izi = new IA(19, 0, opt);
+            IA izi = new IA(19, IALvl, opt);
 
             mec.marcar(opt, mec.getTurn(), tlab, esplab);
 

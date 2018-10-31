@@ -36,6 +36,7 @@ public class inises extends javax.swing.JFrame {
     }
     public static String usrlog1;
     public static String usrlog2;
+    public static int t;
     
     private String conv(char[] chr){
         String res = "";
@@ -111,23 +112,26 @@ public class inises extends javax.swing.JFrame {
         jButton1.setText("jButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setPreferredSize(new java.awt.Dimension(480, 560));
+        getContentPane().setLayout(null);
 
         jLabel2.setFont(new java.awt.Font("UD Digi Kyokasho NP-B", 0, 48)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("ログイン");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 460, 80));
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(10, 70, 460, 80);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Inicie Sesión");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -4, 460, 80));
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(0, -4, 460, 80);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 204, 204));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Nombre de Usuario");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 460, -1));
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 200, 460, 22);
 
         usr.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         usr.addActionListener(new java.awt.event.ActionListener() {
@@ -135,13 +139,14 @@ public class inises extends javax.swing.JFrame {
                 usrActionPerformed(evt);
             }
         });
-        getContentPane().add(usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, 220, -1));
+        getContentPane().add(usr);
+        usr.setBounds(120, 230, 220, 30);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 204, 204));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Contraseña");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 460, -1));
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(0, 280, 460, 22);
 
         psw.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         psw.addActionListener(new java.awt.event.ActionListener() {
@@ -149,7 +154,8 @@ public class inises extends javax.swing.JFrame {
                 pswActionPerformed(evt);
             }
         });
-        getContentPane().add(psw, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 330, 220, -1));
+        getContentPane().add(psw);
+        psw.setBounds(120, 310, 220, 30);
 
         P2.setBackground(new java.awt.Color(235, 159, 29));
         P2.setFont(new java.awt.Font("UD Digi Kyokasho N-R", 0, 15)); // NOI18N
@@ -169,7 +175,8 @@ public class inises extends javax.swing.JFrame {
                 P2ActionPerformed(evt);
             }
         });
-        getContentPane().add(P2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 430, 210, 80));
+        getContentPane().add(P2);
+        P2.setBounds(240, 430, 210, 80);
 
         IA.setBackground(new java.awt.Color(235, 159, 29));
         IA.setFont(new java.awt.Font("UD Digi Kyokasho N-R", 0, 15)); // NOI18N
@@ -189,7 +196,8 @@ public class inises extends javax.swing.JFrame {
                 IAActionPerformed(evt);
             }
         });
-        getContentPane().add(IA, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, 210, 80));
+        getContentPane().add(IA);
+        IA.setBounds(10, 430, 210, 80);
 
         acc.setText("Aceptar");
         acc.addActionListener(new java.awt.event.ActionListener() {
@@ -197,11 +205,13 @@ public class inises extends javax.swing.JFrame {
                 accActionPerformed(evt);
             }
         });
-        getContentPane().add(acc, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 380, -1, -1));
+        getContentPane().add(acc);
+        acc.setBounds(190, 360, 71, 23);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/RegisterBackground.jpg"))); // NOI18N
         jLabel5.setText("jLabel5");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-470, 0, 930, 530));
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(-320, 0, 800, 530);
 
         pack();
         setLocationRelativeTo(null);
@@ -234,19 +244,22 @@ public class inises extends javax.swing.JFrame {
                         case 0: 
                             tab15 vent = new tab15(usr.getText(),"Invitado", -1);
                             vent.setVisible(true);
-                            this.dispose();
+                            this.setVisible(false);
+                            
                         break;
 
                         case 1:
                             tab19 vent1 = new tab19(usr.getText(),"Invitado", -1);
                             vent1.setVisible(true);
-                            this.dispose();
+                            this.setVisible(false);
+                            
                         break;
 
                         case 2: 
                             tab21 vent2 = new tab21(usr.getText(),"Invitado", -1);
                             vent2.setVisible(true);
-                            this.dispose();
+                            this.setVisible(false);
+                            
                         break;
                     }
                 break;
@@ -276,18 +289,21 @@ public class inises extends javax.swing.JFrame {
                         tab15 vent0 = new tab15(usr.getText(), "iaai", iabr);
                         vent0.setVisible(true);
                         this.dispose();
+                        t = 0;
                     break;
 
                     case 1:
                         tab19 vent1 = new tab19(usr.getText(), "iaai", iabr);
                         vent1.setVisible(true);
                         this.dispose();
+                        t = 1;
                     break;
 
                     case 2: 
                         tab21 vent2 = new tab21(usr.getText(), "iaai", iabr);
                         vent2.setVisible(true);
                         this.dispose();
+                        t = 2;
                     break;
                 }
         } else{

@@ -26,14 +26,17 @@ public class IA {
         tabsz = tamtab;
         brain = diff;
         prev = prevButt;
-        selcas(brain, prev);
+        
         
     }
 
     private void selcas(int dif, JButton butt) {
         if (dif == 0 || butt == null) {
+            System.out.println("Generando...");
             casx = (int) (Math.random() * tabsz);
             casy = (int) (Math.random() * tabsz);
+            System.out.print("Coordenadas generadas: ");
+            System.out.println(casx + ", " + casy);
         } else if (dif == 1){
             do{
                 System.out.println("Generando...");
@@ -42,8 +45,14 @@ public class IA {
                 casx = ((butt.getX()-18)/33) + randx;
                 
                 casy = ((butt.getY()-18)/33) + randy;
-                System.out.println();
-            }while(!(casx >= 0 && casx <= 13)&&!(casy >= 0 && casy <= 13));
+                System.out.print("Coordenadas generadas: ");
+                System.out.println(casx + ", " + casy);
+                if(casx < 0 || casx >= tabsz || casy < 0 || casy >= tabsz){
+                    System.out.println("Coordenadas Inválidas, Regenerando...");
+                    System.out.println("");
+                }
+                
+            }while(casx < 0 || casx >= tabsz || casy < 0 || casy >= tabsz);
         }
 
     }
@@ -59,11 +68,13 @@ public class IA {
     public boolean chkplay(int x, int y) {
         gamemec mec = new gamemec();
         if (mec.tab[x][y] != 0) {
-            System.out.println("Reintentando");
+            System.out.println("Ya hay una ficha en esas coordenadas, Reintentando...");
+            System.out.println("");
             
             return true;
         } else {
-            System.out.println("Colocable");
+            System.out.println("Colocable, Coordenadas Válidas");
+            
         }
         return false;
     }
@@ -71,7 +82,7 @@ public class IA {
     public void IATurn(JFrame frame, JLabel lab1, JLabel lab2) {
         gamemec mec = new gamemec();
         myTurn = true;
-        int its = (int) (Math.random() * 3 + 1) * 1000;
+        int its = (int) (Math.random() * 2 + 1) * 1000;
         
         
         
@@ -90,11 +101,18 @@ public class IA {
                     selcas(brain, prev);
                     int Y = getY() * 33 + 20, X = getX() * 33 + 18;
                     IAButton = (JButton) frame.getContentPane().getComponentAt(X, Y);
+                    
                 } while(chkplay(getX(), getY()));
+                System.out.println("Colocando Ficha...");
                 mec.marcar(IAButton, turno, lab1, lab2);
-                System.out.println(getX() + ", " + getY());
+                
                 
                 myTurn = false;
+                
+                System.out.println("Turno dejado");
+                System.out.println("");
+                System.out.println("-----------------------------------------");
+                System.out.println("");
 
             }
         },

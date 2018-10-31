@@ -20,16 +20,19 @@ public class gamemec {
         
     }
     private static int turn;
+    private static long init;
     
     private static int noire;
     private static int blanche;
     public String p1;
     public String p2;
+    private static int fichcont;
+
     
     public static int[][] tab = new int[21][21];
     
     
-    private int segs;
+    
     
 
     
@@ -112,6 +115,8 @@ public class gamemec {
                 tab[i][j] = 0;
             }
         }
+        init = System.currentTimeMillis();
+        
     }
     
     public void marcar(javax.swing.JButton button, int turno, javax.swing.JLabel lab1, javax.swing.JLabel lab2){
@@ -125,6 +130,7 @@ public class gamemec {
             }
             mecturn(turno);
             lblupd(lab1, lab2);
+            fichcont++;
         } else{
             System.out.println("NOPE!, ya hay un " + tab[getcol(button)][getfil(button)]);
         }
@@ -214,17 +220,34 @@ public class gamemec {
    
    public int chkvic(){
        if(chkdiag() != 0){
+           
+           
            return chkdiag();
        }
        if(chkhor() != 0){
+           
+           
            return chkhor();
        }
        if(chkver() != 0){
+           
+           
            return chkver();
        }
        return 0;
    }
    
+   public int getSegs(){
+       long l = System.currentTimeMillis();
+
+       return (int)((l-init)/1000);
+   }
+   public String getTime(){
+       String res = "";
+       
+       res = res + (int)(getSegs()/60) + ":" + getSegs()%60; 
+       return res;
+   }
    public void lblupd(javax.swing.JLabel jap, javax.swing.JLabel esp){
        if (getTurn() == getnoir()){
             jap.setText("黒");
@@ -241,6 +264,10 @@ public class gamemec {
            return true;
        }
        return false;
+   }
+   
+   public int contFich(){
+       return fichcont;
    }
 
    

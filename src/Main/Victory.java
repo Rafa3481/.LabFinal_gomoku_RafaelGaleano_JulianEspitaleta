@@ -5,10 +5,8 @@
  */
 package Main;
 
-import static Main.inises.t;
-import static Main.tab15.w15;
-import static Main.tab19.w19;
-import static Main.tab21.w21;
+
+
 
 
 /**
@@ -20,45 +18,21 @@ public class Victory extends javax.swing.JFrame {
     /**
      * Creates new form Victory
      */
-    public Victory() {
+    public Victory(){
         initComponents();
-        switch(t){
-            
-            case 0:
-                switch(w15){
-                    case 0:
-                        txt.setText("winner winner chicken dinner (Black)");
-                    break;
-                    
-                    case 1:
-                        txt.setText("winner winner chicken dinner (White)");
-                    break;  
-                }            
-            break;
-            
-            case 1:
-                switch(w19){
-                    case 0:
-                        txt.setText("winner winner chicken dinner (Black)");
-                    break;
-                    
-                    case 1:
-                        txt.setText("winner winner chicken dinner (White)");
-                    break;  
-                }            
-            break;
-            
-            case 2:
-                switch(w21){
-                    case 0:
-                        txt.setText("winner winner chicken dinner (Black)");
-                    break;
-                    
-                    case 1:
-                        txt.setText("winner winner chicken dinner (White)");
-                    break;                    
-                }            
-            break;
+    }
+    public Victory(int winner) {
+        initComponents();
+        gamemec mec = new gamemec();
+        int wh = mec.getblanc(), bl = mec.getnoir();
+        temps.setText(mec.getTime());
+        fichas.setText(String.valueOf(mec.contFich()));
+        if (winner  == bl) {
+           txt.setText("winner winner chicken dinner (Negras)");
+           omedetou.setText("黒いさん、おめでとうございます！！");
+        } else{
+            txt.setText("winner winner chicken dinner (Blancas)");
+            omedetou.setText("白いさん、おめでとうございます！！");
         }
     }
 
@@ -73,41 +47,89 @@ public class Victory extends javax.swing.JFrame {
 
         jButton1 = new javax.swing.JButton();
         txt = new javax.swing.JLabel();
+        omedetou = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        fichas = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        temps = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(329, 106));
-        setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(340, 150));
+        setPreferredSize(new java.awt.Dimension(500, 300));
         setResizable(false);
         getContentPane().setLayout(null);
 
-        jButton1.setText("Continuar");
+        jButton1.setText("Volver a jugar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(117, 65, 100, 30);
+        jButton1.setBounds(30, 210, 190, 30);
 
-        txt.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        txt.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         txt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txt.setLabelFor(txt);
         txt.setText("winner winner chicken dinner");
         txt.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         txt.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
         getContentPane().add(txt);
-        txt.setBounds(10, 11, 309, 44);
+        txt.setBounds(0, 10, 500, 44);
         txt.getAccessibleContext().setAccessibleParent(txt);
+
+        omedetou.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 24)); // NOI18N
+        omedetou.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        omedetou.setText("黒さん、おめでとうございます！！");
+        getContentPane().add(omedetou);
+        omedetou.setBounds(1, 86, 500, 30);
+
+        jButton2.setText("Volver al menú Principal");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2);
+        jButton2.setBounds(270, 210, 190, 30);
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel1.setText("Fichas Colocadas: ");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(150, 160, 140, 20);
+
+        fichas.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        fichas.setText("fichas");
+        getContentPane().add(fichas);
+        fichas.setBounds(290, 160, 70, 20);
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel2.setText("Tiempo de partida: ");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(150, 140, 150, 20);
+
+        temps.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        temps.setText("temps");
+        getContentPane().add(temps);
+        temps.setBounds(290, 140, 70, 20);
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        inises vent = new inises();
+        vent.setVisible(true);
         this.dispose();
-        System.exit(0);      
+              
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        Main vent = new Main();
+        vent.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -147,7 +169,13 @@ public class Victory extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel fichas;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel omedetou;
+    private javax.swing.JLabel temps;
     private javax.swing.JLabel txt;
     // End of variables declaration//GEN-END:variables
 }

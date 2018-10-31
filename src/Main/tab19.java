@@ -399,22 +399,22 @@ public class tab19 extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 18)); // NOI18N
         jLabel3.setText("黒いのチップス");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(630, 130, 130, 24);
+        jLabel3.setBounds(630, 130, 130, 19);
 
         jLabel4.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 18)); // NOI18N
         jLabel4.setText("(Fichas Negras)");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(630, 150, 128, 24);
+        jLabel4.setBounds(630, 150, 135, 19);
 
         jLabel5.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 18)); // NOI18N
         jLabel5.setText("白いのチップス");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(830, 130, 130, 24);
+        jLabel5.setBounds(830, 130, 130, 19);
 
         jLabel6.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 18)); // NOI18N
         jLabel6.setText("(Fichas Blancas)");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(830, 150, 134, 24);
+        jLabel6.setBounds(830, 150, 144, 19);
 
         kuro.setEditable(false);
         kuro.setFocusable(false);
@@ -5857,7 +5857,7 @@ public class tab19 extends javax.swing.JFrame {
         esplab.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         esplab.setText("(Negras)");
         getContentPane().add(esplab);
-        esplab.setBounds(736, 370, 110, 32);
+        esplab.setBounds(736, 370, 110, 25);
 
         tlab.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 120)); // NOI18N
         tlab.setText("黒");
@@ -5867,7 +5867,7 @@ public class tab19 extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 24)); // NOI18N
         jLabel9.setText("Turno Actual:");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(710, 210, 144, 32);
+        jLabel9.setBounds(710, 210, 156, 25);
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/UB.jpg"))); // NOI18N
         getContentPane().add(jLabel8);
@@ -5882,7 +5882,7 @@ public class tab19 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void click(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_click
-        Victory v = new Victory();
+        
         gamemec mec = new gamemec();
 
         if(mec.chkplz((javax.swing.JButton)evt.getSource())){
@@ -5894,23 +5894,33 @@ public class tab19 extends javax.swing.JFrame {
 
             if(mec.chkvic() != 0){
                 if (mec.chkvic() == mec.getnoir()){
-                    JOptionPane.showMessageDialog(null, "Ganó el NEGRO PUTITO");
+                    JOptionPane.showMessageDialog(null, "Ganó el NEGRO");
+                    Victory v = new Victory(mec.chkvic());
+                    v.setVisible(true);
+                    this.dispose();
                 } else{
-                    JOptionPane.showMessageDialog(null, "Ganó el BLANCO PUTITO");
+                    JOptionPane.showMessageDialog(null, "Ganó el BLANCO");
+                    Victory v = new Victory(mec.chkvic()); v.setVisible(true);
+                    this.dispose();
 
                 }
 
             }
 
-            if(IAiru){
+            if(IAiru && mec.chkvic() == 0){
                 izi.IATurn(this, tlab, esplab);
                 if(mec.chkvic() != 0){
                     if (mec.chkvic() == mec.getnoir()){
-                        JOptionPane.showMessageDialog(null, "Ganó el NEGRO PUTITO");
-                    } else{
-                        JOptionPane.showMessageDialog(null, "Ganó el BLANCO PUTITO");
+                    JOptionPane.showMessageDialog(null, "Ganó el NEGRO");
+                    Victory v = new Victory(mec.chkvic());
+                    v.setVisible(true);
+                    this.dispose();
+                } else{
+                    JOptionPane.showMessageDialog(null, "Ganó el BLANCO");
+                    Victory v = new Victory(mec.chkvic()); v.setVisible(true);
+                    this.dispose();
 
-                    }
+                }
                 }
             }
         } else{

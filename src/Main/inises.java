@@ -36,7 +36,7 @@ public class inises extends javax.swing.JFrame {
     }
     public static String usrlog1;
     public static String usrlog2;
-    public static int t;
+    
     
     private String conv(char[] chr){
         String res = "";
@@ -206,7 +206,7 @@ public class inises extends javax.swing.JFrame {
             }
         });
         getContentPane().add(acc);
-        acc.setBounds(190, 360, 71, 23);
+        acc.setBounds(190, 360, 77, 25);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/RegisterBackground.jpg"))); // NOI18N
         jLabel5.setText("jLabel5");
@@ -289,21 +289,21 @@ public class inises extends javax.swing.JFrame {
                         tab15 vent0 = new tab15(usr.getText(), "iaai", iabr);
                         vent0.setVisible(true);
                         this.dispose();
-                        t = 0;
+                        
                     break;
 
                     case 1:
                         tab19 vent1 = new tab19(usr.getText(), "iaai", iabr);
                         vent1.setVisible(true);
                         this.dispose();
-                        t = 1;
+                        
                     break;
 
                     case 2: 
                         tab21 vent2 = new tab21(usr.getText(), "iaai", iabr);
                         vent2.setVisible(true);
                         this.dispose();
-                        t = 2;
+                        
                     break;
                 }
         } else{

@@ -25,14 +25,25 @@ public class IA {
     public IA(int tamtab, int diff, JButton prevButt) {
         tabsz = tamtab;
         brain = diff;
-        selcas(brain);
         prev = prevButt;
+        selcas(brain, prev);
+        
     }
 
-    private void selcas(int dif) {
-        if (dif == 0) {
+    private void selcas(int dif, JButton butt) {
+        if (dif == 0 || butt == null) {
             casx = (int) (Math.random() * tabsz);
             casy = (int) (Math.random() * tabsz);
+        } else if (dif == 1){
+            do{
+                System.out.println("Generando...");
+                int randx = (int) (Math.random()*((1-(-1)) + 1)) -1;
+                int randy = (int) (Math.random()*((1-(-1)) + 1)) -1;
+                casx = ((butt.getX()-18)/33) + randx;
+                
+                casy = ((butt.getY()-18)/33) + randy;
+                System.out.println();
+            }while(!(casx >= 0 && casx <= 13)&&!(casy >= 0 && casy <= 13));
         }
 
     }
@@ -76,7 +87,7 @@ public class IA {
                 int turno = mec.getTurn();
                 JButton IAButton;
                 do{
-                    selcas(brain);
+                    selcas(brain, prev);
                     int Y = getY() * 33 + 20, X = getX() * 33 + 18;
                     IAButton = (JButton) frame.getContentPane().getComponentAt(X, Y);
                 } while(chkplay(getX(), getY()));

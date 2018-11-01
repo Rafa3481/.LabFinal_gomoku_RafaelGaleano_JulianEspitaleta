@@ -5,6 +5,8 @@
  */
 package Main;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author ragaleano
@@ -34,10 +36,10 @@ public class dificult extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(300, 150));
-        setMinimumSize(new java.awt.Dimension(300, 150));
+        setMaximumSize(new java.awt.Dimension(296, 111));
+        setMinimumSize(new java.awt.Dimension(296, 111));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(300, 150));
+        setPreferredSize(new java.awt.Dimension(296, 111));
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -47,27 +49,132 @@ public class dificult extends javax.swing.JFrame {
         jLabel1.setBounds(34, 20, 207, 29);
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton1.setText("Facil");
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Buttons/Facilbase.png"))); // NOI18N
+        jButton1.setContentAreaFilled(false);
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton1MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton1MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButton1MouseReleased(evt);
+            }
+        });
         getContentPane().add(jButton1);
-        jButton1.setBounds(10, 70, 73, 25);
+        jButton1.setBounds(10, 60, 90, 40);
 
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton2.setText("Media");
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Buttons/Mediabase.png"))); // NOI18N
+        jButton2.setContentAreaFilled(false);
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton2MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton2MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButton2MouseReleased(evt);
+            }
+        });
         getContentPane().add(jButton2);
-        jButton2.setBounds(100, 70, 73, 25);
+        jButton2.setBounds(100, 60, 90, 40);
 
         jButton3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton3.setText("Dificil");
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Buttons/Dificilbase.png"))); // NOI18N
+        jButton3.setContentAreaFilled(false);
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton3MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton3MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButton3MouseReleased(evt);
+            }
+        });
         getContentPane().add(jButton3);
-        jButton3.setBounds(190, 70, 73, 25);
+        jButton3.setBounds(190, 60, 90, 40);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/UB.jpg"))); // NOI18N
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, 0, 290, 120);
+        jLabel2.setBounds(0, 0, 310, 120);
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseEntered
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/Faciltilted.png"));
+        jButton1.setIcon(ii);
+    }//GEN-LAST:event_jButton1MouseEntered
+
+    private void jButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseExited
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/Facilbase.png"));
+        jButton1.setIcon(ii);
+    }//GEN-LAST:event_jButton1MouseExited
+
+    private void jButton1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MousePressed
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/Facilpressed.png"));
+        jButton1.setIcon(ii);
+    }//GEN-LAST:event_jButton1MousePressed
+
+    private void jButton1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseReleased
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/Facilbase.png"));
+        jButton1.setIcon(ii);
+    }//GEN-LAST:event_jButton1MouseReleased
+
+    private void jButton2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseEntered
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/Mediatilted.png"));
+        jButton2.setIcon(ii);
+    }//GEN-LAST:event_jButton2MouseEntered
+
+    private void jButton2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseExited
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/Mediabase.png"));
+        jButton2.setIcon(ii);
+    }//GEN-LAST:event_jButton2MouseExited
+
+    private void jButton2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MousePressed
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/Mediapressed.png"));
+        jButton2.setIcon(ii);
+    }//GEN-LAST:event_jButton2MousePressed
+
+    private void jButton2MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseReleased
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/Mediabase.png"));
+        jButton2.setIcon(ii);
+    }//GEN-LAST:event_jButton2MouseReleased
+
+    private void jButton3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseEntered
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/Dificiltilted.png"));
+        jButton3.setIcon(ii);
+    }//GEN-LAST:event_jButton3MouseEntered
+
+    private void jButton3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseExited
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/Dificilbase.png"));
+        jButton3.setIcon(ii);
+    }//GEN-LAST:event_jButton3MouseExited
+
+    private void jButton3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MousePressed
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/Dificilpressed.png"));
+        jButton3.setIcon(ii);
+    }//GEN-LAST:event_jButton3MousePressed
+
+    private void jButton3MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseReleased
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/Dificilbase.png"));
+        jButton3.setIcon(ii);
+    }//GEN-LAST:event_jButton3MouseReleased
 
     /**
      * @param args the command line arguments

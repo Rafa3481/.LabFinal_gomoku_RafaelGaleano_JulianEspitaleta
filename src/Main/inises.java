@@ -36,7 +36,8 @@ public class inises extends javax.swing.JFrame {
     }
     public static String usrlog1;
     public static String usrlog2;
-    
+    private int dfsel;
+    private int tab;
     
     private String conv(char[] chr){
         String res = "";
@@ -97,7 +98,18 @@ public class inises extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        tabsel = new javax.swing.JDialog();
+        b15 = new javax.swing.JButton();
+        b19 = new javax.swing.JButton();
+        b21 = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        diffsel = new javax.swing.JDialog();
+        jLabel9 = new javax.swing.JLabel();
+        med = new javax.swing.JButton();
+        izi = new javax.swing.JButton();
+        hrd = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -109,7 +121,185 @@ public class inises extends javax.swing.JFrame {
         acc = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
 
-        jButton1.setText("jButton1");
+        tabsel.setMinimumSize(new java.awt.Dimension(317, 150));
+        tabsel.setPreferredSize(new java.awt.Dimension(311, 117));
+        tabsel.setResizable(false);
+        tabsel.getContentPane().setLayout(null);
+
+        b15.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        b15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Buttons/15Xbase.png"))); // NOI18N
+        b15.setContentAreaFilled(false);
+        b15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                b15MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                b15MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                b15MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                b15MouseReleased(evt);
+            }
+        });
+        b15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b15ActionPerformed(evt);
+            }
+        });
+        tabsel.getContentPane().add(b15);
+        b15.setBounds(10, 60, 90, 40);
+
+        b19.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        b19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Buttons/19Xbase.png"))); // NOI18N
+        b19.setContentAreaFilled(false);
+        b19.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                b19MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                b19MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                b19MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                b19MouseReleased(evt);
+            }
+        });
+        b19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b19ActionPerformed(evt);
+            }
+        });
+        tabsel.getContentPane().add(b19);
+        b19.setBounds(110, 60, 90, 40);
+
+        b21.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        b21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Buttons/21Xbase.png"))); // NOI18N
+        b21.setContentAreaFilled(false);
+        b21.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                b21MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                b21MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                b21MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                b21MouseReleased(evt);
+            }
+        });
+        b21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b21ActionPerformed(evt);
+            }
+        });
+        tabsel.getContentPane().add(b21);
+        b21.setBounds(210, 60, 90, 40);
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setText("Tamaño del tablero");
+        tabsel.getContentPane().add(jLabel7);
+        jLabel7.setBounds(50, 10, 207, 29);
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/UB.jpg"))); // NOI18N
+        tabsel.getContentPane().add(jLabel6);
+        jLabel6.setBounds(0, 0, 310, 120);
+
+        diffsel.setMinimumSize(new java.awt.Dimension(296, 150));
+        diffsel.setResizable(false);
+        diffsel.getContentPane().setLayout(null);
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setText("Elija la dificultad");
+        diffsel.getContentPane().add(jLabel9);
+        jLabel9.setBounds(0, 10, 310, 29);
+
+        med.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        med.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Buttons/Mediabase.png"))); // NOI18N
+        med.setContentAreaFilled(false);
+        med.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                medMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                medMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                medMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                medMouseReleased(evt);
+            }
+        });
+        med.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                medActionPerformed(evt);
+            }
+        });
+        diffsel.getContentPane().add(med);
+        med.setBounds(100, 60, 90, 40);
+
+        izi.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        izi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Buttons/Facilbase.png"))); // NOI18N
+        izi.setContentAreaFilled(false);
+        izi.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                iziMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                iziMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                iziMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                iziMouseReleased(evt);
+            }
+        });
+        izi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                iziActionPerformed(evt);
+            }
+        });
+        diffsel.getContentPane().add(izi);
+        izi.setBounds(10, 60, 90, 40);
+
+        hrd.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        hrd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Buttons/Dificilbase.png"))); // NOI18N
+        hrd.setContentAreaFilled(false);
+        hrd.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                hrdMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                hrdMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                hrdMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                hrdMouseReleased(evt);
+            }
+        });
+        hrd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hrdActionPerformed(evt);
+            }
+        });
+        diffsel.getContentPane().add(hrd);
+        hrd.setBounds(190, 60, 90, 40);
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/UB.jpg"))); // NOI18N
+        jLabel8.setMinimumSize(new java.awt.Dimension(250, 250));
+        diffsel.getContentPane().add(jLabel8);
+        jLabel8.setBounds(0, 0, 290, 120);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(480, 560));
@@ -206,7 +396,7 @@ public class inises extends javax.swing.JFrame {
             }
         });
         getContentPane().add(acc);
-        acc.setBounds(190, 360, 71, 23);
+        acc.setBounds(190, 360, 77, 25);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/RegisterBackground.jpg"))); // NOI18N
         jLabel5.setText("jLabel5");
@@ -223,7 +413,7 @@ public class inises extends javax.swing.JFrame {
 
     private void P2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_P2ActionPerformed
         String[] opt = {"Registrar 2do Jugador", "Jugar como Invitado", "Iniciar Sesión"};
-        String[] dfopt = {"Fácil", "Medio", "Complejo"};
+        //String[] dfopt = {"Fácil", "Medio", "Complejo"};
         if(compcred(usr.getText(), psw.getPassword())){
             int sel = JOptionPane.showOptionDialog(null, "Qué desea hacer?", "Opciones para Jugador 2", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null ,opt, opt[0]);
             this.setVisible(false);
@@ -236,55 +426,8 @@ public class inises extends javax.swing.JFrame {
                 break;
                 
                 case 1:
-                    String[] tabs = {"15x15", "19x19", "21x21"};
-                    int sel2 = JOptionPane.showOptionDialog(null, "Elija su estilo de tablero", "Opciones de Juego", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null ,tabs, opt[0]);
-                    this.setVisible(false);
-
-                    switch(sel2){
-
-                        case 0: 
-                            int dfsel = JOptionPane.showOptionDialog(null, "Elija la dificultad de la partida", "Opciones de Juego", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null ,dfopt, dfopt[0]);
-                            int diff = 10;
-                            switch(dfsel){
-                                case 0: diff = 10; break;              
-                                case 1: diff = 5; break;
-                                case 2: diff = 3; break;
-                            }
-                            tab15 vent = new tab15(usr.getText(),"Invitado", -1, diff);
-                            vent.setVisible(true);
-                            this.setVisible(false);
-                            
-                        break;
-
-                        case 1:
-
-                            dfsel = JOptionPane.showOptionDialog(null, "Elija la dificultad de la partida", "Opciones de Juego", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null ,dfopt, dfopt[0]);
-                            diff = 10;
-                            switch(dfsel){
-                                case 0: diff = 10; break;              
-                                case 1: diff = 5; break;
-                                case 2: diff = 3; break;
-                            }
-                            tab19 vent1 = new tab19(usr.getText(),"Invitado", -1, diff);
-                            vent1.setVisible(true);
-                            this.setVisible(false);
-                            
-                        break;
-
-                        case 2:
-                            dfsel = JOptionPane.showOptionDialog(null, "Elija la dificultad de la partida", "Opciones de Juego", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null ,dfopt, dfopt[0]);
-                            diff = 10;
-                            switch(dfsel){
-                                case 0: diff = 10; break;              
-                                case 1: diff = 5; break;
-                                case 2: diff = 3; break;
-                            }
-                            tab21 vent2 = new tab21(usr.getText(),"Invitado", -1, diff);
-                            vent2.setVisible(true);
-                            this.setVisible(false);
-                            
-                        break;
-                    }
+                    tabsel.setLocationRelativeTo(null);
+                    tabsel.setVisible(true);
                 break;
                 
                 case 2: 
@@ -358,10 +501,11 @@ public class inises extends javax.swing.JFrame {
     private void accActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_accActionPerformed
         String[] opt = {"15x15", "19x19", "21x21"};
         String[] dfopt = {"Fácil", "Medio", "Complejo"};
-        int dfsel = JOptionPane.showOptionDialog(null, "Elija la dificultad de la partida", "Opciones de Juego", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null ,dfopt, dfopt[0]);
+         //= JOptionPane.showOptionDialog(null, "Elija la dificultad de la partida", "Opciones de Juego", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null ,dfopt, dfopt[0]);
             int diff = 10;
+            
             switch(dfsel){
-                case 0: diff = 10; break;              
+                case 0: diff tabselk;              
                 case 1: diff = 5; break;
                 case 2: diff = 3; break;
             }
@@ -397,6 +541,225 @@ public class inises extends javax.swing.JFrame {
     private void usrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usrActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_usrActionPerformed
+
+    private void b15MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b15MouseEntered
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/15Xtilted.png"));
+        b15.setIcon(ii);
+    }//GEN-LAST:event_b15MouseEntered
+
+    private void b15MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b15MouseExited
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/15Xbase.png"));
+        b15.setIcon(ii);
+    }//GEN-LAST:event_b15MouseExited
+
+    private void b15MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b15MousePressed
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/15Xpressed.png"));
+        b15.setIcon(ii);
+    }//GEN-LAST:event_b15MousePressed
+
+    private void b15MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b15MouseReleased
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/15Xbase.png"));
+        b15.setIcon(ii);
+    }//GEN-LAST:event_b15MouseReleased
+
+    private void b19MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b19MouseEntered
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/19Xtilted.png"));
+        b19.setIcon(ii);
+    }//GEN-LAST:event_b19MouseEntered
+
+    private void b19MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b19MouseExited
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/19Xbase.png"));
+        b19.setIcon(ii);
+    }//GEN-LAST:event_b19MouseExited
+
+    private void b19MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b19MousePressed
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/19Xpressed.png"));
+        b19.setIcon(ii);
+    }//GEN-LAST:event_b19MousePressed
+
+    private void b19MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b19MouseReleased
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/19Xbase.png"));
+        b19.setIcon(ii);
+    }//GEN-LAST:event_b19MouseReleased
+
+    private void b21MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b21MouseEntered
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/21Xtilted.png"));
+        b21.setIcon(ii);
+    }//GEN-LAST:event_b21MouseEntered
+
+    private void b21MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b21MouseExited
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/21Xbase.png"));
+        b21.setIcon(ii);
+    }//GEN-LAST:event_b21MouseExited
+
+    private void b21MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b21MousePressed
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/21Xpressed.png"));
+        b21.setIcon(ii);
+    }//GEN-LAST:event_b21MousePressed
+
+    private void b21MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b21MouseReleased
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/21Xbase.png"));
+        b21.setIcon(ii);
+    }//GEN-LAST:event_b21MouseReleased
+
+    private void b15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b15ActionPerformed
+        tab = 15;
+        tabsel.dispose();
+        diffsel.setVisible(true);
+    }//GEN-LAST:event_b15ActionPerformed
+
+    private void iziMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iziMouseEntered
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/Faciltilted.png"));
+        izi.setIcon(ii);
+    }//GEN-LAST:event_iziMouseEntered
+
+    private void iziMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iziMouseExited
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/Facilbase.png"));
+        izi.setIcon(ii);
+    }//GEN-LAST:event_iziMouseExited
+
+    private void iziMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iziMousePressed
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/Facilpressed.png"));
+        izi.setIcon(ii);
+    }//GEN-LAST:event_iziMousePressed
+
+    private void iziMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iziMouseReleased
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/Facilbase.png"));
+        izi.setIcon(ii);
+    }//GEN-LAST:event_iziMouseReleased
+
+    private void medMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_medMouseEntered
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/Mediatilted.png"));
+        med.setIcon(ii);
+    }//GEN-LAST:event_medMouseEntered
+
+    private void medMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_medMouseExited
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/Mediabase.png"));
+        med.setIcon(ii);
+    }//GEN-LAST:event_medMouseExited
+
+    private void medMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_medMousePressed
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/Mediapressed.png"));
+        med.setIcon(ii);
+    }//GEN-LAST:event_medMousePressed
+
+    private void medMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_medMouseReleased
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/Mediabase.png"));
+        med.setIcon(ii);
+    }//GEN-LAST:event_medMouseReleased
+
+    private void hrdMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hrdMouseEntered
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/Dificiltilted.png"));
+        hrd.setIcon(ii);
+    }//GEN-LAST:event_hrdMouseEntered
+
+    private void hrdMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hrdMouseExited
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/Dificilbase.png"));
+        hrd.setIcon(ii);
+    }//GEN-LAST:event_hrdMouseExited
+
+    private void hrdMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hrdMousePressed
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/Dificilpressed.png"));
+        hrd.setIcon(ii);
+    }//GEN-LAST:event_hrdMousePressed
+
+    private void hrdMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hrdMouseReleased
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/Dificilbase.png"));
+        hrd.setIcon(ii);
+    }//GEN-LAST:event_hrdMouseReleased
+
+    private void b19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b19ActionPerformed
+        tab = 19;
+        tabsel.dispose();
+        diffsel.setVisible(true);
+    }//GEN-LAST:event_b19ActionPerformed
+
+    private void b21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b21ActionPerformed
+        tab = 21;
+        tabsel.dispose();
+        diffsel.setVisible(true);
+    }//GEN-LAST:event_b21ActionPerformed
+
+    private void iziActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iziActionPerformed
+        switch(tab){
+            case 15: 
+                tab15 brd15 = new tab15("Invitado", usr.getText(),-1,10);
+                brd15.setVisible(true); 
+                
+                this.dispose(); 
+                
+            break;
+            
+            case 19: 
+                tab19 brd19 = new tab19("Invitado", usr.getText(),-1,10);
+                brd19.setVisible(true); 
+                diffsel.setVisible(false);
+                this.dispose(); 
+                
+            break;
+            
+            case 21: 
+                tab21 brd21 = new tab21("Invitado", usr.getText(),-1,10);
+                brd21.setVisible(true); 
+                diffsel.setVisible(false);
+                this.dispose();
+            break;
+        }
+    }//GEN-LAST:event_iziActionPerformed
+
+    private void medActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_medActionPerformed
+        switch(tab){
+            case 15: 
+                tab15 brd15 = new tab15("Invitado", usr.getText(),-1,5);
+                brd15.setVisible(true); 
+                
+                this.dispose(); 
+                
+            break;
+            
+            case 19: 
+                tab19 brd19 = new tab19("Invitado", usr.getText(),-1,5);
+                brd19.setVisible(true); 
+                diffsel.setVisible(false);
+                this.dispose(); 
+                
+            break;
+            
+            case 21: 
+                tab21 brd21 = new tab21("Invitado", usr.getText(),-1,5);
+                brd21.setVisible(true); 
+                diffsel.setVisible(false);
+                this.dispose();
+            break;
+        }
+    }//GEN-LAST:event_medActionPerformed
+
+    private void hrdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hrdActionPerformed
+        switch(tab){
+            case 15: 
+                tab15 brd15 = new tab15("Invitado", usr.getText(),-1,3);
+                brd15.setVisible(true); 
+                
+                this.dispose(); 
+                
+            break;
+            
+            case 19: 
+                tab19 brd19 = new tab19("Invitado", usr.getText(),-1,3);
+                brd19.setVisible(true); 
+                diffsel.setVisible(false);
+                this.dispose(); 
+                
+            break;
+            
+            case 21: 
+                tab21 brd21 = new tab21("Invitado", usr.getText(),-1,3);
+                brd21.setVisible(true); 
+                diffsel.setVisible(false);
+                this.dispose();
+            break;
+        }
+    }//GEN-LAST:event_hrdActionPerformed
 
     /**
      * @param args the command line arguments
@@ -438,13 +801,24 @@ public class inises extends javax.swing.JFrame {
     private javax.swing.JButton IA;
     private javax.swing.JButton P2;
     private javax.swing.JButton acc;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton b15;
+    private javax.swing.JButton b19;
+    private javax.swing.JButton b21;
+    private javax.swing.JDialog diffsel;
+    private javax.swing.JButton hrd;
+    private javax.swing.JButton izi;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JButton med;
     private javax.swing.JPasswordField psw;
+    private javax.swing.JDialog tabsel;
     private javax.swing.JTextField usr;
     // End of variables declaration//GEN-END:variables
 }

@@ -90,6 +90,11 @@ public class gamemec {
         } else{
             turn = 1;
         }
+        if (!IAiru){
+            tmp.cancel();
+            stp(diff);
+        }
+        
         
     }
     
@@ -107,12 +112,12 @@ public class gamemec {
             public void run(){
                 
                 templabel.setText(String.valueOf(setInterval()));
-                if(segs == 0){
-                    
+                if(segs <= 0){
+                    tmp.cancel();
                     JOptionPane.showMessageDialog(null, "Has perdido tu turno", "ATENCIÓN", JOptionPane.WARNING_MESSAGE);
                     IA ia = new IA(tabsz, 0, null);
                     
-                    tmp.cancel();
+                    
                     ia.IATurn(frameTab);
                     
                     

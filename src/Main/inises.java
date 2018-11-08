@@ -37,7 +37,7 @@ public class inises extends javax.swing.JFrame {
     public static String usrlog1;
     public static String usrlog2;
     private int dfsel;
-    private int tab;
+    public String p2;
     
     private String conv(char[] chr){
         String res = "";
@@ -110,6 +110,12 @@ public class inises extends javax.swing.JFrame {
         izi = new javax.swing.JButton();
         hrd = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
+        p2opt = new javax.swing.JDialog();
+        jLabel11 = new javax.swing.JLabel();
+        regbut = new javax.swing.JButton();
+        inisesp2but = new javax.swing.JButton();
+        p2invbut = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -301,6 +307,48 @@ public class inises extends javax.swing.JFrame {
         diffsel.getContentPane().add(jLabel8);
         jLabel8.setBounds(0, 0, 290, 120);
 
+        p2opt.setMinimumSize(new java.awt.Dimension(317, 160));
+        p2opt.setResizable(false);
+        p2opt.getContentPane().setLayout(null);
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel11.setText("Opciones para Jugador 2");
+        p2opt.getContentPane().add(jLabel11);
+        jLabel11.setBounds(0, 10, 310, 29);
+
+        regbut.setText("Registrar");
+        regbut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                regbutActionPerformed(evt);
+            }
+        });
+        p2opt.getContentPane().add(regbut);
+        regbut.setBounds(10, 80, 90, 25);
+
+        inisesp2but.setText("Iniciar Sesión");
+        inisesp2but.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inisesp2butActionPerformed(evt);
+            }
+        });
+        p2opt.getContentPane().add(inisesp2but);
+        inisesp2but.setBounds(110, 80, 90, 25);
+
+        p2invbut.setText("Invitado");
+        p2invbut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                p2invbutActionPerformed(evt);
+            }
+        });
+        p2opt.getContentPane().add(p2invbut);
+        p2invbut.setBounds(210, 80, 90, 25);
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/UB.jpg"))); // NOI18N
+        jLabel10.setMinimumSize(new java.awt.Dimension(250, 250));
+        p2opt.getContentPane().add(jLabel10);
+        jLabel10.setBounds(0, 0, 330, 150);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(480, 560));
         getContentPane().setLayout(null);
@@ -412,67 +460,24 @@ public class inises extends javax.swing.JFrame {
     }//GEN-LAST:event_pswActionPerformed
 
     private void P2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_P2ActionPerformed
-        String[] opt = {"Registrar 2do Jugador", "Jugar como Invitado", "Iniciar Sesión"};
-        //String[] dfopt = {"Fácil", "Medio", "Complejo"};
+        
         if(compcred(usr.getText(), psw.getPassword())){
-            int sel = JOptionPane.showOptionDialog(null, "Qué desea hacer?", "Opciones para Jugador 2", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null ,opt, opt[0]);
+            p2opt.setVisible(true);
+            p2opt.setLocationRelativeTo(null);
             this.setVisible(false);
-            
-            switch(sel){
-                
-                case 0: 
-                    Registro vent0 = new Registro();
-                    vent0.setVisible(true);
-                break;
-                
-                case 1:
-                    tabsel.setLocationRelativeTo(null);
-                    tabsel.setVisible(true);
-                break;
-                
-                case 2: 
-                    inises vent2 = new inises(true, usr.getText());
-                    vent2.setVisible(true);
-
-                break;
-            }
         } else{
             JOptionPane.showMessageDialog(null, "Usuario o Contraseña Inválido", "Error al Iniciar Sesión", JOptionPane.WARNING_MESSAGE);
         }
     }//GEN-LAST:event_P2ActionPerformed
 
     private void IAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IAActionPerformed
-        String[] opt = {"15x15", "19x19", "21x21"};
-        String[] dfopt = {"Fácil", "Medio", "Complejo"};
+
         
         if(compcred(usr.getText(), psw.getPassword())){
-            int iabr = JOptionPane.showOptionDialog(null, "Elija la dificultad de la partida", "Opciones de Juego", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null ,dfopt, dfopt[0]);
-            int sel = JOptionPane.showOptionDialog(null, "Elija su estilo de tablero", "Opciones de Juego", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null ,opt, opt[0]);
-                this.setVisible(false);
-
-                switch(sel){
-
-                    case 0: 
-                        tab15 vent0 = new tab15(usr.getText(), "iaai", iabr, -1);
-                        vent0.setVisible(true);
-                        this.dispose();
-                        
-                    break;
-
-                    case 1:
-                        tab19 vent1 = new tab19(usr.getText(), "iaai", iabr, -1);
-                        vent1.setVisible(true);
-                        this.dispose();
-                        
-                    break;
-
-                    case 2: 
-                        tab21 vent2 = new tab21(usr.getText(), "iaai", iabr, -1);
-                        vent2.setVisible(true);
-                        this.dispose();
-                        
-                    break;
-                }
+            diffsel.setVisible(true);
+            diffsel.setLocationRelativeTo(null);
+            this.setVisible(false);
+            usrh = "iaai";                
         } else{
             JOptionPane.showMessageDialog(null, "Usuario o Contraseña Inválido", "Error al Iniciar Sesión", JOptionPane.WARNING_MESSAGE);
         }
@@ -603,9 +608,19 @@ public class inises extends javax.swing.JFrame {
     }//GEN-LAST:event_b21MouseReleased
 
     private void b15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b15ActionPerformed
-        tab = 15;
+        
         tabsel.dispose();
-        diffsel.setVisible(true);
+        if(usrh.equalsIgnoreCase("iaai")){
+            tab15 tab  =  new tab15(usrh, "iaai", dfsel, -1);
+            tab.setVisible(true);
+        } else{
+            tab15 tab  =  new tab15(usrh, usr.getText(), -1, dfsel);
+            tab.setVisible(true);
+        }
+        tabsel.dispose();
+        this.dispose();
+        
+        
     }//GEN-LAST:event_b15ActionPerformed
 
     private void iziMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iziMouseEntered
@@ -669,97 +684,70 @@ public class inises extends javax.swing.JFrame {
     }//GEN-LAST:event_hrdMouseReleased
 
     private void b19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b19ActionPerformed
-        tab = 19;
         tabsel.dispose();
-        diffsel.setVisible(true);
+        if(usrh.equalsIgnoreCase("iaai")){
+            tab19 tab  =  new tab19(usrh, "iaai", dfsel, -1);
+            tab.setVisible(true);
+        } else{
+            tab19 tab  =  new tab19(usrh, usr.getText(), -1, dfsel);
+            tab.setVisible(true);
+        }
+        tabsel.dispose();
+        this.dispose();
     }//GEN-LAST:event_b19ActionPerformed
 
     private void b21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b21ActionPerformed
-        tab = 21;
         tabsel.dispose();
-        diffsel.setVisible(true);
+        if(usrh.equalsIgnoreCase("iaai")){
+            tab21 tab  =  new tab21(usrh, "iaai", dfsel, -1);
+            tab.setVisible(true);
+        } else{
+            tab21 tab  =  new tab21(usrh, usr.getText(), -1, dfsel);
+            tab.setVisible(true);
+        }
+        tabsel.dispose();
+        this.dispose();
     }//GEN-LAST:event_b21ActionPerformed
 
     private void iziActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iziActionPerformed
-        switch(tab){
-            case 15: 
-                tab15 brd15 = new tab15("Invitado", usr.getText(),-1,10);
-                brd15.setVisible(true); 
-                
-                this.dispose(); 
-                
-            break;
-            
-            case 19: 
-                tab19 brd19 = new tab19("Invitado", usr.getText(),-1,10);
-                brd19.setVisible(true); 
-                diffsel.setVisible(false);
-                this.dispose(); 
-                
-            break;
-            
-            case 21: 
-                tab21 brd21 = new tab21("Invitado", usr.getText(),-1,10);
-                brd21.setVisible(true); 
-                diffsel.setVisible(false);
-                this.dispose();
-            break;
-        }
+        dfsel = 10;
+        diffsel.dispose();
+        tabsel.setVisible(true);
+        tabsel.setLocationRelativeTo(null);
     }//GEN-LAST:event_iziActionPerformed
 
     private void medActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_medActionPerformed
-        switch(tab){
-            case 15: 
-                tab15 brd15 = new tab15("Invitado", usr.getText(),-1,5);
-                brd15.setVisible(true); 
-                
-                this.dispose(); 
-                
-            break;
-            
-            case 19: 
-                tab19 brd19 = new tab19("Invitado", usr.getText(),-1,5);
-                brd19.setVisible(true); 
-                diffsel.setVisible(false);
-                this.dispose(); 
-                
-            break;
-            
-            case 21: 
-                tab21 brd21 = new tab21("Invitado", usr.getText(),-1,5);
-                brd21.setVisible(true); 
-                diffsel.setVisible(false);
-                this.dispose();
-            break;
-        }
+        dfsel = 5;
+        diffsel.dispose();
+        tabsel.setVisible(true);
+        tabsel.setLocationRelativeTo(null);
     }//GEN-LAST:event_medActionPerformed
 
     private void hrdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hrdActionPerformed
-        switch(tab){
-            case 15: 
-                tab15 brd15 = new tab15("Invitado", usr.getText(),-1,3);
-                brd15.setVisible(true); 
-                
-                this.dispose(); 
-                
-            break;
-            
-            case 19: 
-                tab19 brd19 = new tab19("Invitado", usr.getText(),-1,3);
-                brd19.setVisible(true); 
-                diffsel.setVisible(false);
-                this.dispose(); 
-                
-            break;
-            
-            case 21: 
-                tab21 brd21 = new tab21("Invitado", usr.getText(),-1,3);
-                brd21.setVisible(true); 
-                diffsel.setVisible(false);
-                this.dispose();
-            break;
-        }
+        dfsel = 3;
+        diffsel.dispose();
+        tabsel.setVisible(true);
+        tabsel.setLocationRelativeTo(null);
     }//GEN-LAST:event_hrdActionPerformed
+
+    private void regbutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regbutActionPerformed
+        Registro vent =  new Registro();
+        vent.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_regbutActionPerformed
+
+    private void inisesp2butActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inisesp2butActionPerformed
+        inises vent2 = new inises(true, usr.getText());
+        vent2.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_inisesp2butActionPerformed
+
+    private void p2invbutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p2invbutActionPerformed
+        p2opt.dispose();
+        usrh = "Invitado";
+        diffsel.setVisible(true);
+        diffsel.setLocationRelativeTo(null);
+    }//GEN-LAST:event_p2invbutActionPerformed
 
     /**
      * @param args the command line arguments
@@ -806,8 +794,11 @@ public class inises extends javax.swing.JFrame {
     private javax.swing.JButton b21;
     private javax.swing.JDialog diffsel;
     private javax.swing.JButton hrd;
+    private javax.swing.JButton inisesp2but;
     private javax.swing.JButton izi;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -817,7 +808,10 @@ public class inises extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JButton med;
+    private javax.swing.JButton p2invbut;
+    private javax.swing.JDialog p2opt;
     private javax.swing.JPasswordField psw;
+    private javax.swing.JButton regbut;
     private javax.swing.JDialog tabsel;
     private javax.swing.JTextField usr;
     // End of variables declaration//GEN-END:variables

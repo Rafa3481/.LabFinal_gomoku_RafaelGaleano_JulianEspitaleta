@@ -5,6 +5,8 @@
  */
 package Main;
 
+import javax.swing.ImageIcon;
+
 
 
 
@@ -52,6 +54,7 @@ public class Victory extends javax.swing.JFrame {
         fichas = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         temps = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(329, 106));
@@ -59,14 +62,30 @@ public class Victory extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(null);
 
-        jButton1.setText("Volver a jugar");
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Buttons/vjbase.png"))); // NOI18N
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton1MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton1MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButton1MouseReleased(evt);
+            }
+        });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(30, 210, 190, 30);
+        jButton1.setBounds(30, 210, 170, 30);
 
         txt.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         txt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -84,14 +103,30 @@ public class Victory extends javax.swing.JFrame {
         getContentPane().add(omedetou);
         omedetou.setBounds(1, 86, 500, 30);
 
-        jButton2.setText("Volver al menú Principal");
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Buttons/vmpbase.png"))); // NOI18N
+        jButton2.setBorderPainted(false);
+        jButton2.setContentAreaFilled(false);
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton2MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton2MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButton2MouseReleased(evt);
+            }
+        });
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(270, 210, 190, 30);
+        jButton2.setBounds(220, 210, 260, 30);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel1.setText("Fichas Colocadas: ");
@@ -113,6 +148,10 @@ public class Victory extends javax.swing.JFrame {
         getContentPane().add(temps);
         temps.setBounds(290, 140, 70, 20);
 
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/RegisterBackground.jpg"))); // NOI18N
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(-220, -240, 720, 660);
+
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
@@ -129,6 +168,46 @@ public class Victory extends javax.swing.JFrame {
         vent.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseEntered
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/vjtilted.png"));
+        jButton1.setIcon(ii);
+    }//GEN-LAST:event_jButton1MouseEntered
+
+    private void jButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseExited
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/vjbase.png"));
+        jButton1.setIcon(ii);
+    }//GEN-LAST:event_jButton1MouseExited
+
+    private void jButton1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MousePressed
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/vjpressed.png"));
+        jButton1.setIcon(ii);
+    }//GEN-LAST:event_jButton1MousePressed
+
+    private void jButton2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseEntered
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/vmptilted.png"));
+        jButton2.setIcon(ii);
+    }//GEN-LAST:event_jButton2MouseEntered
+
+    private void jButton2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseExited
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/vmpbase.png"));
+        jButton2.setIcon(ii);
+    }//GEN-LAST:event_jButton2MouseExited
+
+    private void jButton2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MousePressed
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/vmppressed.png"));
+        jButton2.setIcon(ii);
+    }//GEN-LAST:event_jButton2MousePressed
+
+    private void jButton1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseReleased
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/vjbase.png"));
+        jButton1.setIcon(ii);
+    }//GEN-LAST:event_jButton1MouseReleased
+
+    private void jButton2MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseReleased
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/vmpbase.png"));
+        jButton2.setIcon(ii);
+    }//GEN-LAST:event_jButton2MouseReleased
 
     /**
      * @param args the command line arguments
@@ -173,6 +252,7 @@ public class Victory extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel omedetou;
     private javax.swing.JLabel temps;
     private javax.swing.JLabel txt;

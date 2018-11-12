@@ -305,9 +305,11 @@ public class inises extends javax.swing.JFrame {
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/UB.jpg"))); // NOI18N
         jLabel8.setMinimumSize(new java.awt.Dimension(250, 250));
         diffsel.getContentPane().add(jLabel8);
-        jLabel8.setBounds(0, 0, 290, 120);
+        jLabel8.setBounds(0, 0, 300, 120);
 
-        p2opt.setMinimumSize(new java.awt.Dimension(317, 160));
+        p2opt.setMaximumSize(new java.awt.Dimension(499, 166));
+        p2opt.setMinimumSize(new java.awt.Dimension(499, 166));
+        p2opt.setPreferredSize(new java.awt.Dimension(499, 166));
         p2opt.setResizable(false);
         p2opt.getContentPane().setLayout(null);
 
@@ -315,39 +317,87 @@ public class inises extends javax.swing.JFrame {
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setText("Opciones para Jugador 2");
         p2opt.getContentPane().add(jLabel11);
-        jLabel11.setBounds(0, 10, 310, 29);
+        jLabel11.setBounds(100, 10, 310, 29);
 
-        regbut.setText("Registrar");
+        regbut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Buttons/regbase.png"))); // NOI18N
+        regbut.setBorderPainted(false);
+        regbut.setContentAreaFilled(false);
+        regbut.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                regbutMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                regbutMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                regbutMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                regbutMouseReleased(evt);
+            }
+        });
         regbut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 regbutActionPerformed(evt);
             }
         });
         p2opt.getContentPane().add(regbut);
-        regbut.setBounds(10, 80, 90, 25);
+        regbut.setBounds(20, 90, 120, 30);
 
-        inisesp2but.setText("Iniciar Sesión");
+        inisesp2but.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Buttons/isbase.png"))); // NOI18N
+        inisesp2but.setBorderPainted(false);
+        inisesp2but.setContentAreaFilled(false);
+        inisesp2but.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                inisesp2butMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                inisesp2butMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                inisesp2butMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                inisesp2butMouseReleased(evt);
+            }
+        });
         inisesp2but.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 inisesp2butActionPerformed(evt);
             }
         });
         p2opt.getContentPane().add(inisesp2but);
-        inisesp2but.setBounds(110, 80, 90, 25);
+        inisesp2but.setBounds(170, 90, 160, 30);
 
-        p2invbut.setText("Invitado");
+        p2invbut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Buttons/ivbase.png"))); // NOI18N
+        p2invbut.setBorderPainted(false);
+        p2invbut.setContentAreaFilled(false);
+        p2invbut.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                p2invbutMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                p2invbutMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                p2invbutMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                p2invbutMouseReleased(evt);
+            }
+        });
         p2invbut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 p2invbutActionPerformed(evt);
             }
         });
         p2opt.getContentPane().add(p2invbut);
-        p2invbut.setBounds(210, 80, 90, 25);
+        p2invbut.setBounds(360, 90, 110, 30);
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/UB.jpg"))); // NOI18N
         jLabel10.setMinimumSize(new java.awt.Dimension(250, 250));
         p2opt.getContentPane().add(jLabel10);
-        jLabel10.setBounds(0, 0, 330, 150);
+        jLabel10.setBounds(0, 0, 500, 160);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(480, 560));
@@ -444,7 +494,7 @@ public class inises extends javax.swing.JFrame {
             }
         });
         getContentPane().add(acc);
-        acc.setBounds(190, 360, 77, 25);
+        acc.setBounds(190, 360, 71, 23);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/RegisterBackground.jpg"))); // NOI18N
         jLabel5.setText("jLabel5");
@@ -748,6 +798,66 @@ public class inises extends javax.swing.JFrame {
         diffsel.setVisible(true);
         diffsel.setLocationRelativeTo(null);
     }//GEN-LAST:event_p2invbutActionPerformed
+
+    private void regbutMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_regbutMouseEntered
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/regtilted.png"));
+        regbut.setIcon(ii);
+    }//GEN-LAST:event_regbutMouseEntered
+
+    private void regbutMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_regbutMouseExited
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/regbase.png"));
+        regbut.setIcon(ii);
+    }//GEN-LAST:event_regbutMouseExited
+
+    private void regbutMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_regbutMousePressed
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/regpressed.png"));
+        regbut.setIcon(ii);
+    }//GEN-LAST:event_regbutMousePressed
+
+    private void regbutMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_regbutMouseReleased
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/regbase.png"));
+        regbut.setIcon(ii);
+    }//GEN-LAST:event_regbutMouseReleased
+
+    private void inisesp2butMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_inisesp2butMouseEntered
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/istilted.png"));
+        inisesp2but.setIcon(ii);
+    }//GEN-LAST:event_inisesp2butMouseEntered
+
+    private void inisesp2butMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_inisesp2butMouseExited
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/isbase.png"));
+        inisesp2but.setIcon(ii);
+    }//GEN-LAST:event_inisesp2butMouseExited
+
+    private void inisesp2butMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_inisesp2butMousePressed
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/ispressed.png"));
+        inisesp2but.setIcon(ii);
+    }//GEN-LAST:event_inisesp2butMousePressed
+
+    private void inisesp2butMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_inisesp2butMouseReleased
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/isbase.png"));
+        inisesp2but.setIcon(ii);
+    }//GEN-LAST:event_inisesp2butMouseReleased
+
+    private void p2invbutMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p2invbutMouseEntered
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/ivtilted.png"));
+        p2invbut.setIcon(ii);
+    }//GEN-LAST:event_p2invbutMouseEntered
+
+    private void p2invbutMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p2invbutMouseExited
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/ivbase.png"));
+        p2invbut.setIcon(ii);
+    }//GEN-LAST:event_p2invbutMouseExited
+
+    private void p2invbutMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p2invbutMousePressed
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/ivpressed.png"));
+        p2invbut.setIcon(ii);
+    }//GEN-LAST:event_p2invbutMousePressed
+
+    private void p2invbutMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p2invbutMouseReleased
+        ImageIcon ii = new ImageIcon(getClass().getResource("/Buttons/ivbase.png"));
+        p2invbut.setIcon(ii);
+    }//GEN-LAST:event_p2invbutMouseReleased
 
     /**
      * @param args the command line arguments

@@ -494,7 +494,7 @@ public class inises extends javax.swing.JFrame {
             }
         });
         getContentPane().add(acc);
-        acc.setBounds(190, 360, 71, 23);
+        acc.setBounds(190, 360, 77, 25);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/RegisterBackground.jpg"))); // NOI18N
         jLabel5.setText("jLabel5");
@@ -554,43 +554,10 @@ public class inises extends javax.swing.JFrame {
     }//GEN-LAST:event_IAMouseExited
 
     private void accActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_accActionPerformed
-        String[] opt = {"15x15", "19x19", "21x21"};
-        String[] dfopt = {"Fácil", "Medio", "Complejo"};
-         //= JOptionPane.showOptionDialog(null, "Elija la dificultad de la partida", "Opciones de Juego", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null ,dfopt, dfopt[0]);
-            int diff = 10;
-            
-            switch(dfsel){
-                case 0: diff tabselk;              
-                case 1: diff = 5; break;
-                case 2: diff = 3; break;
-            }
-        if(compcred(usr.getText(), psw.getPassword())){
-            int sel = JOptionPane.showOptionDialog(null, "Elija su estilo de tablero", "Opciones de Juego", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null ,opt, opt[0]);
-                this.setVisible(false);
-
-                switch(sel){
-
-                    case 0: 
-                        tab15 vent0 = new tab15(usrh,usr.getText(), -1, diff);
-                        vent0.setVisible(true);
-                        this.dispose();
-                    break;
-
-                    case 1:
-                        tab19 vent1 = new tab19(usrh,usr.getText(), -1, diff);
-                        vent1.setVisible(true);
-                        this.dispose();
-                    break;
-
-                    case 2: 
-                        tab21 vent2 = new tab21(usrh,usr.getText(), -1, diff);
-                        vent2.setVisible(true);
-                        this.dispose();
-                    break;
-                }
-        } else{
-            JOptionPane.showMessageDialog(null, "Usuario o Contraseña Inválido", "Error al Iniciar Sesión", JOptionPane.WARNING_MESSAGE);
-        }
+        this.setVisible(false);
+        
+        diffsel.setVisible(true);
+        diffsel.setLocationRelativeTo(null);
     }//GEN-LAST:event_accActionPerformed
 
     private void usrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usrActionPerformed
@@ -784,12 +751,14 @@ public class inises extends javax.swing.JFrame {
         Registro vent =  new Registro();
         vent.setVisible(true);
         this.dispose();
+        p2opt.dispose();
     }//GEN-LAST:event_regbutActionPerformed
 
     private void inisesp2butActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inisesp2butActionPerformed
         inises vent2 = new inises(true, usr.getText());
         vent2.setVisible(true);
         this.dispose();
+        p2opt.dispose();
     }//GEN-LAST:event_inisesp2butActionPerformed
 
     private void p2invbutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p2invbutActionPerformed
@@ -797,6 +766,7 @@ public class inises extends javax.swing.JFrame {
         usrh = "Invitado";
         diffsel.setVisible(true);
         diffsel.setLocationRelativeTo(null);
+        p2opt.dispose();
     }//GEN-LAST:event_p2invbutActionPerformed
 
     private void regbutMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_regbutMouseEntered

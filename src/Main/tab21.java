@@ -52,7 +52,10 @@ public class tab21 extends javax.swing.JFrame {
             mec.assturn();
             mec.initab();
             mec.getTabInfo(19, df, this, tlab, esplab, timer, false);
-            mec.stp(df);
+            if (!IAiru){
+                mec.stp(df);
+                
+            }
             diff = df;
             
             if (mec.getnoir() == 1){
@@ -533,9 +536,7 @@ public class tab21 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setFocusable(false);
-        setMaximumSize(new java.awt.Dimension(1150, 760));
         setMinimumSize(new java.awt.Dimension(1150, 760));
-        setPreferredSize(new java.awt.Dimension(1150, 760));
         getContentPane().setLayout(null);
 
         jLabel2.setFont(new java.awt.Font("UD Digi Kyokasho NP-B", 0, 48)); // NOI18N

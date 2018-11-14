@@ -60,7 +60,11 @@ public class tab15 extends javax.swing.JFrame {
             mec.assturn();
             mec.initab();
             mec.getTabInfo(13, diff, this, tlab, esplab, timer, IAiru);
-            mec.stp(df);
+            if (!IAiru){
+                mec.stp(df);
+                
+            }
+            
             
             tneg = mec.getnoir();
             if (mec.getnoir() == 1){

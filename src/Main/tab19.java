@@ -80,6 +80,11 @@ public class tab19 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        pausa = new javax.swing.JDialog();
+        jLabel10 = new javax.swing.JLabel();
+        resume = new javax.swing.JButton();
+        sort = new javax.swing.JButton();
+        jLabel12 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -400,7 +405,42 @@ public class tab19 extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         timer = new javax.swing.JLabel();
         trlabel = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
+
+        pausa.setMinimumSize(new java.awt.Dimension(485, 230));
+        pausa.getContentPane().setLayout(null);
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setText("Menú de Pausa");
+        pausa.getContentPane().add(jLabel10);
+        jLabel10.setBounds(0, -4, 480, 70);
+
+        resume.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        resume.setText("Resumir");
+        resume.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resumeActionPerformed(evt);
+            }
+        });
+        pausa.getContentPane().add(resume);
+        resume.setBounds(10, 110, 210, 60);
+
+        sort.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        sort.setText("Rendirse");
+        sort.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sortActionPerformed(evt);
+            }
+        });
+        pausa.getContentPane().add(sort);
+        sort.setBounds(260, 110, 200, 60);
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/UB.jpg"))); // NOI18N
+        jLabel12.setText("jLabel8");
+        pausa.getContentPane().add(jLabel12);
+        jLabel12.setBounds(0, 0, 480, 240);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1020, 660));
@@ -5900,6 +5940,15 @@ public class tab19 extends javax.swing.JFrame {
         getContentPane().add(trlabel);
         trlabel.setBounds(800, 210, 200, 20);
 
+        jButton1.setText("Pausa");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(840, 410, 100, 40);
+
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/RegisterBackground.jpg"))); // NOI18N
         getContentPane().add(jLabel7);
         jLabel7.setBounds(300, -30, 720, 690);
@@ -5945,6 +5994,27 @@ public class tab19 extends javax.swing.JFrame {
         mec.sombrear(mec.getButt(evt.getSource()), mec.getTurn(), false);
     }//GEN-LAST:event_mexit
 
+    private void resumeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resumeActionPerformed
+        gamemec.resume();
+        pausa.dispose();
+    }//GEN-LAST:event_resumeActionPerformed
+
+    private void sortActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortActionPerformed
+        pausa.dispose();
+        this.dispose();
+        if (gamemec.getTurn() == gamemec.getnoir()){
+            Victory v = new Victory(gamemec.getnoir(), shiro.getText()); v.setVisible(true);
+        } else{
+            Victory v = new Victory(gamemec.getnoir(), kuro.getText()); v.setVisible(true);
+        }
+    }//GEN-LAST:event_sortActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        gamemec.pausa();
+        pausa.setVisible(true);
+        pausa.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -5982,6 +6052,7 @@ public class tab19 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel esplab;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton307;
     private javax.swing.JButton jButton308;
     private javax.swing.JButton jButton309;
@@ -6289,6 +6360,8 @@ public class tab19 extends javax.swing.JFrame {
     private javax.swing.JButton jButton611;
     private javax.swing.JButton jButton612;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -6298,7 +6371,10 @@ public class tab19 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField kuro;
+    private javax.swing.JDialog pausa;
+    private javax.swing.JButton resume;
     private javax.swing.JTextField shiro;
+    private javax.swing.JButton sort;
     private javax.swing.JLabel timer;
     private javax.swing.JLabel tlab;
     private javax.swing.JLabel trlabel;

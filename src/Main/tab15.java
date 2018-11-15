@@ -98,7 +98,7 @@ public class tab15 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jDialog1 = new javax.swing.JDialog();
+        pausa = new javax.swing.JDialog();
         jLabel10 = new javax.swing.JLabel();
         resume = new javax.swing.JButton();
         sort = new javax.swing.JButton();
@@ -301,13 +301,13 @@ public class tab15 extends javax.swing.JFrame {
         trlabel = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
 
-        jDialog1.setMinimumSize(new java.awt.Dimension(485, 230));
-        jDialog1.getContentPane().setLayout(null);
+        pausa.setMinimumSize(new java.awt.Dimension(485, 230));
+        pausa.getContentPane().setLayout(null);
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("Menú de Pausa");
-        jDialog1.getContentPane().add(jLabel10);
+        pausa.getContentPane().add(jLabel10);
         jLabel10.setBounds(0, -4, 480, 70);
 
         resume.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -317,17 +317,22 @@ public class tab15 extends javax.swing.JFrame {
                 resumeActionPerformed(evt);
             }
         });
-        jDialog1.getContentPane().add(resume);
+        pausa.getContentPane().add(resume);
         resume.setBounds(10, 110, 210, 60);
 
         sort.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         sort.setText("Rendirse");
-        jDialog1.getContentPane().add(sort);
+        sort.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sortActionPerformed(evt);
+            }
+        });
+        pausa.getContentPane().add(sort);
         sort.setBounds(260, 110, 200, 60);
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/UB.jpg"))); // NOI18N
         jLabel8.setText("jLabel8");
-        jDialog1.getContentPane().add(jLabel8);
+        pausa.getContentPane().add(jLabel8);
         jLabel8.setBounds(0, 0, 480, 240);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -3502,14 +3507,14 @@ public class tab15 extends javax.swing.JFrame {
         getContentPane().add(jLabel9);
         jLabel9.setBounds(490, 200, 156, 25);
 
-        jButton1.setText("jButton1");
+        jButton1.setText("Pausa");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(670, 400, 79, 25);
+        jButton1.setBounds(679, 385, 100, 40);
 
         trlabel.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 24)); // NOI18N
         trlabel.setText("Tiempo restante:");
@@ -3575,12 +3580,29 @@ public class tab15 extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         gamemec.pausa();
-        
+        pausa.setVisible(true);
+        pausa.setLocationRelativeTo(null);        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void resumeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resumeActionPerformed
-        // TODO add your handling code here:
+        gamemec.resume();
+        pausa.dispose();
     }//GEN-LAST:event_resumeActionPerformed
+
+    private void sortActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortActionPerformed
+        pausa.dispose();
+        this.dispose();
+        if (kuro.getText().equalsIgnoreCase("IA") || shiro.getText().equalsIgnoreCase("IA")){
+            Victory v = new Victory(gamemec.getnoir(), "IA"); v.setVisible(true);
+        } else{
+            if (gamemec.getTurn() == gamemec.getnoir()){
+                Victory v = new Victory(gamemec.getnoir(), shiro.getText()); v.setVisible(true);
+            } else{
+                Victory v = new Victory(gamemec.getnoir(), kuro.getText()); v.setVisible(true);
+        }
+        }
+        
+    }//GEN-LAST:event_sortActionPerformed
 
 
     /**
@@ -3803,7 +3825,6 @@ public class tab15 extends javax.swing.JFrame {
     private javax.swing.JButton jButton97;
     private javax.swing.JButton jButton98;
     private javax.swing.JButton jButton99;
-    private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
@@ -3815,6 +3836,7 @@ public class tab15 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField kuro;
+    private javax.swing.JDialog pausa;
     private javax.swing.JButton resume;
     private javax.swing.JTextField shiro;
     private javax.swing.JButton sort;

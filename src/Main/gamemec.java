@@ -79,7 +79,7 @@ public class gamemec {
         }
     }
     
-    public int getnoir(){
+    public static int getnoir(){
         return noire;
     }
     
@@ -135,11 +135,17 @@ public class gamemec {
     
     public static void pausa(){
         pausegs = segs;
-        tmp.cancel();
+        if (!IAiru){
+            tmp.cancel();
+        }
+        
     }
     
     public static void resume(){
-        stp(pausegs);
+        if (!IAiru){
+            stp(pausegs);
+        }
+        
     }
     private static int setInterval(){
         if (segs < 2){

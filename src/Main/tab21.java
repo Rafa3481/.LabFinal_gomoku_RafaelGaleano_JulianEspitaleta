@@ -30,7 +30,7 @@ public class tab21 extends javax.swing.JFrame {
             gamemec mec = new gamemec();
             mec.assturn();
             mec.initab();
-            mec.getTabInfo(19, df, this, tlab, esplab, timer, true);
+            
             trlabel.setVisible(false);
             timer.setVisible(false);
             IALvl = iabr;
@@ -45,17 +45,16 @@ public class tab21 extends javax.swing.JFrame {
                 IA ia = new IA(17, IALvl, null);
                 ia.IATurn(this);
             }
+            mec.getTabInfo(19, df, this, tlab, esplab, timer, true, kuro.getText(), shiro.getText());
         IAiru = true;
         } else{
             IAiru = false;
             gamemec mec = new gamemec();
             mec.assturn();
             mec.initab();
-            mec.getTabInfo(19, df, this, tlab, esplab, timer, false);
-            if (!IAiru){
-                mec.stp(df);
-                
-            }
+            diff = df;
+            
+            
             diff = df;
             
             if (mec.getnoir() == 1){
@@ -64,6 +63,12 @@ public class tab21 extends javax.swing.JFrame {
             } else{
                 kuro.setText(nom2);
                 shiro.setText(nom1);
+            }
+            mec.getTabInfo(19, df, this, tlab, esplab, timer, false, kuro.getText(), shiro.getText());
+            if (!IAiru){
+                
+                mec.stp(df);
+                
             }
             
         }
@@ -8126,37 +8131,16 @@ public class tab21 extends javax.swing.JFrame {
             mec.marcar(opt, mec.getTurn());
 
 
-            if(mec.chkvic() != 0){
-                if (mec.chkvic() == mec.getnoir()){
-                    JOptionPane.showMessageDialog(null, "Victoria!");
-                    Victory v = new Victory(mec.chkvic(), kuro.getText()); v.setVisible(true);
-                    this.dispose();
-                } else{
-                    JOptionPane.showMessageDialog(null, "Victoria!");
-                    Victory v = new Victory(mec.chkvic(), shiro.getText()); v.setVisible(true);
-                    this.dispose();
-
-                }
-
-            }
+            
 
             if(IAiru && mec.chkvic() == 0){
                 izi.IATurn(this);
-                if(mec.chkvic() != 0){
-                    if (mec.chkvic() == mec.getnoir()){
-                        JOptionPane.showMessageDialog(null, "Victoria!");
-                        Victory v = new Victory(mec.chkvic(), kuro.getText()); v.setVisible(true);
-                        this.dispose();
-                    } else{
-                        JOptionPane.showMessageDialog(null, "Victoria!");
-                        Victory v = new Victory(mec.chkvic(), shiro.getText()); v.setVisible(true);
-                        this.dispose();
-
-                    }
-
-                }
+                System.out.println(mec.chkvic());
+                
+                
             }
         }
+            
     }//GEN-LAST:event_click
 
     private void menter(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menter
@@ -8660,8 +8644,8 @@ public class tab21 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField kuro;
-    private javax.swing.JTextField shiro;
+    private static javax.swing.JTextField kuro;
+    private static javax.swing.JTextField shiro;
     private javax.swing.JLabel timer;
     private javax.swing.JLabel tlab;
     private javax.swing.JLabel trlabel;

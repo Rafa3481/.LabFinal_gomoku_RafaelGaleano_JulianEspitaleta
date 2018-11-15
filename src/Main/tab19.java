@@ -30,7 +30,7 @@ public class tab19 extends javax.swing.JFrame {
             gamemec mec = new gamemec();
             mec.assturn();
             mec.initab();
-            mec.getTabInfo(19, df, this, tlab, esplab, timer, true);
+            
             trlabel.setVisible(false);
             timer.setVisible(false);
             IALvl = iabr;
@@ -45,17 +45,15 @@ public class tab19 extends javax.swing.JFrame {
                 IA ia = new IA(17, IALvl, null);
                 ia.IATurn(this);
             }
+            mec.getTabInfo(19, df, this, tlab, esplab, timer, true, kuro.getText(), shiro.getText());
             IAiru = true;
         } else{
             IAiru = false;
             gamemec mec = new gamemec();
             mec.assturn();
             mec.initab();
-            mec.getTabInfo(17, df, this, tlab, esplab, timer, false);
-            if (!IAiru){
-                mec.stp(df);
-                
-            }
+            
+            
             diff = df;
             
             if (mec.getnoir() == 1){
@@ -64,6 +62,11 @@ public class tab19 extends javax.swing.JFrame {
             } else{
                 kuro.setText(nom2);
                 shiro.setText(nom1);
+            }
+            mec.getTabInfo(17, df, this, tlab, esplab, timer, false, kuro.getText(), shiro.getText());
+            if (!IAiru){
+                mec.stp(df);
+                
             }
             
         }
@@ -5913,37 +5916,15 @@ public class tab19 extends javax.swing.JFrame {
             javax.swing.JButton opt = mec.getButt(evt.getSource());
             IA izi = new IA(17, IALvl, opt);
 
-            mec.marcar(opt, mec.getTurn());
+            mec.marcar(opt, gamemec.getTurn());
+            
 
 
-            if(mec.chkvic() != 0){
-                if (mec.chkvic() == mec.getnoir()){
-                    JOptionPane.showMessageDialog(null, "Victoria!");
-                    Victory v = new Victory(mec.chkvic(), kuro.getText()); v.setVisible(true);
-                    this.dispose();
-                } else{
-                    JOptionPane.showMessageDialog(null, "Victoria!");
-                    Victory v = new Victory(mec.chkvic(), shiro.getText()); v.setVisible(true);
-                    this.dispose();
-
-                }
-
-            }
+            
 
             if(IAiru && mec.chkvic() == 0){
                 izi.IATurn(this);
-                if(mec.chkvic() != 0){
-                    if (mec.chkvic() == mec.getnoir()){
-                        JOptionPane.showMessageDialog(null, "Victoria!");
-                        Victory v = new Victory(mec.chkvic(), kuro.getText()); v.setVisible(true);
-                        this.dispose();
-                    } else{
-                        JOptionPane.showMessageDialog(null, "Victoria!");
-                        Victory v = new Victory(mec.chkvic(), shiro.getText()); v.setVisible(true);
-                        this.dispose();
-
-                    }
-                }
+                
             }
         } else{
             System.out.println("NEL PRRO");

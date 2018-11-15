@@ -7,12 +7,15 @@ package Main;
 
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 /**
  *
@@ -31,13 +34,14 @@ public class gamemec {
     public String p2;
     private static int fichcont;
     private static int tabsz;
-    private static int inisegs;
+    private static int inisegs, pausegs;
     private static int segs;
     private static JLabel templabel, lab1, lab2;
     private static JFrame frameTab;
     private static int diff;
     private static boolean IAiru;
     public static int[][] tab = new int[21][21];
+    private static String kuro, shiro;
     
     
     
@@ -50,12 +54,14 @@ public class gamemec {
     public static final Icon transnoir = new ImageIcon("src/Buttons/negratransfinal.png");
     public static final Icon transblanc = new ImageIcon("src/Buttons/blancatransfinal.png");
     
-    public void getTabInfo(int integer, int df, JFrame frame, JLabel label, JLabel label2, JLabel temp, boolean iagame){
+    public void getTabInfo(int integer, int df, JFrame frame, JLabel label, JLabel label2, JLabel temp, boolean iagame, String b, String w){
         tabsz = integer;
         frameTab = frame;
         lab1 = label; lab2 = label2; templabel = temp;
         IAiru = iagame;
         diff = df;
+        kuro = b;
+        shiro = w;
         
     }
     public void assturn(){
@@ -81,7 +87,7 @@ public class gamemec {
         return blanche;
     }    
     
-    public int getTurn(){
+    public static int getTurn(){
         return turn;
     }
     public void mecturn(int turno){
@@ -102,11 +108,12 @@ public class gamemec {
         return (javax.swing.JButton)obt;
     }
     
-    public void stp(int seg){
+    public static void stp(int seg){
         inisegs = seg;
         segs = inisegs;
         int delay = 1000, period = delay;
         tmp = new Timer();
+        
         templabel.setText(String.valueOf(inisegs));
         tmp.scheduleAtFixedRate(new TimerTask(){
             public void run(){
@@ -125,13 +132,23 @@ public class gamemec {
             }
         }, delay, period);
     }
-    private final int setInterval(){
+    
+    public static void pausa(){
+        pausegs = segs;
+        tmp.cancel();
+    }
+    
+    public static void resume(){
+        stp(pausegs);
+    }
+    private static int setInterval(){
         if (segs < 2){
             tmp.cancel();
         }
         int res = (segs - 1);
         segs = res;
         return res;
+    
     }
     public int getcol(javax.swing.JButton button){
         
@@ -179,7 +196,7 @@ public class gamemec {
             } else if (blanche == turno){
                 button.setIcon(blanc);
             }
-            mecturn(turno);
+            mecturn(getTurn());
             lblupd();
             fichcont++;
             if(!IAiru){
@@ -188,6 +205,21 @@ public class gamemec {
                 stp(diff); 
             }
             
+            if(chkvic() != 0){
+                    if (chkvic() == getnoir()){
+                        JOptionPane.showMessageDialog(null, "Victoria!");
+                        System.out.println(kuro);
+                        Victory v = new Victory(chkvic(), kuro); v.setVisible(true);
+                        frameTab.dispose();
+                    } else{
+                        JOptionPane.showMessageDialog(null, "Victoria!");
+                        System.out.println(shiro);
+                        Victory v = new Victory(chkvic(), shiro); v.setVisible(true);
+                        frameTab.dispose();
+
+                    }
+
+                }
             
         } else{
             System.out.println("NOPE!, ya hay un " + tab[getcol(button)][getfil(button)]);

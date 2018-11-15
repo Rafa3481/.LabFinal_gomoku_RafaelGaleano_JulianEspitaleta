@@ -56,7 +56,7 @@ public class inises extends javax.swing.JFrame {
             String[] reg = regusr.leerArch();
             
             
-            while (!(reg[pos].equalsIgnoreCase(usr)) && (pos < reg.length)){
+            while (!(reg[pos].equalsIgnoreCase(usr)) && (pos < reg.length-1)){
                 pos++;
             }           
             
@@ -628,9 +628,22 @@ public class inises extends javax.swing.JFrame {
         
         tabsel.dispose();
         if(usrh.equalsIgnoreCase("iaai")){
-            tab15 tab  =  new tab15(usrh, "iaai", dfsel, -1);
+            tab15 tab  =  new tab15(usr.getText(), usrh, dfsel, -1);
             tab.setVisible(true);
         } else{
+            switch (dfsel) {
+                case 0:
+                    dfsel = 15;
+                    break;
+                case 1:
+                    dfsel = 10;
+                    break;
+                case 2:
+                    dfsel = 5;
+                    break;
+                default:
+                    break;
+            }
             tab15 tab  =  new tab15(usrh, usr.getText(), -1, dfsel);
             tab.setVisible(true);
         }
@@ -703,9 +716,22 @@ public class inises extends javax.swing.JFrame {
     private void b19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b19ActionPerformed
         tabsel.dispose();
         if(usrh.equalsIgnoreCase("iaai")){
-            tab19 tab  =  new tab19(usrh, "iaai", dfsel, -1);
+            tab19 tab  =  new tab19(usr.getText(), usrh, dfsel, -1);
             tab.setVisible(true);
         } else{
+            switch (dfsel) {
+                case 0:
+                    dfsel = 15;
+                    break;
+                case 1:
+                    dfsel = 10;
+                    break;
+                case 2:
+                    dfsel = 5;
+                    break;
+                default:
+                    break;
+            }
             tab19 tab  =  new tab19(usrh, usr.getText(), -1, dfsel);
             tab.setVisible(true);
         }
@@ -716,9 +742,22 @@ public class inises extends javax.swing.JFrame {
     private void b21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b21ActionPerformed
         tabsel.dispose();
         if(usrh.equalsIgnoreCase("iaai")){
-            tab21 tab  =  new tab21(usrh, "iaai", dfsel, -1);
+            tab21 tab  =  new tab21(usr.getText(), usrh, dfsel, -1);
             tab.setVisible(true);
         } else{
+            switch (dfsel) {
+                case 0:
+                    dfsel = 15;
+                    break;
+                case 1:
+                    dfsel = 10;
+                    break;
+                case 2:
+                    dfsel = 5;
+                    break;
+                default:
+                    break;
+            }
             tab21 tab  =  new tab21(usrh, usr.getText(), -1, dfsel);
             tab.setVisible(true);
         }
@@ -727,21 +766,21 @@ public class inises extends javax.swing.JFrame {
     }//GEN-LAST:event_b21ActionPerformed
 
     private void iziActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iziActionPerformed
-        dfsel = 10;
+        dfsel = 0;
         diffsel.dispose();
         tabsel.setVisible(true);
         tabsel.setLocationRelativeTo(null);
     }//GEN-LAST:event_iziActionPerformed
 
     private void medActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_medActionPerformed
-        dfsel = 5;
+        dfsel = 1;
         diffsel.dispose();
         tabsel.setVisible(true);
         tabsel.setLocationRelativeTo(null);
     }//GEN-LAST:event_medActionPerformed
 
     private void hrdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hrdActionPerformed
-        dfsel = 3;
+        dfsel = 2;
         diffsel.dispose();
         tabsel.setVisible(true);
         tabsel.setLocationRelativeTo(null);
